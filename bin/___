@@ -1,0 +1,43 @@
+.:
+total 260
+-rw-r--r-- 1 dt dt      0 мар 29 04:50 ___
+-rw-r--r-- 1 dt dt    181 мар 29 04:46 bashTest
+-rw-r--r-- 1 dt dt    414 мар 27 16:32 bigNumbers.c
+-rw-r--r-- 1 dt dt    280 мар 28 23:53 codeExample002.code
+-rw-r--r-- 1 dt dt    387 мар 29 00:09 codeExample.code
+-rw-r--r-- 1 dt dt   2372 мар 29 00:51 doc.txt
+-rw-r--r-- 1 dt dt    229 мар 28 17:55 errorNumbers.h
+-rw-r--r-- 1 dt dt    387 мар 26 00:45 fense.h
+-rw-r--r-- 1 dt dt    196 мар 29 03:12 globalDefinitions.h
+-rw-r--r-- 1 dt dt  15773 мар 29 00:10 graph001
+-rw-r--r-- 1 dt dt 148629 мар 29 00:10 graph001.svg
+drwxr-xr-x 2 dt dt   4096 мар 29 03:28 haskellTests
+-rw-r--r-- 1 dt dt     87 мар 29 03:12 lexicalAnalizer.hw
+-rw-r--r-- 1 dt dt   9522 мар 28 23:59 lexicalAnalyzer.c
+-rw-r--r-- 1 dt dt     68 мар 26 00:46 lexicalAnalyzer.h
+-rw-r--r-- 1 dt dt    599 мар 29 04:43 main.c
+-rw-r--r-- 1 dt dt    211 мар 27 02:16 Makefile
+-rw-r--r-- 1 dt dt    616 мар 25 18:12 scanner_graph.graph
+-rw-r--r-- 1 dt dt   7709 мар 25 18:12 scanner_graph.svg
+drwxr-xr-x 2 dt dt   4096 мар 29 03:27 simpleLib
+-rw-r--r-- 1 dt dt     93 фев 20 01:28 structure.txt
+-rw-r--r-- 1 dt dt    243 мар 29 04:43 test.c
+-rw-r--r-- 1 dt dt      0 фев  4 08:14 tree.c
+-rw-r--r-- 1 dt dt   1188 мар 29 04:44 treeElements.c
+-rw-r--r-- 1 dt dt   1267 мар 29 01:28 treeElements.h
+-rw-r--r-- 1 dt dt      0 фев  4 08:13 tree.h
+
+./haskellTests:
+total 4
+-rw-r--r-- 1 dt dt 430 мар 28 23:40 haskelCode.hs
+
+./simpleLib:
+total 36
+-rw-r--r-- 1 dt dt 1249 мар 29 04:41 divideString.c
+-rw-r--r-- 1 dt dt  106 мар 29 04:42 divideString.h
+-rw-r--r-- 1 dt dt 4359 мар 29 03:22 image.svg
+-rw-r--r-- 1 dt dt  795 мар 29 04:32 simpleList.c
+-rw-r--r-- 1 dt dt  819 мар 29 04:32 simpleList.h
+-rw-r--r-- 1 dt dt 1033 мар 29 02:55 stringFile.c
+-rw-r--r-- 1 dt dt  872 мар 29 03:19 stringFile.h
+-rw-r--r-- 1 dt dt  208 мар 29 03:20 struct.gr

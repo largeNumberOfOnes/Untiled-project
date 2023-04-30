@@ -1,0 +1,115 @@
+name: add
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 100
+nutapp: 0
+type string: Int->Int->Int
+
+
+name: sub
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 100
+nutapp: 0
+type string: Int->Int->Int
+
+
+name: mul
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 101
+nutapp: 0
+type string: Int->Int->Int
+
+
+name: div
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 101
+nutapp: 0
+type string: Int->Int->Int
+
+
+name: +
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 100
+nutapp: 1
+type string: Int->Int->Int
+
+
+name: -
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 100
+nutapp: 1
+type string: Int->Int->Int
+
+
+name: *
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 101
+nutapp: 1
+type string: Int->Int->Int
+
+
+name: /
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 101
+nutapp: 1
+type string: Int->Int->Int
+
+
+name: ==
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 99
+nutapp: 1
+type string: Int->Int->Int
+
+
+name: pow
+arg count: 2
+   -> |a|
+   -> |b|
+priority: 100
+nutapp: 0
+type string: Int->Int
+
+
+name: workWithFour
+arg count: 4
+   -> |a|
+   -> |b|
+   -> |c|
+   -> |d|
+priority: 100
+nutapp: 0
+type string: Int->Int->Int->Int->Int
+
+
+name: thatSoundsScary
+arg count: 5
+   -> |a|
+   -> |b|
+   -> |c|
+   -> |d|
+   -> |e|
+priority: 100
+nutapp: 0
+type string: Int->Int->Int->Int->Int->Int
+
+
+
+

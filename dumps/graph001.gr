@@ -1,0 +1,57 @@
+digraph {
+	94899149862576 [shape=record, label="{ 
+		{ TypeTree | 0x564f6e1df6b0 } | 
+		{ entity | ARRAY } | 
+		{ type | <01> 94899149862640 } | 
+		{ child | <02> 0x564f6e1df750 } 
+	}"]
+	94899149862640 [shape=record, label="{ 
+		{ TypeTree | 0x564f6e1df6f0 } | 
+		{ entity | ARRAY } | 
+		{ type | <01> 94899149862704 } | 
+		{ child | <02> (nil) } 
+	}"]
+	94899149862704 [shape=record, label="{ 
+		{ TypeTree | 0x564f6e1df730 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> CHAR } | 
+		{ child | <02> (nil) } 
+	}"]
+	94899149862640:<01> -> 94899149862704
+	94899149862576:<01> -> 94899149862640
+	94899149862736 [shape=record, label="{ 
+		{ TypeTree | 0x564f6e1df750 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> FLOAT } | 
+		{ child | <02> 0x564f6e1df770 } 
+	}"]
+	94899149862768 [shape=record, label="{ 
+		{ TypeTree | 0x564f6e1df770 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> BOOL } | 
+		{ child | <02> 0x564f6e1df790 } 
+	}"]
+	94899149862800 [shape=record, label="{ 
+		{ TypeTree | 0x564f6e1df790 } | 
+		{ entity | ARRAY } | 
+		{ type | <01> 94899149862864 } | 
+		{ child | <02> 0x564f6e1df7f0 } 
+	}"]
+	94899149862864 [shape=record, label="{ 
+		{ TypeTree | 0x564f6e1df7d0 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> BOOL } | 
+		{ child | <02> (nil) } 
+	}"]
+	94899149862800:<01> -> 94899149862864
+	94899149862896 [shape=record, label="{ 
+		{ TypeTree | 0x564f6e1df7f0 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> BOOL } | 
+		{ child | <02> (nil) } 
+	}"]
+	94899149862800:<02> -> 94899149862896
+	94899149862768:<02> -> 94899149862800
+	94899149862736:<02> -> 94899149862768
+	94899149862576:<02> -> 94899149862736
+}

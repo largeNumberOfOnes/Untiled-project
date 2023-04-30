@@ -1,0 +1,30 @@
+digraph G {
+
+    START
+
+    def_d [label="d"]
+    def_e [label="e"]
+    def_f [label="f"]
+    START -> def_d -> def_e -> def_f
+
+    import_i [label="i"]
+    import_m [label="m"]
+    import_p [label="p"]
+    import_o [label="o"]
+    import_r [label="r"]
+    import_t [label="t"]
+    START -> import_i -> import_m -> import_p -> import_o -> import_r -> import_t
+
+    main_m [label="m"]
+    main_a [label="a"]
+    main_i [label="i"]
+    main_n [label="n"]
+    START -> main_m -> main_a -> main_i -> main_n
+
+
+
+    // START -> d -> e -> f
+    // START -> "i_" -> m -> p -> o -> r -> t
+    // START -> m -> a -> i -> n
+
+}

@@ -1,0 +1,29 @@
+import 'std'
+
+//-----------------------------------------------------------------------------
+
+def add a b : 100 : Int->Int->Int
+def sub a b : 100 : Int->Int->Int
+def mul a b : 101 : Int->Int->Int
+def div a b : 101 : Int->Int->Int
+
+def + a b : 100 : Int->Int->Int = add a b
+def - a b : 100 : Int->Int->Int = sub a b
+def * a b : 101 : Int->Int->Int = mul a b
+def / a b : 101 : Int->Int->Int = div a b
+
+def == a b : 99 : Int->Int->Int
+
+// def / a b : 101 : Int->Int->Int = div a b
+
+//-----------------------------------------------------------------------------
+
+// def pow a b : 100 : Int->Int = a if b == 1 else pow (a `mul a) (b `sub 1)
+def workWithFour a b c d : 100 : Int->Int->Int->Int->Int = a + (b*c - d)/ a
+// def workWithFour a b c d : 100 : Int->Int->Int->Int->Int = a + b*c - d / a + 12
+def thatSoundsScary a b c d e : 100 : Int->Int->Int->Int->Int->Int = workWithFour a (a + (b*c - d)/ a) e d + 12
+// def thatSoundsScary a b c d e : 100 : Int->Int->Int->Int->Int->Int = if workWithFour a (a + (b*c - d)/ a) e d  then 12 else a + (b*c - d)/ a
+
+//-----------------------------------------------------------------------------
+
+main = `/ (pow 2 6) 4

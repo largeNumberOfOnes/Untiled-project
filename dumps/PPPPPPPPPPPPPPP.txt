@@ -1,0 +1,111 @@
+digraph {
+
+	94893624218144 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94893624218016 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94893624217984 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
++
+0x564e24c35180
+Int->Int->Int"]
+94893624218016 -> 94893624217984
+	94893624217728 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94893624217280 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94893624217344 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int->Int"]
+	94893624215424 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int->Int->Int"]
+	94893624215296 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+workWithFour
+0x564e24c34700
+Int->Int->Int->Int->Int"]
+94893624215424 -> 94893624215296
+	94893624215328 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+a
+Int"]
+94893624215424 -> 94893624215328
+94893624217344 -> 94893624215424
+	94893624217152 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94893624215776 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94893624215808 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
++
+0x564e24c34900
+Int->Int->Int"]
+94893624215776 -> 94893624215808
+	94893624215680 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+a
+Int"]
+94893624215776 -> 94893624215680
+94893624217152 -> 94893624215776
+	94893624216960 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94893624216736 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94893624216768 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+/
+0x564e24c34cc0
+Int->Int->Int"]
+94893624216736 -> 94893624216768
+	94893624216640 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94893624216512 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94893624216256 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+-
+0x564e24c34ac0
+Int->Int->Int"]
+94893624216512 -> 94893624216256
+	94893624216288 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94893624216032 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94893624216064 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+*
+0x564e24c34a00
+Int->Int->Int"]
+94893624216032 -> 94893624216064
+	94893624215936 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+b
+Int"]
+94893624216032 -> 94893624215936
+94893624216288 -> 94893624216032
+	94893624216128 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+c
+Int"]
+94893624216288 -> 94893624216128
+94893624216512 -> 94893624216288
+94893624216640 -> 94893624216512
+	94893624216320 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+d
+Int"]
+94893624216640 -> 94893624216320
+94893624216736 -> 94893624216640
+94893624216960 -> 94893624216736
+	94893624216832 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+a
+Int"]
+94893624216960 -> 94893624216832
+94893624217152 -> 94893624216960
+94893624217344 -> 94893624217152
+94893624217280 -> 94893624217344
+	94893624217504 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+e
+Int"]
+94893624217280 -> 94893624217504
+94893624217728 -> 94893624217280
+	94893624217632 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+d
+Int"]
+94893624217728 -> 94893624217632
+94893624218016 -> 94893624217728
+94893624218144 -> 94893624218016
+	94893624217888 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+12
+Int"]
+94893624218144 -> 94893624217888
+
+}

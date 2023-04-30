@@ -1,0 +1,2 @@
+bash run/comp
+gcc -g objects/*.o -o out

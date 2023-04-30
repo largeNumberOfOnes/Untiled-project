@@ -1,0 +1,12 @@
+import standard
+
+def type Line       List Float
+def type Matrix     List Line
+def type MatrixSize Struct {row:Int, col:Int}
+
+def match isMatrixSquare : Matrix -> Bool : matrix = if (interim matrix) == (length matrix) then True else False where
+    match interim : Matrix -> Float :
+        | (h:[]) = length h
+        | (h:oth) = let l = length h in if l == interim oth then l else -1
+
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+a=$(ls -R | grep -v '^test.c$' | grep '\.c$')
+echo "it is a value: $a"
+
+#a="main.c lexicalAnalyzer.c"
+gcc $a -o out && \
+./out && \
+dot -Tsvg graph001 -o graph001.svg
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# OBJECTS=$(ls -R | grep '.c$')
+# OBJECTS=$(find | grep '.c$')
+
+# gcc $OBJECTS -o out && ./out
+
+
+# a="main.c treeSeparator.c"
+
+gcc main.c treeSeparator.c -o out

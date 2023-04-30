@@ -1,0 +1,28 @@
+include "That I want to include"
+
+
+
+type <TYPE_NAME> <TYPE>
+type <TYPE_NAME> Array(<ARRAY_TYPE>)
+
+type Bool       Cane(1|0)
+type Line       List(Float)
+type Matrix     List(Line)
+type MatrixSize Struct(row:Int, col:Int)
+
+
+
+def func a b c : Int->Int->Int->Int = (12.4*a + `* b 23) * c + pow 82 2 - 2 `pow 4
+def `pow a b : 200 : Int->Int->Int = ...  
+                🠕
+            priority
+
+
+expressions:
+    a if b else c
+    func ..args
+    <arg1> oper <arg2>
+    
+
+    
+    

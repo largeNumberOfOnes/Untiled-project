@@ -1,0 +1,10 @@
+
+def match isMatrixCorrect : Matrix -> Bool : matrix = 
+
+def match size : Matrix -> MatrixSize : matrix = 
+
+def match minor : Matrix -> Matrix : matrix row col = if matrix 
+
+def match determinant : Matrix -> Float : matrix = None
+
+def match rank : Matrix -> Float : matrix = None

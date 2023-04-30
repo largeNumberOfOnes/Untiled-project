@@ -1,0 +1,42 @@
+ 
+
+sover -> def | type | include
+
+# include
+    include -> 'include' name
+
+# def
+    def -> 'def' name ..name operator(:) type operator(=) expression
+
+    expression -> expression if expression else expression | func ..expressions | expression oper expression
+    
+    expressions:
+        a if b else c
+        func ..args
+        <arg1> oper <arg2>
+    
+    
+    
+    priority
+
+
+    
+* - 1
++ - 0
+
+2 * 4 + 3
+
+
+   *     
+  / \   
+ 2   +
+    / \
+   4   3
+                 
+     +
+    / \
+   *   3
+  / \  
+ 2   4
+   
+      

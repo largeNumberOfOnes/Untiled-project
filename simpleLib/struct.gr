@@ -1,0 +1,12 @@
+digraph {
+
+    malloc -> simpleList
+    stddef -> simpleList
+    
+    malloc -> stringFile
+    string -> stringFile
+
+    simpleList -> divideString
+    stringFile -> divideString
+    malloc -> divideString
+}
