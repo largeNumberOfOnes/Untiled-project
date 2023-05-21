@@ -29,6 +29,10 @@ int exptree_dump(Exptree *tree, FILE *file) {
             fprintf(file, "─┬─🢒 type: ELEM\n");
             fprintf(file, " ╰─🢒 content: %s\n", (char*)(tree->content));
             break;
+        case EXPTREE_TYPE_VAR:
+            fprintf(file, "─┬─🢒 type: VAR\n");
+            fprintf(file, " ╰─🢒 content: %s\n", (char*)(tree->content));
+            break;
         case EXPTREE_TYPE_OPERATOR:
             fprintf(file, "─┬─🢒 type: OPERATOR\n");
             fprintf(file, " ╰─🢒 content: %s\n", ((Function*)(tree->content))->name);
@@ -91,6 +95,9 @@ int exptree_printToFile_body(Exptree *tree, FILE *file) {
             break;
         case EXPTREE_TYPE_ELEM:
             fprintf(file, "\t%lu [shape=rectangle, style=\"filled\",fillcolor=\"#BDE038\", label=\"ELEM\n%s\n%s\"]\n", (size_t) tree, (char*)(tree->content), typestr);
+            break;
+        case EXPTREE_TYPE_VAR:
+            fprintf(file, "\t%lu [shape=rectangle, style=\"filled\",fillcolor=\"#C26D97\", label=\"VAR\n%s\n%s\"]\n", (size_t) tree, (char*)(tree->content), typestr);
             break;
         case EXPTREE_TYPE_OPERATOR:
             fprintf(file, "\t%lu [shape=rectangle, style=\"filled\",fillcolor=\"#818274\", label=\"OPERATOR\n%s\n%p\n%s\"]\n", (size_t) tree, ((Function*)(tree->content))->name, (void*)tree, typestr);

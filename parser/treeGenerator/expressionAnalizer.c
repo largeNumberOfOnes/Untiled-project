@@ -159,7 +159,7 @@ Exptree* exptree_initSimple(Token *token, Scope *scope) {
     ) {
         tree->type = EXPTREE_TYPE_OPERATOR;
     } else if (token->type == TOKEN_TYPE_VARIABLE) {
-        tree->type = EXPTREE_TYPE_ELEM; // chan
+        tree->type = EXPTREE_TYPE_VAR; // chan
     } else {
         printf("--> |%d|\n", token->type);
         CAP // dev
@@ -182,6 +182,8 @@ int exptree_getPriority(Exptree *tree) {
     ) {
         return ((Function*)(tree->content))->priority;
     } else if (tree->type == EXPTREE_TYPE_ELEM) {
+        CAP // dev
+    } else if (tree->type == EXPTREE_TYPE_VAR) {
         CAP // dev
     } else {
         CAP // dev
@@ -476,6 +478,7 @@ Exptree* opstackToExptree(Opstack *stack) {
     Exptree *tree = opstack_pop(stack);
 
     if (tree->type == EXPTREE_TYPE_ELEM || 
+        tree->type == EXPTREE_TYPE_VAR  || 
         tree->type == EXPTREE_TYPE_APPLY
     ) {
         return tree;

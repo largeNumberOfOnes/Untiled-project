@@ -39,7 +39,8 @@ typedef struct stringArray_t {
     size_t capacity;
     size_t occupancy;
 
-    char **array;
+    char  **array;
+    size_t *lensa;
 
 } StringArray;
 
@@ -47,25 +48,29 @@ StringArray* stringArray_init() {
 
     StringArray *arr = (StringArray*) malloc(sizeof(StringArray));
 
-    arr->array     = (char**) malloc(sizeof(char*)*10);
+    arr->array     = (char** ) malloc(sizeof(char* )*10);
+    arr->lensa     = (size_t*) malloc(sizeof(size_t)*10);
     arr->capacity  = 10;
     arr->occupancy = 0;
 
     return arr;
 }
 
-size_t stringArray_add(StringArray *arr, char *str) {
+size_t stringArray_add(StringArray *arr, char *str, size_t len) {
 
     assert(arr != NULL);
     assert(str != NULL);
 
     if (arr->capacity == arr->occupancy) {
-        arr->array = (char**) realloc(arr->array, sizeof(char*)*(arr->capacity)*2);
+        arr->array = (char** ) realloc(arr->array, sizeof(char* )*(arr->capacity)*2);
+        arr->lensa = (size_t*) realloc(arr->lensa, sizeof(size_t)*(arr->capacity)*2);
     }
 
     assert(arr->array != NULL);
 
     (arr->array)[(arr->occupancy)++] = str;
+    (arr->lensa)[(arr->occupancy)-1] = len;
+    // printf("-2-- %lu\n", arr->lensa[q]);
 
     return arr->occupancy - 1;
 }
@@ -76,7 +81,14 @@ int stringArray_printToFile(StringArray *arr, char *filePath) {
 
     for (size_t q = 0; q < arr->occupancy; ++q) {
 
-        fprintf(file, "%s", arr->array[q]);
+        int l = (int) (arr->lensa[q]);
+        // printf("-2-- %lu\n", arr->lensa[q]);
+        // printf("-1-- %d\n", l);
+        // fprintf(file, "%*s", l, arr->array[q]);
+        for (size_t w = 0; w < arr->lensa[q]; ++w) {
+            putc(arr->array[q][w], file);
+        }
+        // fprintf(file, "%s", arr->array[q]);
     }
 
     fclose(file); file = NULL;
@@ -111,14 +123,14 @@ Prog* prog_destr(Prog *prog) {
     return NULL;
 }
 
-size_t prog_dataAdd(Prog *prog, char *str) {
+size_t prog_dataAdd(Prog *prog, char *str, size_t len) {
 
-    return stringArray_add(prog->data, str);
+    return stringArray_add(prog->data, str, len);
 }
 
-size_t prog_codeAdd(Prog *prog, char *str) {
+size_t prog_codeAdd(Prog *prog, char *str, size_t len) {
 
-    return stringArray_add(prog->code, str);
+    return stringArray_add(prog->code, str, len);
 }
 
 size_t prog_codeAddCommand(Prog *prog, char command) {
@@ -127,7 +139,7 @@ size_t prog_codeAddCommand(Prog *prog, char command) {
     s[0] = command;
     s[1] = '\0';
 
-    return stringArray_add(prog->code, s);
+    return stringArray_add(prog->code, s, 1);
 }
 
 size_t prog_getDataLineCount(Prog *prog) {
@@ -153,20 +165,20 @@ int prog_printCodeToFile(Prog *prog, char *filePath) {
 //? ###########################################################################
 //? ###########################################################################
 
-int prog_addTree(Prog *prog, Exptree *tree);
-int prog_addApply(Prog *prog, Exptree *tree);
-int prog_addFunction(Prog *prog, Exptree *tree);
-int prog_addElem(Prog *prog, Exptree *tree);
+int prog_addTree(Prog *prog, Exptree *tree, Function *func);
+int prog_addApply(Prog *prog, Exptree *tree, Function *func);
+int prog_addFunction(Prog *prog, Exptree *tree, Function *func);
+int prog_addElem(Prog *prog, Exptree *tree, Function *func);
 
-int prog_addApply(Prog *prog, Exptree *tree) {
+int prog_addApply(Prog *prog, Exptree *tree, Function *func) {
 
-    prog_addTree(prog, ((Pair*)(tree->content))->arg);
-    prog_addTree(prog, ((Pair*)(tree->content))->func);
+    prog_addTree(prog, ((Pair*)(tree->content))->arg, func);
+    prog_addTree(prog, ((Pair*)(tree->content))->func, func);
 
     return 0;
 }
 
-int prog_addFunction(Prog *prog, Exptree *tree) {
+int prog_addFunction(Prog *prog, Exptree *tree, Function *func) {
 
     char* s = (char*) malloc(
         sizeof(char) * (strlen(((Function*)(tree->content))->name) + 2)
@@ -174,29 +186,26 @@ int prog_addFunction(Prog *prog, Exptree *tree) {
     s[0] = COMMAND_NEED_FOR_ADDRESS;
     s[1] = COMMAND_CALL;
     strcpy(s+2, ((Function*)(tree->content))->name);
-    prog_codeAdd(prog, s);
+    prog_codeAdd(prog, s, strlen(((Function*)(tree->content))->name) + 2);
 
     fprintf(glob_file, "NFA call %s\n", ((Function*)(tree->content))->name); // log
 
     return 0;
 }
 
-int prog_addElem(Prog *prog, Exptree *tree) {
+int prog_addElem(Prog *prog, Exptree *tree, Function *func) {
 
     assert(prog != NULL);
     assert(tree != NULL);
 
     // prog_addString(prog, "call");
-    if (FALSE) {
-
-    } else if (
+    if (
         tree->elemType->type == INT_TYPE &&
         tree->elemType->child == NULL
     ) {
 
-        printf("777-> %s", (char*) (tree->content));
         int val = atoi( (char*) (tree->content) );
-        printf("888-> %d", val);
+
         char *str = (char*) malloc(sizeof(char)*6);
         str[0] = DATATYPE_INT;
         str[1] = (char) (val >> 0 );
@@ -211,40 +220,62 @@ int prog_addElem(Prog *prog, Exptree *tree) {
         }
         printf("|\n");
         
-        prog_dataAdd(prog, str);
+        prog_dataAdd(prog, str, 5);
     } else {
-        
+
         CAP
     }
 
-    char *str = (char*) malloc(sizeof(char)*3);
+    char *str = (char*) malloc(sizeof(char)*(sizeof(size_t)+1));
     str[0] = COMMAND_PUSH;
     size_t line = prog_getDataLineCount(prog);
     convert_ToBytes(str+1, &line, sizeof(size_t));
-    prog_codeAdd(prog, str);
+    prog_codeAdd(prog, str, sizeof(size_t) + 1);
     // MES("Where elem must be added to data"); // dev
     fprintf(glob_file, "push %lu\n", line); // log
 
     return 0;
 }
 
-int prog_addTree(Prog *prog, Exptree *tree) {
+int prog_addVar(Prog *prog, Exptree *tree, Function *func) {
+
+    assert(prog != NULL);
+    assert(tree != NULL);
+
+    int num_ = function_getArgNum(func, (char*)(tree->content));
+    assert(num_ >= 0); // dev
+    size_t num = (size_t) num;
+
+    char *str = (char*) malloc(sizeof(char)*2 + sizeof(size_t));
+    str[0] = COMMAND_PUSHARG;
+    convert_ToBytes(str+1, &num, sizeof(size_t));
+    prog_codeAdd(prog, str, sizeof(size_t) + 1);
+    // MES("Where elem must be added to data"); // dev
+    fprintf(glob_file, "pushArg %lu\n", num); // log
+
+    return 0;
+}
+
+int prog_addTree(Prog *prog, Exptree *tree, Function *func) {
 
     assert(prog != NULL);
     assert(tree != NULL);
 
     if (tree->type == EXPTREE_TYPE_ELEM) {
 
-        return prog_addElem(prog, tree);
+        return prog_addElem(prog, tree, func);
+    } else if (tree->type == EXPTREE_TYPE_VAR) {
+
+        return prog_addVar(prog, tree, func);
     } else if (tree->type == EXPTREE_TYPE_APPLY) {
 
-        return prog_addApply(prog, tree);
+        return prog_addApply(prog, tree, func);
     } else if (
         tree->type == EXPTREE_TYPE_FUNCTION ||
         tree->type == EXPTREE_TYPE_OPERATOR
     ) {
 
-        return prog_addFunction(prog, tree);
+        return prog_addFunction(prog, tree, func);
     } else if (tree->type == EXPTREE_TYPE_IF) {
 
         CAP // dev
@@ -258,6 +289,8 @@ int prog_addTree(Prog *prog, Exptree *tree) {
 
 int functionAddressesSubstitution() {
     DOT
+
+    return 0;
 }
 
 //? ###########################################################################
@@ -283,7 +316,7 @@ int interpreter(Root *root) {
         iter->line = prog_getDataLineCount(prog) + 1;
 
         printf("name -> %s\n", iter->func->name);
-        prog_addTree(prog, iter->func->tree);
+        prog_addTree(prog, iter->func->tree, iter->func);
         
         prog_codeAddCommand(prog, COMMAND_RET);
 

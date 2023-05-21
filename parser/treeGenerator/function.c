@@ -1,7 +1,17 @@
 
 #include "tree_structs.h"
+#include "string.h"
 
+int function_getArgNum(Function *func, char *arg) {
 
+    for (int q = 0; q < func->argsCount; ++q) {
+        if (!strcmp(func->argNames[q], arg)) {
+            return q;
+        }
+    }
+
+    return -1;
+}
 
 int function_isOper(Function * func) {
 

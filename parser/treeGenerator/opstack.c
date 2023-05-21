@@ -24,7 +24,9 @@ Opstack* opstack_push(Opstack *stack, Exptree *tree) {
 
     while (stack->next) stack = stack->next;
 
-    if (tree->type == EXPTREE_TYPE_ELEM) {
+    if (tree->type == EXPTREE_TYPE_ELEM ||
+        tree->type == EXPTREE_TYPE_VAR
+    ) {
         printf("pushing to [%p]: %s\n", stack, (char*)(tree->content));
     } else {
         printf("pushing to [%p]: %s\n", stack, ((Function*)(tree->content))->name);
@@ -43,7 +45,9 @@ Exptree* opstack_pop(Opstack *stack) {
 
     Exptree *ret = stack->tree;
 
-    if (ret->type == EXPTREE_TYPE_ELEM) {
+    if (ret->type == EXPTREE_TYPE_ELEM ||
+        ret->type == EXPTREE_TYPE_VAR
+    ) {
         printf("poping from [%p]: %s\n", stack, (char*)(ret->content));
     } else {
         printf("poping from [%p]: %s\n", stack, ((Function*)(ret->content))->name);

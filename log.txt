@@ -1,36 +1,36 @@
-push 1
-push 2
+pushArg 94075681821616
+pushArg 94075653336910
 NFA call add
-push 3
-push 4
+pushArg 94075681822576
+pushArg 94075653336910
 NFA call sub
-push 5
-push 6
+pushArg 94075681824704
+pushArg 94075653336910
 NFA call mul
-push 7
-push 8
+pushArg 94075681825664
+pushArg 94075653336910
 NFA call div
-push 9
-push 10
-push 11
-push 12
+pushArg 0
+pushArg 140324982148064
+pushArg 140324982148064
+pushArg 94075653336910
 NFA call *
 NFA call -
 NFA call /
-push 13
+pushArg 94075681835280
 NFA call +
-push 14
-push 15
-push 16
-push 17
-push 18
-push 19
-push 20
+push 1
+pushArg 140324982148064
+pushArg 94075653336910
+pushArg 0
+pushArg 140324982148064
+pushArg 140324982148064
+pushArg 94075653336910
 NFA call *
 NFA call -
 NFA call /
-push 21
+pushArg 94075681835728
 NFA call +
-push 22
+pushArg 94075681835728
 NFA call workWithFour
 NFA call +

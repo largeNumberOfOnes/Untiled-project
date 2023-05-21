@@ -76,6 +76,7 @@ typedef struct function_t {
 
 Function* function_declaration(Token *token);
 int function_isOper(Function * func);
+int function_getArgNum(Function *func, char *arg);
 
 int function_dump(Function *func, FILE *file);
 
