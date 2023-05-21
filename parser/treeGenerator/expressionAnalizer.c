@@ -159,7 +159,7 @@ Exptree* exptree_initSimple(Token *token, Scope *scope) {
     ) {
         tree->type = EXPTREE_TYPE_OPERATOR;
     } else if (token->type == TOKEN_TYPE_VARIABLE) {
-        tree->type = EXPTREE_TYPE_ELEM;
+        tree->type = EXPTREE_TYPE_ELEM; // chan
     } else {
         printf("--> |%d|\n", token->type);
         CAP // dev
@@ -501,7 +501,7 @@ Exptree* weakexpression(Token **token_ptr, Scope *scope) {
 
     Opstack *output = reorder(token_ptr, scope);
     Exptree *tree = opstackToExptree(output);
-    if (!opstack_isEmpty(output)) { CAP } // It`is an error obviously
+    if (!opstack_isEmpty(output)) { CAP } // dev // It`is an error obviously
 
     return tree;
 }

@@ -6,6 +6,7 @@ gcc -g -c ../parser/preprocessor/*.c
 gcc -g -c ../parser/scanner/*.c
 gcc -g -c ../parser/treeGenerator/*.c
 gcc -g -c ../parser/typeTree/*.c
+gcc -g -c ../parser/interpreter/*.c
 gcc -g -c ../main.c
 
 cd ../

@@ -99,7 +99,7 @@ enum FUNCTION_DECL_OVERLAP function_isFunctionDeclEqual(Function *fn1, Function 
     
     //fn1->typeTree // devel
 
-    return EQUAL;    
+    return EQUAL;
 }
 
 Function* function_definition(Token *token, Root *root) {
@@ -150,15 +150,23 @@ int defineFunctions(Fence *fence, Root *root) {
     while (fence->prev) fence = fence->prev;
 
     // CAP
+    int isMainFunction = FALSE;
 
     while (fence) {
 
         if (!strcmp(fence->token->string, "def")) {
             DOT
             function_definition(fence->token, root);
+        } else if (!strcmp(fence->token->string, "main")) {
+            isMainFunction = TRUE;
+            // function_definition(fence->token, root); // dev
         }
 
         fence = fence->next;
+    }
+
+    if (!isMainFunction) {
+        CAP // dev // ERROR where should be main funnction
     }
 
     return 0;
@@ -175,8 +183,21 @@ Deflist* deflist_init(Function* func) {
     defList->prev = NULL;
 
     defList->func = func;
+    defList->line = 0;
 
     return defList;
+}
+
+Deflist* deflist_iteratorInit(Deflist *deflist) {
+
+    while (deflist->prev) deflist = deflist->prev;
+
+    return deflist;
+}
+
+Deflist* deflist_iteratorNext(Deflist *deflist) {
+
+    return deflist->next;
 }
 
 Deflist* deflist_search(Deflist *deflist, char *name) {
@@ -198,7 +219,6 @@ Deflist* deflist_search(Deflist *deflist, char *name) {
 int deflist_append(Deflist* deflist, Function* func) {
 DOT
     while (deflist->next) deflist = deflist->next;
-DOT
 
     Deflist* newdeflist = deflist_init(func);
 

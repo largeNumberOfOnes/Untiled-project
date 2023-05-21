@@ -20,6 +20,8 @@
 #include "parser/typeTree/treeSeparator.h"
 #include "parser/typeTree/treeElements.h"
 
+#include "parser/interpreter/interpreter.h"
+
 //? ############################################################################
 //? ############################################################################
 
@@ -91,6 +93,10 @@ int main() {
 
     root_printToFile(root, "rootDump.gr");
     system("dot -Tsvg rootDump.gr -o root.svg");
+
+    DOT
+
+    interpreter(root);
 
     CAP
     // printf("fence %p\n", fence);

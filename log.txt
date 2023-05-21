@@ -1,0 +1,36 @@
+push 1
+push 2
+NFA call add
+push 3
+push 4
+NFA call sub
+push 5
+push 6
+NFA call mul
+push 7
+push 8
+NFA call div
+push 9
+push 10
+push 11
+push 12
+NFA call *
+NFA call -
+NFA call /
+push 13
+NFA call +
+push 14
+push 15
+push 16
+push 17
+push 18
+push 19
+push 20
+NFA call *
+NFA call -
+NFA call /
+push 21
+NFA call +
+push 22
+NFA call workWithFour
+NFA call +

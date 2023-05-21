@@ -4,6 +4,7 @@
 
 #include "../typeTree/treeElements.h"
 #include "../typeTree/treeSeparator.h"
+#include <stddef.h>
 
 // root --*---> main
 //        *---> def
@@ -42,6 +43,7 @@ typedef struct exptree_t {
 enum EXPTREE_TYPE_ENUM {
     EXPTREE_TYPE_APPLY,
     EXPTREE_TYPE_ELEM,
+    EXPTREE_TYPE_VAR,
     EXPTREE_TYPE_FUNCTION,
     EXPTREE_TYPE_OPERATOR,
     EXPTREE_TYPE_IF,
@@ -86,6 +88,7 @@ typedef struct deflist_t {
     struct deflist_t *prev;
 
     Function *func;
+    size_t line;
 
 } Deflist;
 
@@ -95,6 +98,8 @@ Deflist* deflist_search(Deflist *deflist, char *name);
 
 Deflist* fenceToDefList(Fence *fence);
 
+Deflist* deflist_iteratorInit(Deflist *deflist);
+Deflist* deflist_iteratorNext(Deflist *deflist);
 
 //? ###########################################################################
 //? ###########################################################################
