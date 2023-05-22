@@ -1,696 +1,744 @@
 digraph {
-subgraph Fence94075681832272 {
+subgraph Fence93845777719456 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832272 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fd50| cont: 0x558fb398c980| next: 0x558fb398fd70| prev: (nil)}"]
-94075681819008 [shape=record, label="{Token|self: 0x558fb398c980| type: SOVEREIGN_def,
+	93845777719456 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea0a0| cont: 0x555a2c3e6980| next: 0x555a2c3ea0c0| prev: (nil)}"]
+93845777705344 [shape=record, label="{Token|self: 0x555a2c3e6980| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681819008 -> 94075681819088 [constraint=false]
-94075681819088 -> 94075681819008 [constraint=false]
-94075681819088 [shape=record, label="{Token|self: 0x558fb398c9d0| type: VARIABLE,
+93845777705344 -> 93845777705424 [constraint=false]
+93845777705424 -> 93845777705344 [constraint=false]
+93845777705424 [shape=record, label="{Token|self: 0x555a2c3e69d0| type: VARIABLE,
 | string: \|add\|}"]
-94075681819088 -> 94075681819168 [constraint=false]
-94075681819168 -> 94075681819088 [constraint=false]
-94075681819168 [shape=record, label="{Token|self: 0x558fb398ca20| type: VARIABLE,
+93845777705424 -> 93845777705504 [constraint=false]
+93845777705504 -> 93845777705424 [constraint=false]
+93845777705504 [shape=record, label="{Token|self: 0x555a2c3e6a20| type: VARIABLE,
 | string: \|a\|}"]
-94075681819168 -> 94075681819248 [constraint=false]
-94075681819248 -> 94075681819168 [constraint=false]
-94075681819248 [shape=record, label="{Token|self: 0x558fb398ca70| type: VARIABLE,
+93845777705504 -> 93845777705584 [constraint=false]
+93845777705584 -> 93845777705504 [constraint=false]
+93845777705584 [shape=record, label="{Token|self: 0x555a2c3e6a70| type: VARIABLE,
 | string: \|b\|}"]
-94075681819248 -> 94075681819328 [constraint=false]
-94075681819328 -> 94075681819248 [constraint=false]
-94075681819328 [shape=record, label="{Token|self: 0x558fb398cac0| type: OPERATOR,
+93845777705584 -> 93845777705664 [constraint=false]
+93845777705664 -> 93845777705584 [constraint=false]
+93845777705664 [shape=record, label="{Token|self: 0x555a2c3e6ac0| type: OPERATOR,
 | string: \|:\|}"]
-94075681819328 -> 94075681819408 [constraint=false]
-94075681819408 -> 94075681819328 [constraint=false]
-94075681819408 [shape=record, label="{Token|self: 0x558fb398cb10| type: INT,
+93845777705664 -> 93845777705744 [constraint=false]
+93845777705744 -> 93845777705664 [constraint=false]
+93845777705744 [shape=record, label="{Token|self: 0x555a2c3e6b10| type: INT,
 | string: \|100\|}"]
-94075681819408 -> 94075681819488 [constraint=false]
-94075681819488 -> 94075681819408 [constraint=false]
-94075681819488 [shape=record, label="{Token|self: 0x558fb398cb60| type: OPERATOR,
+93845777705744 -> 93845777705824 [constraint=false]
+93845777705824 -> 93845777705744 [constraint=false]
+93845777705824 [shape=record, label="{Token|self: 0x555a2c3e6b60| type: OPERATOR,
 | string: \|:\|}"]
-94075681819488 -> 94075681819568 [constraint=false]
-94075681819568 -> 94075681819488 [constraint=false]
-94075681819568 [shape=record, label="{Token|self: 0x558fb398cbb0| type: TYPE,
+93845777705824 -> 93845777705904 [constraint=false]
+93845777705904 -> 93845777705824 [constraint=false]
+93845777705904 [shape=record, label="{Token|self: 0x555a2c3e6bb0| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-{rank=same; 94075681832272 94075681819008 94075681819088 94075681819168 94075681819248 94075681819328 94075681819408 94075681819488 94075681819568}
-94075681832272 -> 94075681819008 [constraint=false]
+{rank=same; 93845777719456 93845777705344 93845777705424 93845777705504 93845777705584 93845777705664 93845777705744 93845777705824 93845777705904}
+93845777719456 -> 93845777705344 [constraint=false]
 
 }
-94075681832272 -> 94075681832304
-94075681832304 -> 94075681832272
-subgraph Fence94075681832304 {
+93845777719456 -> 93845777719488
+93845777719488 -> 93845777719456
+subgraph Fence93845777719488 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832304 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fd70| cont: 0x558fb398cc00| next: 0x558fb398fd90| prev: 0x558fb398fd50}"]
-94075681819648 [shape=record, label="{Token|self: 0x558fb398cc00| type: SOVEREIGN_def,
+	93845777719488 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea0c0| cont: 0x555a2c3e6c00| next: 0x555a2c3ea0e0| prev: 0x555a2c3ea0a0}"]
+93845777705984 [shape=record, label="{Token|self: 0x555a2c3e6c00| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681819648 -> 94075681819728 [constraint=false]
-94075681819728 -> 94075681819648 [constraint=false]
-94075681819728 [shape=record, label="{Token|self: 0x558fb398cc50| type: VARIABLE,
+93845777705984 -> 93845777706064 [constraint=false]
+93845777706064 -> 93845777705984 [constraint=false]
+93845777706064 [shape=record, label="{Token|self: 0x555a2c3e6c50| type: VARIABLE,
 | string: \|sub\|}"]
-94075681819728 -> 94075681819808 [constraint=false]
-94075681819808 -> 94075681819728 [constraint=false]
-94075681819808 [shape=record, label="{Token|self: 0x558fb398cca0| type: VARIABLE,
+93845777706064 -> 93845777706144 [constraint=false]
+93845777706144 -> 93845777706064 [constraint=false]
+93845777706144 [shape=record, label="{Token|self: 0x555a2c3e6ca0| type: VARIABLE,
 | string: \|a\|}"]
-94075681819808 -> 94075681819888 [constraint=false]
-94075681819888 -> 94075681819808 [constraint=false]
-94075681819888 [shape=record, label="{Token|self: 0x558fb398ccf0| type: VARIABLE,
+93845777706144 -> 93845777706224 [constraint=false]
+93845777706224 -> 93845777706144 [constraint=false]
+93845777706224 [shape=record, label="{Token|self: 0x555a2c3e6cf0| type: VARIABLE,
 | string: \|b\|}"]
-94075681819888 -> 94075681819968 [constraint=false]
-94075681819968 -> 94075681819888 [constraint=false]
-94075681819968 [shape=record, label="{Token|self: 0x558fb398cd40| type: OPERATOR,
+93845777706224 -> 93845777706304 [constraint=false]
+93845777706304 -> 93845777706224 [constraint=false]
+93845777706304 [shape=record, label="{Token|self: 0x555a2c3e6d40| type: OPERATOR,
 | string: \|:\|}"]
-94075681819968 -> 94075681820048 [constraint=false]
-94075681820048 -> 94075681819968 [constraint=false]
-94075681820048 [shape=record, label="{Token|self: 0x558fb398cd90| type: INT,
+93845777706304 -> 93845777706384 [constraint=false]
+93845777706384 -> 93845777706304 [constraint=false]
+93845777706384 [shape=record, label="{Token|self: 0x555a2c3e6d90| type: INT,
 | string: \|100\|}"]
-94075681820048 -> 94075681820128 [constraint=false]
-94075681820128 -> 94075681820048 [constraint=false]
-94075681820128 [shape=record, label="{Token|self: 0x558fb398cde0| type: OPERATOR,
+93845777706384 -> 93845777706464 [constraint=false]
+93845777706464 -> 93845777706384 [constraint=false]
+93845777706464 [shape=record, label="{Token|self: 0x555a2c3e6de0| type: OPERATOR,
 | string: \|:\|}"]
-94075681820128 -> 94075681820208 [constraint=false]
-94075681820208 -> 94075681820128 [constraint=false]
-94075681820208 [shape=record, label="{Token|self: 0x558fb398ce30| type: TYPE,
+93845777706464 -> 93845777706544 [constraint=false]
+93845777706544 -> 93845777706464 [constraint=false]
+93845777706544 [shape=record, label="{Token|self: 0x555a2c3e6e30| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-{rank=same; 94075681832304 94075681819648 94075681819728 94075681819808 94075681819888 94075681819968 94075681820048 94075681820128 94075681820208}
-94075681832304 -> 94075681819648 [constraint=false]
+{rank=same; 93845777719488 93845777705984 93845777706064 93845777706144 93845777706224 93845777706304 93845777706384 93845777706464 93845777706544}
+93845777719488 -> 93845777705984 [constraint=false]
 
 }
-94075681832304 -> 94075681832336
-94075681832336 -> 94075681832304
-subgraph Fence94075681832336 {
+93845777719488 -> 93845777719520
+93845777719520 -> 93845777719488
+subgraph Fence93845777719520 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832336 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fd90| cont: 0x558fb398ce80| next: 0x558fb398fdb0| prev: 0x558fb398fd70}"]
-94075681820288 [shape=record, label="{Token|self: 0x558fb398ce80| type: SOVEREIGN_def,
+	93845777719520 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea0e0| cont: 0x555a2c3e6e80| next: 0x555a2c3ea100| prev: 0x555a2c3ea0c0}"]
+93845777706624 [shape=record, label="{Token|self: 0x555a2c3e6e80| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681820288 -> 94075681820368 [constraint=false]
-94075681820368 -> 94075681820288 [constraint=false]
-94075681820368 [shape=record, label="{Token|self: 0x558fb398ced0| type: VARIABLE,
+93845777706624 -> 93845777706704 [constraint=false]
+93845777706704 -> 93845777706624 [constraint=false]
+93845777706704 [shape=record, label="{Token|self: 0x555a2c3e6ed0| type: VARIABLE,
 | string: \|mul\|}"]
-94075681820368 -> 94075681820448 [constraint=false]
-94075681820448 -> 94075681820368 [constraint=false]
-94075681820448 [shape=record, label="{Token|self: 0x558fb398cf20| type: VARIABLE,
+93845777706704 -> 93845777706784 [constraint=false]
+93845777706784 -> 93845777706704 [constraint=false]
+93845777706784 [shape=record, label="{Token|self: 0x555a2c3e6f20| type: VARIABLE,
 | string: \|a\|}"]
-94075681820448 -> 94075681820528 [constraint=false]
-94075681820528 -> 94075681820448 [constraint=false]
-94075681820528 [shape=record, label="{Token|self: 0x558fb398cf70| type: VARIABLE,
+93845777706784 -> 93845777706864 [constraint=false]
+93845777706864 -> 93845777706784 [constraint=false]
+93845777706864 [shape=record, label="{Token|self: 0x555a2c3e6f70| type: VARIABLE,
 | string: \|b\|}"]
-94075681820528 -> 94075681820608 [constraint=false]
-94075681820608 -> 94075681820528 [constraint=false]
-94075681820608 [shape=record, label="{Token|self: 0x558fb398cfc0| type: OPERATOR,
+93845777706864 -> 93845777706944 [constraint=false]
+93845777706944 -> 93845777706864 [constraint=false]
+93845777706944 [shape=record, label="{Token|self: 0x555a2c3e6fc0| type: OPERATOR,
 | string: \|:\|}"]
-94075681820608 -> 94075681820688 [constraint=false]
-94075681820688 -> 94075681820608 [constraint=false]
-94075681820688 [shape=record, label="{Token|self: 0x558fb398d010| type: INT,
+93845777706944 -> 93845777707024 [constraint=false]
+93845777707024 -> 93845777706944 [constraint=false]
+93845777707024 [shape=record, label="{Token|self: 0x555a2c3e7010| type: INT,
 | string: \|101\|}"]
-94075681820688 -> 94075681820768 [constraint=false]
-94075681820768 -> 94075681820688 [constraint=false]
-94075681820768 [shape=record, label="{Token|self: 0x558fb398d060| type: OPERATOR,
+93845777707024 -> 93845777707104 [constraint=false]
+93845777707104 -> 93845777707024 [constraint=false]
+93845777707104 [shape=record, label="{Token|self: 0x555a2c3e7060| type: OPERATOR,
 | string: \|:\|}"]
-94075681820768 -> 94075681820848 [constraint=false]
-94075681820848 -> 94075681820768 [constraint=false]
-94075681820848 [shape=record, label="{Token|self: 0x558fb398d0b0| type: TYPE,
+93845777707104 -> 93845777707184 [constraint=false]
+93845777707184 -> 93845777707104 [constraint=false]
+93845777707184 [shape=record, label="{Token|self: 0x555a2c3e70b0| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-{rank=same; 94075681832336 94075681820288 94075681820368 94075681820448 94075681820528 94075681820608 94075681820688 94075681820768 94075681820848}
-94075681832336 -> 94075681820288 [constraint=false]
+{rank=same; 93845777719520 93845777706624 93845777706704 93845777706784 93845777706864 93845777706944 93845777707024 93845777707104 93845777707184}
+93845777719520 -> 93845777706624 [constraint=false]
 
 }
-94075681832336 -> 94075681832368
-94075681832368 -> 94075681832336
-subgraph Fence94075681832368 {
+93845777719520 -> 93845777719552
+93845777719552 -> 93845777719520
+subgraph Fence93845777719552 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832368 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fdb0| cont: 0x558fb398d100| next: 0x558fb398fdd0| prev: 0x558fb398fd90}"]
-94075681820928 [shape=record, label="{Token|self: 0x558fb398d100| type: SOVEREIGN_def,
+	93845777719552 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea100| cont: 0x555a2c3e7100| next: 0x555a2c3ea120| prev: 0x555a2c3ea0e0}"]
+93845777707264 [shape=record, label="{Token|self: 0x555a2c3e7100| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681820928 -> 94075681821008 [constraint=false]
-94075681821008 -> 94075681820928 [constraint=false]
-94075681821008 [shape=record, label="{Token|self: 0x558fb398d150| type: VARIABLE,
+93845777707264 -> 93845777707344 [constraint=false]
+93845777707344 -> 93845777707264 [constraint=false]
+93845777707344 [shape=record, label="{Token|self: 0x555a2c3e7150| type: VARIABLE,
 | string: \|div\|}"]
-94075681821008 -> 94075681821088 [constraint=false]
-94075681821088 -> 94075681821008 [constraint=false]
-94075681821088 [shape=record, label="{Token|self: 0x558fb398d1a0| type: VARIABLE,
+93845777707344 -> 93845777707424 [constraint=false]
+93845777707424 -> 93845777707344 [constraint=false]
+93845777707424 [shape=record, label="{Token|self: 0x555a2c3e71a0| type: VARIABLE,
 | string: \|a\|}"]
-94075681821088 -> 94075681821168 [constraint=false]
-94075681821168 -> 94075681821088 [constraint=false]
-94075681821168 [shape=record, label="{Token|self: 0x558fb398d1f0| type: VARIABLE,
+93845777707424 -> 93845777707504 [constraint=false]
+93845777707504 -> 93845777707424 [constraint=false]
+93845777707504 [shape=record, label="{Token|self: 0x555a2c3e71f0| type: VARIABLE,
 | string: \|b\|}"]
-94075681821168 -> 94075681821248 [constraint=false]
-94075681821248 -> 94075681821168 [constraint=false]
-94075681821248 [shape=record, label="{Token|self: 0x558fb398d240| type: OPERATOR,
+93845777707504 -> 93845777707584 [constraint=false]
+93845777707584 -> 93845777707504 [constraint=false]
+93845777707584 [shape=record, label="{Token|self: 0x555a2c3e7240| type: OPERATOR,
 | string: \|:\|}"]
-94075681821248 -> 94075681821328 [constraint=false]
-94075681821328 -> 94075681821248 [constraint=false]
-94075681821328 [shape=record, label="{Token|self: 0x558fb398d290| type: INT,
+93845777707584 -> 93845777707664 [constraint=false]
+93845777707664 -> 93845777707584 [constraint=false]
+93845777707664 [shape=record, label="{Token|self: 0x555a2c3e7290| type: INT,
 | string: \|101\|}"]
-94075681821328 -> 94075681821408 [constraint=false]
-94075681821408 -> 94075681821328 [constraint=false]
-94075681821408 [shape=record, label="{Token|self: 0x558fb398d2e0| type: OPERATOR,
+93845777707664 -> 93845777707744 [constraint=false]
+93845777707744 -> 93845777707664 [constraint=false]
+93845777707744 [shape=record, label="{Token|self: 0x555a2c3e72e0| type: OPERATOR,
 | string: \|:\|}"]
-94075681821408 -> 94075681821488 [constraint=false]
-94075681821488 -> 94075681821408 [constraint=false]
-94075681821488 [shape=record, label="{Token|self: 0x558fb398d330| type: TYPE,
+93845777707744 -> 93845777707824 [constraint=false]
+93845777707824 -> 93845777707744 [constraint=false]
+93845777707824 [shape=record, label="{Token|self: 0x555a2c3e7330| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-{rank=same; 94075681832368 94075681820928 94075681821008 94075681821088 94075681821168 94075681821248 94075681821328 94075681821408 94075681821488}
-94075681832368 -> 94075681820928 [constraint=false]
+{rank=same; 93845777719552 93845777707264 93845777707344 93845777707424 93845777707504 93845777707584 93845777707664 93845777707744 93845777707824}
+93845777719552 -> 93845777707264 [constraint=false]
 
 }
-94075681832368 -> 94075681832400
-94075681832400 -> 94075681832368
-subgraph Fence94075681832400 {
+93845777719552 -> 93845777719584
+93845777719584 -> 93845777719552
+subgraph Fence93845777719584 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832400 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fdd0| cont: 0x558fb398d380| next: 0x558fb398fdf0| prev: 0x558fb398fdb0}"]
-94075681821568 [shape=record, label="{Token|self: 0x558fb398d380| type: SOVEREIGN_def,
+	93845777719584 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea120| cont: 0x555a2c3e7380| next: 0x555a2c3ea140| prev: 0x555a2c3ea100}"]
+93845777707904 [shape=record, label="{Token|self: 0x555a2c3e7380| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681821568 -> 94075681821648 [constraint=false]
-94075681821648 -> 94075681821568 [constraint=false]
-94075681821648 [shape=record, label="{Token|self: 0x558fb398d3d0| type: OPERATOR,
+93845777707904 -> 93845777707984 [constraint=false]
+93845777707984 -> 93845777707904 [constraint=false]
+93845777707984 [shape=record, label="{Token|self: 0x555a2c3e73d0| type: OPERATOR,
 | string: \|+\|}"]
-94075681821648 -> 94075681821728 [constraint=false]
-94075681821728 -> 94075681821648 [constraint=false]
-94075681821728 [shape=record, label="{Token|self: 0x558fb398d420| type: VARIABLE,
+93845777707984 -> 93845777708064 [constraint=false]
+93845777708064 -> 93845777707984 [constraint=false]
+93845777708064 [shape=record, label="{Token|self: 0x555a2c3e7420| type: VARIABLE,
 | string: \|a\|}"]
-94075681821728 -> 94075681821808 [constraint=false]
-94075681821808 -> 94075681821728 [constraint=false]
-94075681821808 [shape=record, label="{Token|self: 0x558fb398d470| type: VARIABLE,
+93845777708064 -> 93845777708144 [constraint=false]
+93845777708144 -> 93845777708064 [constraint=false]
+93845777708144 [shape=record, label="{Token|self: 0x555a2c3e7470| type: VARIABLE,
 | string: \|b\|}"]
-94075681821808 -> 94075681821888 [constraint=false]
-94075681821888 -> 94075681821808 [constraint=false]
-94075681821888 [shape=record, label="{Token|self: 0x558fb398d4c0| type: OPERATOR,
+93845777708144 -> 93845777708224 [constraint=false]
+93845777708224 -> 93845777708144 [constraint=false]
+93845777708224 [shape=record, label="{Token|self: 0x555a2c3e74c0| type: OPERATOR,
 | string: \|:\|}"]
-94075681821888 -> 94075681821968 [constraint=false]
-94075681821968 -> 94075681821888 [constraint=false]
-94075681821968 [shape=record, label="{Token|self: 0x558fb398d510| type: INT,
+93845777708224 -> 93845777708304 [constraint=false]
+93845777708304 -> 93845777708224 [constraint=false]
+93845777708304 [shape=record, label="{Token|self: 0x555a2c3e7510| type: INT,
 | string: \|100\|}"]
-94075681821968 -> 94075681822048 [constraint=false]
-94075681822048 -> 94075681821968 [constraint=false]
-94075681822048 [shape=record, label="{Token|self: 0x558fb398d560| type: OPERATOR,
+93845777708304 -> 93845777708384 [constraint=false]
+93845777708384 -> 93845777708304 [constraint=false]
+93845777708384 [shape=record, label="{Token|self: 0x555a2c3e7560| type: OPERATOR,
 | string: \|:\|}"]
-94075681822048 -> 94075681822128 [constraint=false]
-94075681822128 -> 94075681822048 [constraint=false]
-94075681822128 [shape=record, label="{Token|self: 0x558fb398d5b0| type: TYPE,
+93845777708384 -> 93845777708464 [constraint=false]
+93845777708464 -> 93845777708384 [constraint=false]
+93845777708464 [shape=record, label="{Token|self: 0x555a2c3e75b0| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-94075681822128 -> 94075681822208 [constraint=false]
-94075681822208 -> 94075681822128 [constraint=false]
-94075681822208 [shape=record, label="{Token|self: 0x558fb398d600| type: OPERATOR,
+93845777708464 -> 93845777708544 [constraint=false]
+93845777708544 -> 93845777708464 [constraint=false]
+93845777708544 [shape=record, label="{Token|self: 0x555a2c3e7600| type: OPERATOR,
 | string: \|=\|}"]
-94075681822208 -> 94075681822288 [constraint=false]
-94075681822288 -> 94075681822208 [constraint=false]
-94075681822288 [shape=record, label="{Token|self: 0x558fb398d650| type: VARIABLE,
+93845777708544 -> 93845777708624 [constraint=false]
+93845777708624 -> 93845777708544 [constraint=false]
+93845777708624 [shape=record, label="{Token|self: 0x555a2c3e7650| type: VARIABLE,
 | string: \|add\|}"]
-94075681822288 -> 94075681822368 [constraint=false]
-94075681822368 -> 94075681822288 [constraint=false]
-94075681822368 [shape=record, label="{Token|self: 0x558fb398d6a0| type: VARIABLE,
+93845777708624 -> 93845777708704 [constraint=false]
+93845777708704 -> 93845777708624 [constraint=false]
+93845777708704 [shape=record, label="{Token|self: 0x555a2c3e76a0| type: VARIABLE,
 | string: \|a\|}"]
-94075681822368 -> 94075681822448 [constraint=false]
-94075681822448 -> 94075681822368 [constraint=false]
-94075681822448 [shape=record, label="{Token|self: 0x558fb398d6f0| type: VARIABLE,
+93845777708704 -> 93845777708784 [constraint=false]
+93845777708784 -> 93845777708704 [constraint=false]
+93845777708784 [shape=record, label="{Token|self: 0x555a2c3e76f0| type: VARIABLE,
 | string: \|b\|}"]
-{rank=same; 94075681832400 94075681821568 94075681821648 94075681821728 94075681821808 94075681821888 94075681821968 94075681822048 94075681822128 94075681822208 94075681822288 94075681822368 94075681822448}
-94075681832400 -> 94075681821568 [constraint=false]
+{rank=same; 93845777719584 93845777707904 93845777707984 93845777708064 93845777708144 93845777708224 93845777708304 93845777708384 93845777708464 93845777708544 93845777708624 93845777708704 93845777708784}
+93845777719584 -> 93845777707904 [constraint=false]
 
 }
-94075681832400 -> 94075681832432
-94075681832432 -> 94075681832400
-subgraph Fence94075681832432 {
+93845777719584 -> 93845777719616
+93845777719616 -> 93845777719584
+subgraph Fence93845777719616 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832432 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fdf0| cont: 0x558fb398d740| next: 0x558fb398fe10| prev: 0x558fb398fdd0}"]
-94075681822528 [shape=record, label="{Token|self: 0x558fb398d740| type: SOVEREIGN_def,
+	93845777719616 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea140| cont: 0x555a2c3e7740| next: 0x555a2c3ea160| prev: 0x555a2c3ea120}"]
+93845777708864 [shape=record, label="{Token|self: 0x555a2c3e7740| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681822528 -> 94075681822608 [constraint=false]
-94075681822608 -> 94075681822528 [constraint=false]
-94075681822608 [shape=record, label="{Token|self: 0x558fb398d790| type: OPERATOR,
+93845777708864 -> 93845777708944 [constraint=false]
+93845777708944 -> 93845777708864 [constraint=false]
+93845777708944 [shape=record, label="{Token|self: 0x555a2c3e7790| type: OPERATOR,
 | string: \|-\|}"]
-94075681822608 -> 94075681822688 [constraint=false]
-94075681822688 -> 94075681822608 [constraint=false]
-94075681822688 [shape=record, label="{Token|self: 0x558fb398d7e0| type: VARIABLE,
+93845777708944 -> 93845777709024 [constraint=false]
+93845777709024 -> 93845777708944 [constraint=false]
+93845777709024 [shape=record, label="{Token|self: 0x555a2c3e77e0| type: VARIABLE,
 | string: \|a\|}"]
-94075681822688 -> 94075681822768 [constraint=false]
-94075681822768 -> 94075681822688 [constraint=false]
-94075681822768 [shape=record, label="{Token|self: 0x558fb398d830| type: VARIABLE,
+93845777709024 -> 93845777709104 [constraint=false]
+93845777709104 -> 93845777709024 [constraint=false]
+93845777709104 [shape=record, label="{Token|self: 0x555a2c3e7830| type: VARIABLE,
 | string: \|b\|}"]
-94075681822768 -> 94075681824048 [constraint=false]
-94075681824048 -> 94075681822768 [constraint=false]
-94075681824048 [shape=record, label="{Token|self: 0x558fb398dd30| type: OPERATOR,
+93845777709104 -> 93845777710432 [constraint=false]
+93845777710432 -> 93845777709104 [constraint=false]
+93845777710432 [shape=record, label="{Token|self: 0x555a2c3e7d60| type: OPERATOR,
 | string: \|:\|}"]
-94075681824048 -> 94075681824096 [constraint=false]
-94075681824096 -> 94075681824048 [constraint=false]
-94075681824096 [shape=record, label="{Token|self: 0x558fb398dd60| type: INT,
+93845777710432 -> 93845777710480 [constraint=false]
+93845777710480 -> 93845777710432 [constraint=false]
+93845777710480 [shape=record, label="{Token|self: 0x555a2c3e7d90| type: INT,
 | string: \|100\|}"]
-94075681824096 -> 94075681824176 [constraint=false]
-94075681824176 -> 94075681824096 [constraint=false]
-94075681824176 [shape=record, label="{Token|self: 0x558fb398ddb0| type: OPERATOR,
+93845777710480 -> 93845777710560 [constraint=false]
+93845777710560 -> 93845777710480 [constraint=false]
+93845777710560 [shape=record, label="{Token|self: 0x555a2c3e7de0| type: OPERATOR,
 | string: \|:\|}"]
-94075681824176 -> 94075681824256 [constraint=false]
-94075681824256 -> 94075681824176 [constraint=false]
-94075681824256 [shape=record, label="{Token|self: 0x558fb398de00| type: TYPE,
+93845777710560 -> 93845777710640 [constraint=false]
+93845777710640 -> 93845777710560 [constraint=false]
+93845777710640 [shape=record, label="{Token|self: 0x555a2c3e7e30| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-94075681824256 -> 94075681824336 [constraint=false]
-94075681824336 -> 94075681824256 [constraint=false]
-94075681824336 [shape=record, label="{Token|self: 0x558fb398de50| type: OPERATOR,
+93845777710640 -> 93845777710720 [constraint=false]
+93845777710720 -> 93845777710640 [constraint=false]
+93845777710720 [shape=record, label="{Token|self: 0x555a2c3e7e80| type: OPERATOR,
 | string: \|=\|}"]
-94075681824336 -> 94075681824416 [constraint=false]
-94075681824416 -> 94075681824336 [constraint=false]
-94075681824416 [shape=record, label="{Token|self: 0x558fb398dea0| type: VARIABLE,
+93845777710720 -> 93845777710800 [constraint=false]
+93845777710800 -> 93845777710720 [constraint=false]
+93845777710800 [shape=record, label="{Token|self: 0x555a2c3e7ed0| type: VARIABLE,
 | string: \|sub\|}"]
-94075681824416 -> 94075681824496 [constraint=false]
-94075681824496 -> 94075681824416 [constraint=false]
-94075681824496 [shape=record, label="{Token|self: 0x558fb398def0| type: VARIABLE,
+93845777710800 -> 93845777710880 [constraint=false]
+93845777710880 -> 93845777710800 [constraint=false]
+93845777710880 [shape=record, label="{Token|self: 0x555a2c3e7f20| type: VARIABLE,
 | string: \|a\|}"]
-94075681824496 -> 94075681824576 [constraint=false]
-94075681824576 -> 94075681824496 [constraint=false]
-94075681824576 [shape=record, label="{Token|self: 0x558fb398df40| type: VARIABLE,
+93845777710880 -> 93845777710960 [constraint=false]
+93845777710960 -> 93845777710880 [constraint=false]
+93845777710960 [shape=record, label="{Token|self: 0x555a2c3e7f70| type: VARIABLE,
 | string: \|b\|}"]
-{rank=same; 94075681832432 94075681822528 94075681822608 94075681822688 94075681822768 94075681824048 94075681824096 94075681824176 94075681824256 94075681824336 94075681824416 94075681824496 94075681824576}
-94075681832432 -> 94075681822528 [constraint=false]
+{rank=same; 93845777719616 93845777708864 93845777708944 93845777709024 93845777709104 93845777710432 93845777710480 93845777710560 93845777710640 93845777710720 93845777710800 93845777710880 93845777710960}
+93845777719616 -> 93845777708864 [constraint=false]
 
 }
-94075681832432 -> 94075681832464
-94075681832464 -> 94075681832432
-subgraph Fence94075681832464 {
+93845777719616 -> 93845777719648
+93845777719648 -> 93845777719616
+subgraph Fence93845777719648 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832464 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fe10| cont: 0x558fb398df90| next: 0x558fb398fe30| prev: 0x558fb398fdf0}"]
-94075681824656 [shape=record, label="{Token|self: 0x558fb398df90| type: SOVEREIGN_def,
+	93845777719648 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea160| cont: 0x555a2c3e7fc0| next: 0x555a2c3ea180| prev: 0x555a2c3ea140}"]
+93845777711040 [shape=record, label="{Token|self: 0x555a2c3e7fc0| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681824656 -> 94075681824736 [constraint=false]
-94075681824736 -> 94075681824656 [constraint=false]
-94075681824736 [shape=record, label="{Token|self: 0x558fb398dfe0| type: OPERATOR,
+93845777711040 -> 93845777711120 [constraint=false]
+93845777711120 -> 93845777711040 [constraint=false]
+93845777711120 [shape=record, label="{Token|self: 0x555a2c3e8010| type: OPERATOR,
 | string: \|*\|}"]
-94075681824736 -> 94075681824816 [constraint=false]
-94075681824816 -> 94075681824736 [constraint=false]
-94075681824816 [shape=record, label="{Token|self: 0x558fb398e030| type: VARIABLE,
+93845777711120 -> 93845777711200 [constraint=false]
+93845777711200 -> 93845777711120 [constraint=false]
+93845777711200 [shape=record, label="{Token|self: 0x555a2c3e8060| type: VARIABLE,
 | string: \|a\|}"]
-94075681824816 -> 94075681824896 [constraint=false]
-94075681824896 -> 94075681824816 [constraint=false]
-94075681824896 [shape=record, label="{Token|self: 0x558fb398e080| type: VARIABLE,
+93845777711200 -> 93845777711280 [constraint=false]
+93845777711280 -> 93845777711200 [constraint=false]
+93845777711280 [shape=record, label="{Token|self: 0x555a2c3e80b0| type: VARIABLE,
 | string: \|b\|}"]
-94075681824896 -> 94075681824976 [constraint=false]
-94075681824976 -> 94075681824896 [constraint=false]
-94075681824976 [shape=record, label="{Token|self: 0x558fb398e0d0| type: OPERATOR,
+93845777711280 -> 93845777711360 [constraint=false]
+93845777711360 -> 93845777711280 [constraint=false]
+93845777711360 [shape=record, label="{Token|self: 0x555a2c3e8100| type: OPERATOR,
 | string: \|:\|}"]
-94075681824976 -> 94075681825056 [constraint=false]
-94075681825056 -> 94075681824976 [constraint=false]
-94075681825056 [shape=record, label="{Token|self: 0x558fb398e120| type: INT,
+93845777711360 -> 93845777711440 [constraint=false]
+93845777711440 -> 93845777711360 [constraint=false]
+93845777711440 [shape=record, label="{Token|self: 0x555a2c3e8150| type: INT,
 | string: \|101\|}"]
-94075681825056 -> 94075681825136 [constraint=false]
-94075681825136 -> 94075681825056 [constraint=false]
-94075681825136 [shape=record, label="{Token|self: 0x558fb398e170| type: OPERATOR,
+93845777711440 -> 93845777711520 [constraint=false]
+93845777711520 -> 93845777711440 [constraint=false]
+93845777711520 [shape=record, label="{Token|self: 0x555a2c3e81a0| type: OPERATOR,
 | string: \|:\|}"]
-94075681825136 -> 94075681825216 [constraint=false]
-94075681825216 -> 94075681825136 [constraint=false]
-94075681825216 [shape=record, label="{Token|self: 0x558fb398e1c0| type: TYPE,
+93845777711520 -> 93845777711600 [constraint=false]
+93845777711600 -> 93845777711520 [constraint=false]
+93845777711600 [shape=record, label="{Token|self: 0x555a2c3e81f0| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-94075681825216 -> 94075681825296 [constraint=false]
-94075681825296 -> 94075681825216 [constraint=false]
-94075681825296 [shape=record, label="{Token|self: 0x558fb398e210| type: OPERATOR,
+93845777711600 -> 93845777711680 [constraint=false]
+93845777711680 -> 93845777711600 [constraint=false]
+93845777711680 [shape=record, label="{Token|self: 0x555a2c3e8240| type: OPERATOR,
 | string: \|=\|}"]
-94075681825296 -> 94075681825376 [constraint=false]
-94075681825376 -> 94075681825296 [constraint=false]
-94075681825376 [shape=record, label="{Token|self: 0x558fb398e260| type: VARIABLE,
+93845777711680 -> 93845777711760 [constraint=false]
+93845777711760 -> 93845777711680 [constraint=false]
+93845777711760 [shape=record, label="{Token|self: 0x555a2c3e8290| type: VARIABLE,
 | string: \|mul\|}"]
-94075681825376 -> 94075681825456 [constraint=false]
-94075681825456 -> 94075681825376 [constraint=false]
-94075681825456 [shape=record, label="{Token|self: 0x558fb398e2b0| type: VARIABLE,
+93845777711760 -> 93845777711840 [constraint=false]
+93845777711840 -> 93845777711760 [constraint=false]
+93845777711840 [shape=record, label="{Token|self: 0x555a2c3e82e0| type: VARIABLE,
 | string: \|a\|}"]
-94075681825456 -> 94075681825536 [constraint=false]
-94075681825536 -> 94075681825456 [constraint=false]
-94075681825536 [shape=record, label="{Token|self: 0x558fb398e300| type: VARIABLE,
+93845777711840 -> 93845777711920 [constraint=false]
+93845777711920 -> 93845777711840 [constraint=false]
+93845777711920 [shape=record, label="{Token|self: 0x555a2c3e8330| type: VARIABLE,
 | string: \|b\|}"]
-{rank=same; 94075681832464 94075681824656 94075681824736 94075681824816 94075681824896 94075681824976 94075681825056 94075681825136 94075681825216 94075681825296 94075681825376 94075681825456 94075681825536}
-94075681832464 -> 94075681824656 [constraint=false]
+{rank=same; 93845777719648 93845777711040 93845777711120 93845777711200 93845777711280 93845777711360 93845777711440 93845777711520 93845777711600 93845777711680 93845777711760 93845777711840 93845777711920}
+93845777719648 -> 93845777711040 [constraint=false]
 
 }
-94075681832464 -> 94075681832496
-94075681832496 -> 94075681832464
-subgraph Fence94075681832496 {
+93845777719648 -> 93845777719680
+93845777719680 -> 93845777719648
+subgraph Fence93845777719680 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832496 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fe30| cont: 0x558fb398e350| next: 0x558fb398fe50| prev: 0x558fb398fe10}"]
-94075681825616 [shape=record, label="{Token|self: 0x558fb398e350| type: SOVEREIGN_def,
+	93845777719680 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea180| cont: 0x555a2c3e8380| next: 0x555a2c3ea1a0| prev: 0x555a2c3ea160}"]
+93845777712000 [shape=record, label="{Token|self: 0x555a2c3e8380| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681825616 -> 94075681825696 [constraint=false]
-94075681825696 -> 94075681825616 [constraint=false]
-94075681825696 [shape=record, label="{Token|self: 0x558fb398e3a0| type: OPERATOR,
+93845777712000 -> 93845777712080 [constraint=false]
+93845777712080 -> 93845777712000 [constraint=false]
+93845777712080 [shape=record, label="{Token|self: 0x555a2c3e83d0| type: OPERATOR,
 | string: \|/\|}"]
-94075681825696 -> 94075681825776 [constraint=false]
-94075681825776 -> 94075681825696 [constraint=false]
-94075681825776 [shape=record, label="{Token|self: 0x558fb398e3f0| type: VARIABLE,
+93845777712080 -> 93845777712160 [constraint=false]
+93845777712160 -> 93845777712080 [constraint=false]
+93845777712160 [shape=record, label="{Token|self: 0x555a2c3e8420| type: VARIABLE,
 | string: \|a\|}"]
-94075681825776 -> 94075681825856 [constraint=false]
-94075681825856 -> 94075681825776 [constraint=false]
-94075681825856 [shape=record, label="{Token|self: 0x558fb398e440| type: VARIABLE,
+93845777712160 -> 93845777712240 [constraint=false]
+93845777712240 -> 93845777712160 [constraint=false]
+93845777712240 [shape=record, label="{Token|self: 0x555a2c3e8470| type: VARIABLE,
 | string: \|b\|}"]
-94075681825856 -> 94075681825936 [constraint=false]
-94075681825936 -> 94075681825856 [constraint=false]
-94075681825936 [shape=record, label="{Token|self: 0x558fb398e490| type: OPERATOR,
+93845777712240 -> 93845777712320 [constraint=false]
+93845777712320 -> 93845777712240 [constraint=false]
+93845777712320 [shape=record, label="{Token|self: 0x555a2c3e84c0| type: OPERATOR,
 | string: \|:\|}"]
-94075681825936 -> 94075681826016 [constraint=false]
-94075681826016 -> 94075681825936 [constraint=false]
-94075681826016 [shape=record, label="{Token|self: 0x558fb398e4e0| type: INT,
+93845777712320 -> 93845777712400 [constraint=false]
+93845777712400 -> 93845777712320 [constraint=false]
+93845777712400 [shape=record, label="{Token|self: 0x555a2c3e8510| type: INT,
 | string: \|101\|}"]
-94075681826016 -> 94075681826096 [constraint=false]
-94075681826096 -> 94075681826016 [constraint=false]
-94075681826096 [shape=record, label="{Token|self: 0x558fb398e530| type: OPERATOR,
+93845777712400 -> 93845777712480 [constraint=false]
+93845777712480 -> 93845777712400 [constraint=false]
+93845777712480 [shape=record, label="{Token|self: 0x555a2c3e8560| type: OPERATOR,
 | string: \|:\|}"]
-94075681826096 -> 94075681826176 [constraint=false]
-94075681826176 -> 94075681826096 [constraint=false]
-94075681826176 [shape=record, label="{Token|self: 0x558fb398e580| type: TYPE,
+93845777712480 -> 93845777712560 [constraint=false]
+93845777712560 -> 93845777712480 [constraint=false]
+93845777712560 [shape=record, label="{Token|self: 0x555a2c3e85b0| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-94075681826176 -> 94075681826256 [constraint=false]
-94075681826256 -> 94075681826176 [constraint=false]
-94075681826256 [shape=record, label="{Token|self: 0x558fb398e5d0| type: OPERATOR,
+93845777712560 -> 93845777712640 [constraint=false]
+93845777712640 -> 93845777712560 [constraint=false]
+93845777712640 [shape=record, label="{Token|self: 0x555a2c3e8600| type: OPERATOR,
 | string: \|=\|}"]
-94075681826256 -> 94075681826336 [constraint=false]
-94075681826336 -> 94075681826256 [constraint=false]
-94075681826336 [shape=record, label="{Token|self: 0x558fb398e620| type: VARIABLE,
+93845777712640 -> 93845777712720 [constraint=false]
+93845777712720 -> 93845777712640 [constraint=false]
+93845777712720 [shape=record, label="{Token|self: 0x555a2c3e8650| type: VARIABLE,
 | string: \|div\|}"]
-94075681826336 -> 94075681826416 [constraint=false]
-94075681826416 -> 94075681826336 [constraint=false]
-94075681826416 [shape=record, label="{Token|self: 0x558fb398e670| type: VARIABLE,
+93845777712720 -> 93845777712800 [constraint=false]
+93845777712800 -> 93845777712720 [constraint=false]
+93845777712800 [shape=record, label="{Token|self: 0x555a2c3e86a0| type: VARIABLE,
 | string: \|a\|}"]
-94075681826416 -> 94075681826496 [constraint=false]
-94075681826496 -> 94075681826416 [constraint=false]
-94075681826496 [shape=record, label="{Token|self: 0x558fb398e6c0| type: VARIABLE,
+93845777712800 -> 93845777712880 [constraint=false]
+93845777712880 -> 93845777712800 [constraint=false]
+93845777712880 [shape=record, label="{Token|self: 0x555a2c3e86f0| type: VARIABLE,
 | string: \|b\|}"]
-{rank=same; 94075681832496 94075681825616 94075681825696 94075681825776 94075681825856 94075681825936 94075681826016 94075681826096 94075681826176 94075681826256 94075681826336 94075681826416 94075681826496}
-94075681832496 -> 94075681825616 [constraint=false]
+{rank=same; 93845777719680 93845777712000 93845777712080 93845777712160 93845777712240 93845777712320 93845777712400 93845777712480 93845777712560 93845777712640 93845777712720 93845777712800 93845777712880}
+93845777719680 -> 93845777712000 [constraint=false]
 
 }
-94075681832496 -> 94075681832528
-94075681832528 -> 94075681832496
-subgraph Fence94075681832528 {
+93845777719680 -> 93845777719712
+93845777719712 -> 93845777719680
+subgraph Fence93845777719712 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832528 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fe50| cont: 0x558fb398e710| next: 0x558fb398fe70| prev: 0x558fb398fe30}"]
-94075681826576 [shape=record, label="{Token|self: 0x558fb398e710| type: SOVEREIGN_def,
+	93845777719712 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea1a0| cont: 0x555a2c3e8740| next: 0x555a2c3ea1c0| prev: 0x555a2c3ea180}"]
+93845777712960 [shape=record, label="{Token|self: 0x555a2c3e8740| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681826576 -> 94075681826656 [constraint=false]
-94075681826656 -> 94075681826576 [constraint=false]
-94075681826656 [shape=record, label="{Token|self: 0x558fb398e760| type: OPERATOR,
+93845777712960 -> 93845777713040 [constraint=false]
+93845777713040 -> 93845777712960 [constraint=false]
+93845777713040 [shape=record, label="{Token|self: 0x555a2c3e8790| type: OPERATOR,
 | string: \|==\|}"]
-94075681826656 -> 94075681826736 [constraint=false]
-94075681826736 -> 94075681826656 [constraint=false]
-94075681826736 [shape=record, label="{Token|self: 0x558fb398e7b0| type: VARIABLE,
+93845777713040 -> 93845777713120 [constraint=false]
+93845777713120 -> 93845777713040 [constraint=false]
+93845777713120 [shape=record, label="{Token|self: 0x555a2c3e87e0| type: VARIABLE,
 | string: \|a\|}"]
-94075681826736 -> 94075681826816 [constraint=false]
-94075681826816 -> 94075681826736 [constraint=false]
-94075681826816 [shape=record, label="{Token|self: 0x558fb398e800| type: VARIABLE,
+93845777713120 -> 93845777713200 [constraint=false]
+93845777713200 -> 93845777713120 [constraint=false]
+93845777713200 [shape=record, label="{Token|self: 0x555a2c3e8830| type: VARIABLE,
 | string: \|b\|}"]
-94075681826816 -> 94075681826896 [constraint=false]
-94075681826896 -> 94075681826816 [constraint=false]
-94075681826896 [shape=record, label="{Token|self: 0x558fb398e850| type: OPERATOR,
+93845777713200 -> 93845777713280 [constraint=false]
+93845777713280 -> 93845777713200 [constraint=false]
+93845777713280 [shape=record, label="{Token|self: 0x555a2c3e8880| type: OPERATOR,
 | string: \|:\|}"]
-94075681826896 -> 94075681826976 [constraint=false]
-94075681826976 -> 94075681826896 [constraint=false]
-94075681826976 [shape=record, label="{Token|self: 0x558fb398e8a0| type: INT,
+93845777713280 -> 93845777713360 [constraint=false]
+93845777713360 -> 93845777713280 [constraint=false]
+93845777713360 [shape=record, label="{Token|self: 0x555a2c3e88d0| type: INT,
 | string: \|99\|}"]
-94075681826976 -> 94075681827056 [constraint=false]
-94075681827056 -> 94075681826976 [constraint=false]
-94075681827056 [shape=record, label="{Token|self: 0x558fb398e8f0| type: OPERATOR,
+93845777713360 -> 93845777713440 [constraint=false]
+93845777713440 -> 93845777713360 [constraint=false]
+93845777713440 [shape=record, label="{Token|self: 0x555a2c3e8920| type: OPERATOR,
 | string: \|:\|}"]
-94075681827056 -> 94075681827136 [constraint=false]
-94075681827136 -> 94075681827056 [constraint=false]
-94075681827136 [shape=record, label="{Token|self: 0x558fb398e940| type: TYPE,
+93845777713440 -> 93845777713520 [constraint=false]
+93845777713520 -> 93845777713440 [constraint=false]
+93845777713520 [shape=record, label="{Token|self: 0x555a2c3e8970| type: TYPE,
 | string: \|Int-\>Int-\>Int\|}"]
-{rank=same; 94075681832528 94075681826576 94075681826656 94075681826736 94075681826816 94075681826896 94075681826976 94075681827056 94075681827136}
-94075681832528 -> 94075681826576 [constraint=false]
+{rank=same; 93845777719712 93845777712960 93845777713040 93845777713120 93845777713200 93845777713280 93845777713360 93845777713440 93845777713520}
+93845777719712 -> 93845777712960 [constraint=false]
 
 }
-94075681832528 -> 94075681832560
-94075681832560 -> 94075681832528
-subgraph Fence94075681832560 {
+93845777719712 -> 93845777719744
+93845777719744 -> 93845777719712
+subgraph Fence93845777719744 {
 	style=filled;
 	bcolor="lightgrey;"
-	94075681832560 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fe70| cont: 0x558fb398e990| next: 0x558fb398fe90| prev: 0x558fb398fe50}"]
-94075681827216 [shape=record, label="{Token|self: 0x558fb398e990| type: SOVEREIGN_def,
+	93845777719744 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea1c0| cont: 0x555a2c3e89c0| next: 0x555a2c3ea1e0| prev: 0x555a2c3ea1a0}"]
+93845777713600 [shape=record, label="{Token|self: 0x555a2c3e89c0| type: SOVEREIGN_def,
 | string: \|def\|}"]
-94075681827216 -> 94075681827296 [constraint=false]
-94075681827296 -> 94075681827216 [constraint=false]
-94075681827296 [shape=record, label="{Token|self: 0x558fb398e9e0| type: VARIABLE,
-| string: \|workWithFour\|}"]
-94075681827296 -> 94075681827376 [constraint=false]
-94075681827376 -> 94075681827296 [constraint=false]
-94075681827376 [shape=record, label="{Token|self: 0x558fb398ea30| type: VARIABLE,
-| string: \|a\|}"]
-94075681827376 -> 94075681827456 [constraint=false]
-94075681827456 -> 94075681827376 [constraint=false]
-94075681827456 [shape=record, label="{Token|self: 0x558fb398ea80| type: VARIABLE,
-| string: \|b\|}"]
-94075681827456 -> 94075681827536 [constraint=false]
-94075681827536 -> 94075681827456 [constraint=false]
-94075681827536 [shape=record, label="{Token|self: 0x558fb398ead0| type: VARIABLE,
-| string: \|c\|}"]
-94075681827536 -> 94075681827616 [constraint=false]
-94075681827616 -> 94075681827536 [constraint=false]
-94075681827616 [shape=record, label="{Token|self: 0x558fb398eb20| type: VARIABLE,
-| string: \|d\|}"]
-94075681827616 -> 94075681827696 [constraint=false]
-94075681827696 -> 94075681827616 [constraint=false]
-94075681827696 [shape=record, label="{Token|self: 0x558fb398eb70| type: OPERATOR,
-| string: \|:\|}"]
-94075681827696 -> 94075681827776 [constraint=false]
-94075681827776 -> 94075681827696 [constraint=false]
-94075681827776 [shape=record, label="{Token|self: 0x558fb398ebc0| type: INT,
-| string: \|100\|}"]
-94075681827776 -> 94075681827856 [constraint=false]
-94075681827856 -> 94075681827776 [constraint=false]
-94075681827856 [shape=record, label="{Token|self: 0x558fb398ec10| type: OPERATOR,
-| string: \|:\|}"]
-94075681827856 -> 94075681827936 [constraint=false]
-94075681827936 -> 94075681827856 [constraint=false]
-94075681827936 [shape=record, label="{Token|self: 0x558fb398ec60| type: TYPE,
-| string: \|Int-\>Int-\>Int-\>Int-\>Int\|}"]
-94075681827936 -> 94075681828016 [constraint=false]
-94075681828016 -> 94075681827936 [constraint=false]
-94075681828016 [shape=record, label="{Token|self: 0x558fb398ecb0| type: OPERATOR,
-| string: \|=\|}"]
-94075681828016 -> 94075681828096 [constraint=false]
-94075681828096 -> 94075681828016 [constraint=false]
-94075681828096 [shape=record, label="{Token|self: 0x558fb398ed00| type: VARIABLE,
-| string: \|a\|}"]
-94075681828096 -> 94075681828176 [constraint=false]
-94075681828176 -> 94075681828096 [constraint=false]
-94075681828176 [shape=record, label="{Token|self: 0x558fb398ed50| type: OPERATOR,
-| string: \|+\|}"]
-94075681828176 -> 94075681828256 [constraint=false]
-94075681828256 -> 94075681828176 [constraint=false]
-94075681828256 [shape=record, label="{Token|self: 0x558fb398eda0| type: PARENTHESES_BRACKET_OPEN,
-| string: \|(\|}"]
-94075681828256 -> 94075681828336 [constraint=false]
-94075681828336 -> 94075681828256 [constraint=false]
-94075681828336 [shape=record, label="{Token|self: 0x558fb398edf0| type: VARIABLE,
-| string: \|b\|}"]
-94075681828336 -> 94075681828416 [constraint=false]
-94075681828416 -> 94075681828336 [constraint=false]
-94075681828416 [shape=record, label="{Token|self: 0x558fb398ee40| type: OPERATOR,
-| string: \|*\|}"]
-94075681828416 -> 94075681828496 [constraint=false]
-94075681828496 -> 94075681828416 [constraint=false]
-94075681828496 [shape=record, label="{Token|self: 0x558fb398ee90| type: VARIABLE,
-| string: \|c\|}"]
-94075681828496 -> 94075681828576 [constraint=false]
-94075681828576 -> 94075681828496 [constraint=false]
-94075681828576 [shape=record, label="{Token|self: 0x558fb398eee0| type: OPERATOR,
-| string: \|-\|}"]
-94075681828576 -> 94075681828656 [constraint=false]
-94075681828656 -> 94075681828576 [constraint=false]
-94075681828656 [shape=record, label="{Token|self: 0x558fb398ef30| type: VARIABLE,
-| string: \|d\|}"]
-94075681828656 -> 94075681828736 [constraint=false]
-94075681828736 -> 94075681828656 [constraint=false]
-94075681828736 [shape=record, label="{Token|self: 0x558fb398ef80| type: PARENTHESES_BRACKET_CLOSE,
-| string: \|)\|}"]
-94075681828736 -> 94075681828816 [constraint=false]
-94075681828816 -> 94075681828736 [constraint=false]
-94075681828816 [shape=record, label="{Token|self: 0x558fb398efd0| type: OPERATOR,
-| string: \|/\|}"]
-94075681828816 -> 94075681828896 [constraint=false]
-94075681828896 -> 94075681828816 [constraint=false]
-94075681828896 [shape=record, label="{Token|self: 0x558fb398f020| type: VARIABLE,
-| string: \|a\|}"]
-{rank=same; 94075681832560 94075681827216 94075681827296 94075681827376 94075681827456 94075681827536 94075681827616 94075681827696 94075681827776 94075681827856 94075681827936 94075681828016 94075681828096 94075681828176 94075681828256 94075681828336 94075681828416 94075681828496 94075681828576 94075681828656 94075681828736 94075681828816 94075681828896}
-94075681832560 -> 94075681827216 [constraint=false]
-
-}
-94075681832560 -> 94075681832592
-94075681832592 -> 94075681832560
-subgraph Fence94075681832592 {
-	style=filled;
-	bcolor="lightgrey;"
-	94075681832592 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398fe90| cont: 0x558fb398f070| next: 0x558fb398feb0| prev: 0x558fb398fe70}"]
-94075681828976 [shape=record, label="{Token|self: 0x558fb398f070| type: SOVEREIGN_def,
-| string: \|def\|}"]
-94075681828976 -> 94075681829056 [constraint=false]
-94075681829056 -> 94075681828976 [constraint=false]
-94075681829056 [shape=record, label="{Token|self: 0x558fb398f0c0| type: VARIABLE,
-| string: \|thatSoundsScary\|}"]
-94075681829056 -> 94075681829136 [constraint=false]
-94075681829136 -> 94075681829056 [constraint=false]
-94075681829136 [shape=record, label="{Token|self: 0x558fb398f110| type: VARIABLE,
-| string: \|a\|}"]
-94075681829136 -> 94075681829216 [constraint=false]
-94075681829216 -> 94075681829136 [constraint=false]
-94075681829216 [shape=record, label="{Token|self: 0x558fb398f160| type: VARIABLE,
-| string: \|b\|}"]
-94075681829216 -> 94075681829296 [constraint=false]
-94075681829296 -> 94075681829216 [constraint=false]
-94075681829296 [shape=record, label="{Token|self: 0x558fb398f1b0| type: VARIABLE,
-| string: \|c\|}"]
-94075681829296 -> 94075681829376 [constraint=false]
-94075681829376 -> 94075681829296 [constraint=false]
-94075681829376 [shape=record, label="{Token|self: 0x558fb398f200| type: VARIABLE,
-| string: \|d\|}"]
-94075681829376 -> 94075681829456 [constraint=false]
-94075681829456 -> 94075681829376 [constraint=false]
-94075681829456 [shape=record, label="{Token|self: 0x558fb398f250| type: VARIABLE,
-| string: \|e\|}"]
-94075681829456 -> 94075681829536 [constraint=false]
-94075681829536 -> 94075681829456 [constraint=false]
-94075681829536 [shape=record, label="{Token|self: 0x558fb398f2a0| type: OPERATOR,
-| string: \|:\|}"]
-94075681829536 -> 94075681829616 [constraint=false]
-94075681829616 -> 94075681829536 [constraint=false]
-94075681829616 [shape=record, label="{Token|self: 0x558fb398f2f0| type: INT,
-| string: \|100\|}"]
-94075681829616 -> 94075681829696 [constraint=false]
-94075681829696 -> 94075681829616 [constraint=false]
-94075681829696 [shape=record, label="{Token|self: 0x558fb398f340| type: OPERATOR,
-| string: \|:\|}"]
-94075681829696 -> 94075681829792 [constraint=false]
-94075681829792 -> 94075681829696 [constraint=false]
-94075681829792 [shape=record, label="{Token|self: 0x558fb398f3a0| type: TYPE,
-| string: \|Int-\>Int-\>Int-\>Int-\>Int-\>Int\|}"]
-94075681829792 -> 94075681829872 [constraint=false]
-94075681829872 -> 94075681829792 [constraint=false]
-94075681829872 [shape=record, label="{Token|self: 0x558fb398f3f0| type: OPERATOR,
-| string: \|=\|}"]
-94075681829872 -> 94075681829952 [constraint=false]
-94075681829952 -> 94075681829872 [constraint=false]
-94075681829952 [shape=record, label="{Token|self: 0x558fb398f440| type: VARIABLE,
-| string: \|workWithFour\|}"]
-94075681829952 -> 94075681830032 [constraint=false]
-94075681830032 -> 94075681829952 [constraint=false]
-94075681830032 [shape=record, label="{Token|self: 0x558fb398f490| type: VARIABLE,
-| string: \|a\|}"]
-94075681830032 -> 94075681830112 [constraint=false]
-94075681830112 -> 94075681830032 [constraint=false]
-94075681830112 [shape=record, label="{Token|self: 0x558fb398f4e0| type: PARENTHESES_BRACKET_OPEN,
-| string: \|(\|}"]
-94075681830112 -> 94075681830192 [constraint=false]
-94075681830192 -> 94075681830112 [constraint=false]
-94075681830192 [shape=record, label="{Token|self: 0x558fb398f530| type: VARIABLE,
-| string: \|a\|}"]
-94075681830192 -> 94075681830272 [constraint=false]
-94075681830272 -> 94075681830192 [constraint=false]
-94075681830272 [shape=record, label="{Token|self: 0x558fb398f580| type: OPERATOR,
-| string: \|+\|}"]
-94075681830272 -> 94075681830352 [constraint=false]
-94075681830352 -> 94075681830272 [constraint=false]
-94075681830352 [shape=record, label="{Token|self: 0x558fb398f5d0| type: PARENTHESES_BRACKET_OPEN,
-| string: \|(\|}"]
-94075681830352 -> 94075681830432 [constraint=false]
-94075681830432 -> 94075681830352 [constraint=false]
-94075681830432 [shape=record, label="{Token|self: 0x558fb398f620| type: VARIABLE,
-| string: \|b\|}"]
-94075681830432 -> 94075681830512 [constraint=false]
-94075681830512 -> 94075681830432 [constraint=false]
-94075681830512 [shape=record, label="{Token|self: 0x558fb398f670| type: OPERATOR,
-| string: \|*\|}"]
-94075681830512 -> 94075681830592 [constraint=false]
-94075681830592 -> 94075681830512 [constraint=false]
-94075681830592 [shape=record, label="{Token|self: 0x558fb398f6c0| type: VARIABLE,
-| string: \|c\|}"]
-94075681830592 -> 94075681830672 [constraint=false]
-94075681830672 -> 94075681830592 [constraint=false]
-94075681830672 [shape=record, label="{Token|self: 0x558fb398f710| type: OPERATOR,
-| string: \|-\|}"]
-94075681830672 -> 94075681830752 [constraint=false]
-94075681830752 -> 94075681830672 [constraint=false]
-94075681830752 [shape=record, label="{Token|self: 0x558fb398f760| type: VARIABLE,
-| string: \|d\|}"]
-94075681830752 -> 94075681830832 [constraint=false]
-94075681830832 -> 94075681830752 [constraint=false]
-94075681830832 [shape=record, label="{Token|self: 0x558fb398f7b0| type: PARENTHESES_BRACKET_CLOSE,
-| string: \|)\|}"]
-94075681830832 -> 94075681830912 [constraint=false]
-94075681830912 -> 94075681830832 [constraint=false]
-94075681830912 [shape=record, label="{Token|self: 0x558fb398f800| type: OPERATOR,
-| string: \|/\|}"]
-94075681830912 -> 94075681830992 [constraint=false]
-94075681830992 -> 94075681830912 [constraint=false]
-94075681830992 [shape=record, label="{Token|self: 0x558fb398f850| type: VARIABLE,
-| string: \|a\|}"]
-94075681830992 -> 94075681831072 [constraint=false]
-94075681831072 -> 94075681830992 [constraint=false]
-94075681831072 [shape=record, label="{Token|self: 0x558fb398f8a0| type: PARENTHESES_BRACKET_CLOSE,
-| string: \|)\|}"]
-94075681831072 -> 94075681831152 [constraint=false]
-94075681831152 -> 94075681831072 [constraint=false]
-94075681831152 [shape=record, label="{Token|self: 0x558fb398f8f0| type: VARIABLE,
-| string: \|e\|}"]
-94075681831152 -> 94075681831232 [constraint=false]
-94075681831232 -> 94075681831152 [constraint=false]
-94075681831232 [shape=record, label="{Token|self: 0x558fb398f940| type: VARIABLE,
-| string: \|d\|}"]
-94075681831232 -> 94075681831312 [constraint=false]
-94075681831312 -> 94075681831232 [constraint=false]
-94075681831312 [shape=record, label="{Token|self: 0x558fb398f990| type: OPERATOR,
-| string: \|+\|}"]
-94075681831312 -> 94075681831392 [constraint=false]
-94075681831392 -> 94075681831312 [constraint=false]
-94075681831392 [shape=record, label="{Token|self: 0x558fb398f9e0| type: INT,
-| string: \|12\|}"]
-{rank=same; 94075681832592 94075681828976 94075681829056 94075681829136 94075681829216 94075681829296 94075681829376 94075681829456 94075681829536 94075681829616 94075681829696 94075681829792 94075681829872 94075681829952 94075681830032 94075681830112 94075681830192 94075681830272 94075681830352 94075681830432 94075681830512 94075681830592 94075681830672 94075681830752 94075681830832 94075681830912 94075681830992 94075681831072 94075681831152 94075681831232 94075681831312 94075681831392}
-94075681832592 -> 94075681828976 [constraint=false]
-
-}
-94075681832592 -> 94075681832624
-94075681832624 -> 94075681832592
-subgraph Fence94075681832624 {
-	style=filled;
-	bcolor="lightgrey;"
-	94075681832624 [shape=record, fillcolor="red", label="{Fence|self: 0x558fb398feb0| cont: 0x558fb398fa30| next: (nil)| prev: 0x558fb398fe90}"]
-94075681831472 [shape=record, label="{Token|self: 0x558fb398fa30| type: SOVEREIGN_main,
-| string: \|main\|}"]
-94075681831472 -> 94075681831552 [constraint=false]
-94075681831552 -> 94075681831472 [constraint=false]
-94075681831552 [shape=record, label="{Token|self: 0x558fb398fa80| type: OPERATOR,
-| string: \|=\|}"]
-94075681831552 -> 94075681831632 [constraint=false]
-94075681831632 -> 94075681831552 [constraint=false]
-94075681831632 [shape=record, label="{Token|self: 0x558fb398fad0| type: ACUTED_OPERATOR,
-| string: \|`/\|}"]
-94075681831632 -> 94075681831712 [constraint=false]
-94075681831712 -> 94075681831632 [constraint=false]
-94075681831712 [shape=record, label="{Token|self: 0x558fb398fb20| type: PARENTHESES_BRACKET_OPEN,
-| string: \|(\|}"]
-94075681831712 -> 94075681831792 [constraint=false]
-94075681831792 -> 94075681831712 [constraint=false]
-94075681831792 [shape=record, label="{Token|self: 0x558fb398fb70| type: VARIABLE,
+93845777713600 -> 93845777713680 [constraint=false]
+93845777713680 -> 93845777713600 [constraint=false]
+93845777713680 [shape=record, label="{Token|self: 0x555a2c3e8a10| type: VARIABLE,
 | string: \|pow\|}"]
-94075681831792 -> 94075681831872 [constraint=false]
-94075681831872 -> 94075681831792 [constraint=false]
-94075681831872 [shape=record, label="{Token|self: 0x558fb398fbc0| type: INT,
-| string: \|2\|}"]
-94075681831872 -> 94075681831952 [constraint=false]
-94075681831952 -> 94075681831872 [constraint=false]
-94075681831952 [shape=record, label="{Token|self: 0x558fb398fc10| type: INT,
-| string: \|6\|}"]
-94075681831952 -> 94075681832032 [constraint=false]
-94075681832032 -> 94075681831952 [constraint=false]
-94075681832032 [shape=record, label="{Token|self: 0x558fb398fc60| type: PARENTHESES_BRACKET_CLOSE,
+93845777713680 -> 93845777713760 [constraint=false]
+93845777713760 -> 93845777713680 [constraint=false]
+93845777713760 [shape=record, label="{Token|self: 0x555a2c3e8a60| type: VARIABLE,
+| string: \|a\|}"]
+93845777713760 -> 93845777713840 [constraint=false]
+93845777713840 -> 93845777713760 [constraint=false]
+93845777713840 [shape=record, label="{Token|self: 0x555a2c3e8ab0| type: VARIABLE,
+| string: \|b\|}"]
+93845777713840 -> 93845777713920 [constraint=false]
+93845777713920 -> 93845777713840 [constraint=false]
+93845777713920 [shape=record, label="{Token|self: 0x555a2c3e8b00| type: OPERATOR,
+| string: \|:\|}"]
+93845777713920 -> 93845777714000 [constraint=false]
+93845777714000 -> 93845777713920 [constraint=false]
+93845777714000 [shape=record, label="{Token|self: 0x555a2c3e8b50| type: INT,
+| string: \|100\|}"]
+93845777714000 -> 93845777714080 [constraint=false]
+93845777714080 -> 93845777714000 [constraint=false]
+93845777714080 [shape=record, label="{Token|self: 0x555a2c3e8ba0| type: OPERATOR,
+| string: \|:\|}"]
+93845777714080 -> 93845777714160 [constraint=false]
+93845777714160 -> 93845777714080 [constraint=false]
+93845777714160 [shape=record, label="{Token|self: 0x555a2c3e8bf0| type: TYPE,
+| string: \|Int-\>Int-\>Int\|}"]
+93845777714160 -> 93845777714240 [constraint=false]
+93845777714240 -> 93845777714160 [constraint=false]
+93845777714240 [shape=record, label="{Token|self: 0x555a2c3e8c40| type: OPERATOR,
+| string: \|=\|}"]
+93845777714240 -> 93845777714320 [constraint=false]
+93845777714320 -> 93845777714240 [constraint=false]
+93845777714320 [shape=record, label="{Token|self: 0x555a2c3e8c90| type: VARIABLE,
+| string: \|a\|}"]
+93845777714320 -> 93845777714400 [constraint=false]
+93845777714400 -> 93845777714320 [constraint=false]
+93845777714400 [shape=record, label="{Token|self: 0x555a2c3e8ce0| type: OPERATOR,
+| string: \|+\|}"]
+93845777714400 -> 93845777714480 [constraint=false]
+93845777714480 -> 93845777714400 [constraint=false]
+93845777714480 [shape=record, label="{Token|self: 0x555a2c3e8d30| type: VARIABLE,
+| string: \|b\|}"]
+{rank=same; 93845777719744 93845777713600 93845777713680 93845777713760 93845777713840 93845777713920 93845777714000 93845777714080 93845777714160 93845777714240 93845777714320 93845777714400 93845777714480}
+93845777719744 -> 93845777713600 [constraint=false]
+
+}
+93845777719744 -> 93845777719776
+93845777719776 -> 93845777719744
+subgraph Fence93845777719776 {
+	style=filled;
+	bcolor="lightgrey;"
+	93845777719776 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea1e0| cont: 0x555a2c3e8d80| next: 0x555a2c3ea200| prev: 0x555a2c3ea1c0}"]
+93845777714560 [shape=record, label="{Token|self: 0x555a2c3e8d80| type: SOVEREIGN_def,
+| string: \|def\|}"]
+93845777714560 -> 93845777714640 [constraint=false]
+93845777714640 -> 93845777714560 [constraint=false]
+93845777714640 [shape=record, label="{Token|self: 0x555a2c3e8dd0| type: VARIABLE,
+| string: \|workWithFour\|}"]
+93845777714640 -> 93845777714720 [constraint=false]
+93845777714720 -> 93845777714640 [constraint=false]
+93845777714720 [shape=record, label="{Token|self: 0x555a2c3e8e20| type: VARIABLE,
+| string: \|a\|}"]
+93845777714720 -> 93845777714800 [constraint=false]
+93845777714800 -> 93845777714720 [constraint=false]
+93845777714800 [shape=record, label="{Token|self: 0x555a2c3e8e70| type: VARIABLE,
+| string: \|b\|}"]
+93845777714800 -> 93845777714880 [constraint=false]
+93845777714880 -> 93845777714800 [constraint=false]
+93845777714880 [shape=record, label="{Token|self: 0x555a2c3e8ec0| type: VARIABLE,
+| string: \|c\|}"]
+93845777714880 -> 93845777714960 [constraint=false]
+93845777714960 -> 93845777714880 [constraint=false]
+93845777714960 [shape=record, label="{Token|self: 0x555a2c3e8f10| type: VARIABLE,
+| string: \|d\|}"]
+93845777714960 -> 93845777715040 [constraint=false]
+93845777715040 -> 93845777714960 [constraint=false]
+93845777715040 [shape=record, label="{Token|self: 0x555a2c3e8f60| type: OPERATOR,
+| string: \|:\|}"]
+93845777715040 -> 93845777715120 [constraint=false]
+93845777715120 -> 93845777715040 [constraint=false]
+93845777715120 [shape=record, label="{Token|self: 0x555a2c3e8fb0| type: INT,
+| string: \|100\|}"]
+93845777715120 -> 93845777715200 [constraint=false]
+93845777715200 -> 93845777715120 [constraint=false]
+93845777715200 [shape=record, label="{Token|self: 0x555a2c3e9000| type: OPERATOR,
+| string: \|:\|}"]
+93845777715200 -> 93845777715280 [constraint=false]
+93845777715280 -> 93845777715200 [constraint=false]
+93845777715280 [shape=record, label="{Token|self: 0x555a2c3e9050| type: TYPE,
+| string: \|Int-\>Int-\>Int-\>Int-\>Int\|}"]
+93845777715280 -> 93845777715360 [constraint=false]
+93845777715360 -> 93845777715280 [constraint=false]
+93845777715360 [shape=record, label="{Token|self: 0x555a2c3e90a0| type: OPERATOR,
+| string: \|=\|}"]
+93845777715360 -> 93845777715440 [constraint=false]
+93845777715440 -> 93845777715360 [constraint=false]
+93845777715440 [shape=record, label="{Token|self: 0x555a2c3e90f0| type: VARIABLE,
+| string: \|a\|}"]
+93845777715440 -> 93845777715520 [constraint=false]
+93845777715520 -> 93845777715440 [constraint=false]
+93845777715520 [shape=record, label="{Token|self: 0x555a2c3e9140| type: OPERATOR,
+| string: \|+\|}"]
+93845777715520 -> 93845777715600 [constraint=false]
+93845777715600 -> 93845777715520 [constraint=false]
+93845777715600 [shape=record, label="{Token|self: 0x555a2c3e9190| type: PARENTHESES_BRACKET_OPEN,
+| string: \|(\|}"]
+93845777715600 -> 93845777715680 [constraint=false]
+93845777715680 -> 93845777715600 [constraint=false]
+93845777715680 [shape=record, label="{Token|self: 0x555a2c3e91e0| type: VARIABLE,
+| string: \|b\|}"]
+93845777715680 -> 93845777715760 [constraint=false]
+93845777715760 -> 93845777715680 [constraint=false]
+93845777715760 [shape=record, label="{Token|self: 0x555a2c3e9230| type: OPERATOR,
+| string: \|*\|}"]
+93845777715760 -> 93845777715840 [constraint=false]
+93845777715840 -> 93845777715760 [constraint=false]
+93845777715840 [shape=record, label="{Token|self: 0x555a2c3e9280| type: VARIABLE,
+| string: \|c\|}"]
+93845777715840 -> 93845777715920 [constraint=false]
+93845777715920 -> 93845777715840 [constraint=false]
+93845777715920 [shape=record, label="{Token|self: 0x555a2c3e92d0| type: OPERATOR,
+| string: \|-\|}"]
+93845777715920 -> 93845777716000 [constraint=false]
+93845777716000 -> 93845777715920 [constraint=false]
+93845777716000 [shape=record, label="{Token|self: 0x555a2c3e9320| type: VARIABLE,
+| string: \|d\|}"]
+93845777716000 -> 93845777716080 [constraint=false]
+93845777716080 -> 93845777716000 [constraint=false]
+93845777716080 [shape=record, label="{Token|self: 0x555a2c3e9370| type: PARENTHESES_BRACKET_CLOSE,
 | string: \|)\|}"]
-94075681832032 -> 94075681832112 [constraint=false]
-94075681832112 -> 94075681832032 [constraint=false]
-94075681832112 [shape=record, label="{Token|self: 0x558fb398fcb0| type: INT,
+93845777716080 -> 93845777716160 [constraint=false]
+93845777716160 -> 93845777716080 [constraint=false]
+93845777716160 [shape=record, label="{Token|self: 0x555a2c3e93c0| type: OPERATOR,
+| string: \|/\|}"]
+93845777716160 -> 93845777716240 [constraint=false]
+93845777716240 -> 93845777716160 [constraint=false]
+93845777716240 [shape=record, label="{Token|self: 0x555a2c3e9410| type: VARIABLE,
+| string: \|a\|}"]
+{rank=same; 93845777719776 93845777714560 93845777714640 93845777714720 93845777714800 93845777714880 93845777714960 93845777715040 93845777715120 93845777715200 93845777715280 93845777715360 93845777715440 93845777715520 93845777715600 93845777715680 93845777715760 93845777715840 93845777715920 93845777716000 93845777716080 93845777716160 93845777716240}
+93845777719776 -> 93845777714560 [constraint=false]
+
+}
+93845777719776 -> 93845777719808
+93845777719808 -> 93845777719776
+subgraph Fence93845777719808 {
+	style=filled;
+	bcolor="lightgrey;"
+	93845777719808 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea200| cont: 0x555a2c3e9460| next: 0x555a2c3ea220| prev: 0x555a2c3ea1e0}"]
+93845777716320 [shape=record, label="{Token|self: 0x555a2c3e9460| type: SOVEREIGN_def,
+| string: \|def\|}"]
+93845777716320 -> 93845777716400 [constraint=false]
+93845777716400 -> 93845777716320 [constraint=false]
+93845777716400 [shape=record, label="{Token|self: 0x555a2c3e94b0| type: VARIABLE,
+| string: \|thatSoundsScary\|}"]
+93845777716400 -> 93845777716480 [constraint=false]
+93845777716480 -> 93845777716400 [constraint=false]
+93845777716480 [shape=record, label="{Token|self: 0x555a2c3e9500| type: VARIABLE,
+| string: \|a\|}"]
+93845777716480 -> 93845777716560 [constraint=false]
+93845777716560 -> 93845777716480 [constraint=false]
+93845777716560 [shape=record, label="{Token|self: 0x555a2c3e9550| type: VARIABLE,
+| string: \|b\|}"]
+93845777716560 -> 93845777716640 [constraint=false]
+93845777716640 -> 93845777716560 [constraint=false]
+93845777716640 [shape=record, label="{Token|self: 0x555a2c3e95a0| type: VARIABLE,
+| string: \|c\|}"]
+93845777716640 -> 93845777716720 [constraint=false]
+93845777716720 -> 93845777716640 [constraint=false]
+93845777716720 [shape=record, label="{Token|self: 0x555a2c3e95f0| type: VARIABLE,
+| string: \|d\|}"]
+93845777716720 -> 93845777716800 [constraint=false]
+93845777716800 -> 93845777716720 [constraint=false]
+93845777716800 [shape=record, label="{Token|self: 0x555a2c3e9640| type: VARIABLE,
+| string: \|e\|}"]
+93845777716800 -> 93845777716880 [constraint=false]
+93845777716880 -> 93845777716800 [constraint=false]
+93845777716880 [shape=record, label="{Token|self: 0x555a2c3e9690| type: OPERATOR,
+| string: \|:\|}"]
+93845777716880 -> 93845777716960 [constraint=false]
+93845777716960 -> 93845777716880 [constraint=false]
+93845777716960 [shape=record, label="{Token|self: 0x555a2c3e96e0| type: INT,
+| string: \|100\|}"]
+93845777716960 -> 93845777717040 [constraint=false]
+93845777717040 -> 93845777716960 [constraint=false]
+93845777717040 [shape=record, label="{Token|self: 0x555a2c3e9730| type: OPERATOR,
+| string: \|:\|}"]
+93845777717040 -> 93845777717136 [constraint=false]
+93845777717136 -> 93845777717040 [constraint=false]
+93845777717136 [shape=record, label="{Token|self: 0x555a2c3e9790| type: TYPE,
+| string: \|Int-\>Int-\>Int-\>Int-\>Int-\>Int\|}"]
+93845777717136 -> 93845777717216 [constraint=false]
+93845777717216 -> 93845777717136 [constraint=false]
+93845777717216 [shape=record, label="{Token|self: 0x555a2c3e97e0| type: OPERATOR,
+| string: \|=\|}"]
+93845777717216 -> 93845777717296 [constraint=false]
+93845777717296 -> 93845777717216 [constraint=false]
+93845777717296 [shape=record, label="{Token|self: 0x555a2c3e9830| type: VARIABLE,
+| string: \|workWithFour\|}"]
+93845777717296 -> 93845777717376 [constraint=false]
+93845777717376 -> 93845777717296 [constraint=false]
+93845777717376 [shape=record, label="{Token|self: 0x555a2c3e9880| type: VARIABLE,
+| string: \|a\|}"]
+93845777717376 -> 93845777717456 [constraint=false]
+93845777717456 -> 93845777717376 [constraint=false]
+93845777717456 [shape=record, label="{Token|self: 0x555a2c3e98d0| type: PARENTHESES_BRACKET_OPEN,
+| string: \|(\|}"]
+93845777717456 -> 93845777717536 [constraint=false]
+93845777717536 -> 93845777717456 [constraint=false]
+93845777717536 [shape=record, label="{Token|self: 0x555a2c3e9920| type: VARIABLE,
+| string: \|a\|}"]
+93845777717536 -> 93845777717616 [constraint=false]
+93845777717616 -> 93845777717536 [constraint=false]
+93845777717616 [shape=record, label="{Token|self: 0x555a2c3e9970| type: OPERATOR,
+| string: \|+\|}"]
+93845777717616 -> 93845777717696 [constraint=false]
+93845777717696 -> 93845777717616 [constraint=false]
+93845777717696 [shape=record, label="{Token|self: 0x555a2c3e99c0| type: PARENTHESES_BRACKET_OPEN,
+| string: \|(\|}"]
+93845777717696 -> 93845777717776 [constraint=false]
+93845777717776 -> 93845777717696 [constraint=false]
+93845777717776 [shape=record, label="{Token|self: 0x555a2c3e9a10| type: VARIABLE,
+| string: \|b\|}"]
+93845777717776 -> 93845777717856 [constraint=false]
+93845777717856 -> 93845777717776 [constraint=false]
+93845777717856 [shape=record, label="{Token|self: 0x555a2c3e9a60| type: OPERATOR,
+| string: \|*\|}"]
+93845777717856 -> 93845777717936 [constraint=false]
+93845777717936 -> 93845777717856 [constraint=false]
+93845777717936 [shape=record, label="{Token|self: 0x555a2c3e9ab0| type: VARIABLE,
+| string: \|c\|}"]
+93845777717936 -> 93845777718016 [constraint=false]
+93845777718016 -> 93845777717936 [constraint=false]
+93845777718016 [shape=record, label="{Token|self: 0x555a2c3e9b00| type: OPERATOR,
+| string: \|-\|}"]
+93845777718016 -> 93845777718096 [constraint=false]
+93845777718096 -> 93845777718016 [constraint=false]
+93845777718096 [shape=record, label="{Token|self: 0x555a2c3e9b50| type: VARIABLE,
+| string: \|d\|}"]
+93845777718096 -> 93845777718176 [constraint=false]
+93845777718176 -> 93845777718096 [constraint=false]
+93845777718176 [shape=record, label="{Token|self: 0x555a2c3e9ba0| type: PARENTHESES_BRACKET_CLOSE,
+| string: \|)\|}"]
+93845777718176 -> 93845777718256 [constraint=false]
+93845777718256 -> 93845777718176 [constraint=false]
+93845777718256 [shape=record, label="{Token|self: 0x555a2c3e9bf0| type: OPERATOR,
+| string: \|/\|}"]
+93845777718256 -> 93845777718336 [constraint=false]
+93845777718336 -> 93845777718256 [constraint=false]
+93845777718336 [shape=record, label="{Token|self: 0x555a2c3e9c40| type: VARIABLE,
+| string: \|a\|}"]
+93845777718336 -> 93845777718416 [constraint=false]
+93845777718416 -> 93845777718336 [constraint=false]
+93845777718416 [shape=record, label="{Token|self: 0x555a2c3e9c90| type: PARENTHESES_BRACKET_CLOSE,
+| string: \|)\|}"]
+93845777718416 -> 93845777718496 [constraint=false]
+93845777718496 -> 93845777718416 [constraint=false]
+93845777718496 [shape=record, label="{Token|self: 0x555a2c3e9ce0| type: VARIABLE,
+| string: \|e\|}"]
+93845777718496 -> 93845777718576 [constraint=false]
+93845777718576 -> 93845777718496 [constraint=false]
+93845777718576 [shape=record, label="{Token|self: 0x555a2c3e9d30| type: VARIABLE,
+| string: \|d\|}"]
+93845777718576 -> 93845777718656 [constraint=false]
+93845777718656 -> 93845777718576 [constraint=false]
+93845777718656 [shape=record, label="{Token|self: 0x555a2c3e9d80| type: OPERATOR,
+| string: \|+\|}"]
+93845777718656 -> 93845777718736 [constraint=false]
+93845777718736 -> 93845777718656 [constraint=false]
+93845777718736 [shape=record, label="{Token|self: 0x555a2c3e9dd0| type: INT,
+| string: \|12\|}"]
+{rank=same; 93845777719808 93845777716320 93845777716400 93845777716480 93845777716560 93845777716640 93845777716720 93845777716800 93845777716880 93845777716960 93845777717040 93845777717136 93845777717216 93845777717296 93845777717376 93845777717456 93845777717536 93845777717616 93845777717696 93845777717776 93845777717856 93845777717936 93845777718016 93845777718096 93845777718176 93845777718256 93845777718336 93845777718416 93845777718496 93845777718576 93845777718656 93845777718736}
+93845777719808 -> 93845777716320 [constraint=false]
+
+}
+93845777719808 -> 93845777719840
+93845777719840 -> 93845777719808
+subgraph Fence93845777719840 {
+	style=filled;
+	bcolor="lightgrey;"
+	93845777719840 [shape=record, fillcolor="red", label="{Fence|self: 0x555a2c3ea220| cont: 0x555a2c3e9e20| next: (nil)| prev: 0x555a2c3ea200}"]
+93845777718816 [shape=record, label="{Token|self: 0x555a2c3e9e20| type: SOVEREIGN_main,
+| string: \|main\|}"]
+93845777718816 -> 93845777718896 [constraint=false]
+93845777718896 -> 93845777718816 [constraint=false]
+93845777718896 [shape=record, label="{Token|self: 0x555a2c3e9e70| type: OPERATOR,
+| string: \|=\|}"]
+93845777718896 -> 93845777718976 [constraint=false]
+93845777718976 -> 93845777718896 [constraint=false]
+93845777718976 [shape=record, label="{Token|self: 0x555a2c3e9ec0| type: VARIABLE,
+| string: \|pow\|}"]
+93845777718976 -> 93845777719056 [constraint=false]
+93845777719056 -> 93845777718976 [constraint=false]
+93845777719056 [shape=record, label="{Token|self: 0x555a2c3e9f10| type: INT,
+| string: \|2\|}"]
+93845777719056 -> 93845777719136 [constraint=false]
+93845777719136 -> 93845777719056 [constraint=false]
+93845777719136 [shape=record, label="{Token|self: 0x555a2c3e9f60| type: INT,
+| string: \|6\|}"]
+93845777719136 -> 93845777719216 [constraint=false]
+93845777719216 -> 93845777719136 [constraint=false]
+93845777719216 [shape=record, label="{Token|self: 0x555a2c3e9fb0| type: OPERATOR,
+| string: \|+\|}"]
+93845777719216 -> 93845777719296 [constraint=false]
+93845777719296 -> 93845777719216 [constraint=false]
+93845777719296 [shape=record, label="{Token|self: 0x555a2c3ea000| type: INT,
 | string: \|4\|}"]
-{rank=same; 94075681832624 94075681831472 94075681831552 94075681831632 94075681831712 94075681831792 94075681831872 94075681831952 94075681832032 94075681832112}
-94075681832624 -> 94075681831472 [constraint=false]
+{rank=same; 93845777719840 93845777718816 93845777718896 93845777718976 93845777719056 93845777719136 93845777719216 93845777719296}
+93845777719840 -> 93845777718816 [constraint=false]
 
 }
 

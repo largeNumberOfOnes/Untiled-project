@@ -1,0 +1,6 @@
+
+cd VM/objects
+
+gcc -g -c ../*.c
+
+cd ../../

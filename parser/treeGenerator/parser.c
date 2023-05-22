@@ -25,6 +25,7 @@ Root* parser(Fence *fence) {
     DOT
     MES("----------------------------------------------------");
     defineFunctions(fence, root);
+    parseMain(fence, root);
 
     // while (fence->next->next) fence = fence->next;
     // DOT

@@ -447,6 +447,7 @@ Opstack* reorder(Token **token_ptr, Scope *scope) {
         } else if (isConstType(token) || isFuncType(token) || isVarType(token)){
             DOT
             opstack_push(output, exptree_initSimple(token, scope));
+            DOT
         } else {
             printf("--1> |%s|\n", token->string);
             CAP // dev
@@ -514,7 +515,10 @@ Exptree* weakexpression(Token **token_ptr, Scope *scope) {
 
 Exptree* expression(Token **token_ptr, Scope *scope) {
 
-    DOT
+    assert(scope != NULL);
+    assert(token_ptr != NULL);
+    assert(*token_ptr != NULL);
+DOT
 
     Token *token = *token_ptr;
 
@@ -522,8 +526,8 @@ Exptree* expression(Token **token_ptr, Scope *scope) {
     if (token->type == TOKEN_TYPE_FUNCTION ||
         token->type == TOKEN_TYPE_ACUTED_OPERATOR
     ) {
-        tree = eatFunction(token_ptr, scope);
         DOT
+        tree = eatFunction(token_ptr, scope);
         Token *token = *token_ptr;
         // printf("--> %s\n", token->string);
         // CAP
@@ -548,10 +552,11 @@ Exptree* expression(Token **token_ptr, Scope *scope) {
         // Exptree *arg1 = expression(token_ptr, scope);
         CAP
     } else {
+        DOT
         tree = weakexpression(token_ptr, scope);
 
     }
-
+DOT
     // if (token->type)
 
 

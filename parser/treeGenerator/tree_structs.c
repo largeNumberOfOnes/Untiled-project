@@ -175,6 +175,60 @@ int defineFunctions(Fence *fence, Root *root) {
 //? ###########################################################################
 //? ###########################################################################
 
+int parseMain(Fence *fence, Root *root) {
+    
+    Function *main = (Function*) malloc(sizeof(Function));
+
+    main->argsCount = 0;
+    main->argNames = NULL;
+
+    char *name = (char*) malloc(sizeof(char)*5);
+    char *type = (char*) malloc(sizeof(char)*4);
+    strcpy(name, "main");
+    strcpy(type, "Int" );
+    name[5] = 0;
+    type[4] = 0;
+    main->name = name;
+    main->typetreeString = type;
+    main->typeTree = typeTree_treeSeparator(type);
+
+    main->nutapp = FUNCTION_NUTAPP_FUNCTION;
+    main->priority = 0;
+
+    main->tree = NULL;
+
+    deflist_append(root->deflist, main);
+
+    Token *token = NULL;
+    while (fence->prev) fence = fence->prev;
+    while (fence) {
+        if (!strcmp(fence->token->string, "main")) {
+            token = fence->token;
+            break;
+        }
+        fence = fence->next;
+    }
+
+    assert(token != NULL);
+    assert(!strcmp(token->string, "main"));
+
+    assert(token->next != NULL);
+    assert(token->next->next != NULL);
+    token = token->next;
+    assert(!strcmp(token->string, "="));
+    token = token->next;
+
+    Scope *scope = scope_init(deflist_search(root->deflist, "main"));
+    main->tree = expression(&token, scope);
+    scope = scope_delete(scope);
+    assert(main->tree != NULL); // dev
+
+    return 0;
+}
+
+//? ###########################################################################
+//? ###########################################################################
+
 Deflist* deflist_init(Function* func) {
 
     Deflist* defList = (Deflist*) malloc(sizeof(Deflist));

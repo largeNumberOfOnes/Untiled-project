@@ -1,0 +1,5 @@
+
+bash run/VMcomp
+
+gcc -g VM/objects/*.o -o VM.out
+

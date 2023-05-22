@@ -18,7 +18,8 @@ def == a b : 99 : Int->Int->Int
 
 //-----------------------------------------------------------------------------
 
-// def pow a b : 100 : Int->Int = a if b == 1 else pow (a `mul a) (b `sub 1)
+// def pow a b : 100 : Int->Int->Int = a if b == 1 else pow (a `mul a) (b `sub 1)
+def pow a b : 100 : Int->Int->Int = a + b
 def workWithFour a b c d : 100 : Int->Int->Int->Int->Int = a + (b*c - d)/ a
 // def workWithFour a b c d : 100 : Int->Int->Int->Int->Int = a + b*c - d / a + 12
 def thatSoundsScary a b c d e : 100 : Int->Int->Int->Int->Int->Int = workWithFour a (a + (b*c - d)/ a) e d + 12
@@ -26,4 +27,4 @@ def thatSoundsScary a b c d e : 100 : Int->Int->Int->Int->Int->Int = workWithFou
 
 //-----------------------------------------------------------------------------
 
-main = `/ (pow 2 6) 4
+main = pow 2 6 + 4

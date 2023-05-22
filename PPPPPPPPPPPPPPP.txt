@@ -1,111 +1,37 @@
 digraph {
 
-	94075681845984 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	93845777735584 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	94075681845856 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	93845777735456 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	94075681845824 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	93845777735424 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 +
-0x558fb3993240
+0x555a2c3edf00
 Int->Int->Int"]
-94075681845856 -> 94075681845824
-	94075681845568 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+93845777735456 -> 93845777735424
+	93845777734672 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	94075681845120 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	93845777734640 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	94075681845184 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	93845777734832 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+pow
+0x555a2c3edcb0
 Int->Int->Int"]
-	94075681843264 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int->Int->Int->Int"]
-	94075681843136 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
-workWithFour
-0x558fb39927c0
-Int->Int->Int->Int->Int"]
-94075681843264 -> 94075681843136
-	94075681843168 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-a
+93845777734640 -> 93845777734832
+	93845777739200 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+2
 Int"]
-94075681843264 -> 94075681843168
-94075681845184 -> 94075681843264
-	94075681844992 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+93845777734640 -> 93845777739200
+93845777734672 -> 93845777734640
+	93845777734512 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+6
 Int"]
-	94075681843616 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int->Int"]
-	94075681843648 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
-+
-0x558fb39929c0
-Int->Int->Int"]
-94075681843616 -> 94075681843648
-	94075681843520 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-a
+93845777734672 -> 93845777734512
+93845777735456 -> 93845777734672
+93845777735584 -> 93845777735456
+	93845777735328 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+4
 Int"]
-94075681843616 -> 94075681843520
-94075681844992 -> 94075681843616
-	94075681844800 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int"]
-	94075681844576 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int->Int"]
-	94075681844608 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
-/
-0x558fb3992d80
-Int->Int->Int"]
-94075681844576 -> 94075681844608
-	94075681844480 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int"]
-	94075681844352 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int->Int"]
-	94075681844096 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
--
-0x558fb3992b80
-Int->Int->Int"]
-94075681844352 -> 94075681844096
-	94075681844128 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int"]
-	94075681843872 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int->Int"]
-	94075681843904 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
-*
-0x558fb3992ac0
-Int->Int->Int"]
-94075681843872 -> 94075681843904
-	94075681843776 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-b
-Int"]
-94075681843872 -> 94075681843776
-94075681844128 -> 94075681843872
-	94075681843968 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-c
-Int"]
-94075681844128 -> 94075681843968
-94075681844352 -> 94075681844128
-94075681844480 -> 94075681844352
-	94075681844160 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-d
-Int"]
-94075681844480 -> 94075681844160
-94075681844576 -> 94075681844480
-94075681844800 -> 94075681844576
-	94075681844672 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-a
-Int"]
-94075681844800 -> 94075681844672
-94075681844992 -> 94075681844800
-94075681845184 -> 94075681844992
-94075681845120 -> 94075681845184
-	94075681845344 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-e
-Int"]
-94075681845120 -> 94075681845344
-94075681845568 -> 94075681845120
-	94075681845472 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-d
-Int"]
-94075681845568 -> 94075681845472
-94075681845856 -> 94075681845568
-94075681845984 -> 94075681845856
-	94075681845728 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
-12
-Int"]
-94075681845984 -> 94075681845728
+93845777735584 -> 93845777735328
 
 }

@@ -1,36 +1,49 @@
-pushArg 94075681821616
-pushArg 94075653336910
-NFA call add
-pushArg 94075681822576
-pushArg 94075653336910
-NFA call sub
-pushArg 94075681824704
-pushArg 94075653336910
-NFA call mul
-pushArg 94075681825664
-pushArg 94075653336910
-NFA call div
-pushArg 0
-pushArg 140324982148064
-pushArg 140324982148064
-pushArg 94075653336910
-NFA call *
-NFA call -
-NFA call /
-pushArg 94075681835280
-NFA call +
+push 0
 push 1
-pushArg 140324982148064
-pushArg 94075653336910
+push 2
+NFA call pow
+NFA call +
+pushArg 1
 pushArg 0
-pushArg 140324982148064
-pushArg 140324982148064
-pushArg 94075653336910
+NFA call add
+pushArg 1
+pushArg 0
+NFA call sub
+pushArg 1
+pushArg 0
+NFA call mul
+pushArg 1
+pushArg 0
+NFA call div
+pushArg 1
+pushArg 0
+NFA call +
+pushArg 0
+pushArg 3
+pushArg 2
+pushArg 1
 NFA call *
 NFA call -
 NFA call /
-pushArg 94075681835728
+pushArg 0
 NFA call +
-pushArg 94075681835728
+push 3
+pushArg 3
+pushArg 4
+pushArg 0
+pushArg 3
+pushArg 2
+pushArg 1
+NFA call *
+NFA call -
+NFA call /
+pushArg 0
+NFA call +
+pushArg 0
 NFA call workWithFour
+NFA call +
+push 4
+push 5
+push 6
+NFA call pow
 NFA call +
