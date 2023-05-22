@@ -2,7 +2,7 @@ push 0
 push 1
 push 2
 NFA call pow
-NFA call +
+NFA call /
 pushArg 1
 pushArg 0
 NFA call add
@@ -46,4 +46,4 @@ push 4
 push 5
 push 6
 NFA call pow
-NFA call +
+NFA call /

@@ -503,7 +503,12 @@ int interpreter(Root *root) {
         printf("name -> %s\n", iter->func->name);
         prog_addTree(prog, iter->func->tree, iter->func);
         
-        prog_codeAddCommand(prog, COMMAND_RET);
+        char *str = (char*) malloc(sizeof(size_t)+2);
+        str[0] = COMMAND_RET;
+        size_t argCount = (size_t)(unsigned)(iter->func->argsCount);
+        convert_ToBytes(str+1, &argCount, sizeof(size_t));
+        str[sizeof(size_t)+1] = '\0';
+        prog_codeAdd(prog, str, sizeof(size_t)+1);
 
         iter = deflist_iteratorNext(iter);
     }

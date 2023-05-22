@@ -7,6 +7,7 @@
 #include "../globalDefinitions.h"
 #include "../parser/interpreter/commands.h" // dev
 #include "../parser/interpreter/datatypes.h" // dev
+#include <assert.h>
 #include <stddef.h>
 
 
@@ -54,7 +55,7 @@ int convert_BytesToInt(char *str) {
 
     // return (size_t) (*str);
     // return (size_t)(unsigned char)(str[0]);
-    return (int)sum;
+    return sum;
 }
 
 //? ###########################################################################
@@ -62,13 +63,14 @@ int convert_BytesToInt(char *str) {
 
 typedef struct pair_t {
 
-    //!SECTION
+    size_t elem;
+    size_t type;
 
 } Pair;
 
 typedef struct stack_t {
 
-    size_t *array;
+    Pair *array;
 
     size_t capacity;
     size_t occupancy;
@@ -76,28 +78,28 @@ typedef struct stack_t {
 } Stack;
 
 Stack* stringArray_init();
-int stack_push(Stack *stack, size_t elem);
-size_t stack_pop(Stack *stack);
+int stack_push(Stack *stack, Pair elem);
+Pair stack_pop(Stack *stack);
 
 Stack* stack_init() {
 
     Stack *stack = (Stack*) malloc(sizeof(Stack));
 
-    stack->array     = (size_t*) malloc(sizeof(size_t)*100);
+    stack->array     = (Pair*) malloc(sizeof(Pair)*100);
     stack->capacity  = 100;
     stack->occupancy = 0;
 
-    stack_push(stack, 0);
+    stack_push(stack, (Pair){0, 0});
 
     return stack;
 }
 
-int stack_push(Stack *stack, size_t elem) {
+int stack_push(Stack *stack, Pair elem) {
 
     assert(stack != NULL);
 
     if (stack->capacity == stack->occupancy) {
-        stack->array = (size_t*) realloc(stack->array, sizeof(size_t)*(stack->capacity)*2);
+        stack->array = (Pair*) realloc(stack->array, sizeof(Pair)*(stack->capacity)*2);
         stack->capacity *= 2;
     }
 
@@ -108,13 +110,14 @@ int stack_push(Stack *stack, size_t elem) {
     return 0;
 }
 
-size_t stack_pop(Stack *stack) {
+Pair stack_pop(Stack *stack) {
 
     assert(stack != NULL);
 
     assert(stack->occupancy > 0);
 
-    size_t ret = stack->array[stack->occupancy--];
+    Pair ret = stack->array[--stack->occupancy];
+    stack->array[stack->occupancy] = (Pair){0, 0};
 
     // if (stack->capacity % 2 == 0 &&
     //     stack->capacity > 100 &&
@@ -127,17 +130,33 @@ size_t stack_pop(Stack *stack) {
     return ret;
 }
 
+int stack_dump(Stack *stack) {
+
+    for (size_t q = 0; q < stack->occupancy; ++q) {
+        printf("%08lu - %03lu\n", stack->array[q].elem, stack->array[q].type);
+    }
+
+    return 0;
+}
+
 size_t stack_getPos(Stack *stack) {
 
     return stack->occupancy - 1;
 }
 
-size_t stack_getByPos(Stack *stack, size_t num) {
+Pair stack_getByPos(Stack *stack, size_t num) {
 
     assert(num > 0);
     assert(num < stack->occupancy);
 
     return stack->array[num];
+}
+
+size_t stack_getLastPos(Stack *stack) {
+
+    assert(stack != NULL);
+
+    return stack->occupancy - 1;
 }
 
 //? ###########################################################################
@@ -148,8 +167,17 @@ typedef struct prog_t{
     char *arr;
     size_t len;
 
+    size_t dataStart;
 
 } Prog;
+
+enum STACK_ELEM_TYPES {
+    STACK_ELEM_TYPES_NULL,
+    STACK_ELEM_TYPES_DATA_ADDRESS,
+    STACK_ELEM_TYPES_FUNC_ADDRESS,
+    STACK_ELEM_TYPES_RET_ADDRESS,
+    STACK_ELEM_TYPES_INLINE_INT,
+};
 
 size_t getByteCount(FILE *file) {
     
@@ -183,16 +211,156 @@ Prog readInList(char *filePath) {
 
 int func_add(Stack *stack, Prog *prog) {
 
-    size_t arg1 = stack_pop(stack);
-    size_t arg2 = stack_pop(stack);
+    printf("---> %lu\n", prog->dataStart);
+    Pair arg1 = stack_pop(stack);
+    Pair arg2 = stack_pop(stack);
 
-    assert(prog.arr[arg1] == DATATYPE_INT);
-    assert(prog.arr[arg2] == DATATYPE_INT);
+    int arg1_int = 0;
+    if (arg1.type == STACK_ELEM_TYPES_DATA_ADDRESS) {
+        // printf("arg1: %lu\n", prog->dataStart+arg1.elem*5);
+        arg1_int = convert_BytesToInt(prog->arr+prog->dataStart+arg1.elem*5+1);
+        // printf("arg1: %d\n", arg1_int);
+    } else if (arg1.type == STACK_ELEM_TYPES_INLINE_INT) {
+        arg1_int = (int)(long)arg1.elem;
+    } else {
+        CAP
+    }
+    
+    int arg2_int = 0;
+    switch (arg2.type) {
+    case STACK_ELEM_TYPES_DATA_ADDRESS:
+        // printf("arg2: %lu\n", prog->dataStart+arg2.elem*5);
+        arg2_int = convert_BytesToInt(prog->arr+prog->dataStart+arg2.elem*5+1);
+        // printf("arg2: %d\n", arg2_int);
+        break;
+    case STACK_ELEM_TYPES_INLINE_INT:
+        arg2_int = (int)(long)arg2.elem;
+        break;
+    default:
+        CAP
+    }
+    // assert(prog.arr[arg2] == DATATYPE_INT);
 
-    int arg1_int = convert_BytesToInt(prog.arr + arg1 + 1);
-    int arg2_int = convert_BytesToInt(prog.arr + arg1 + 2);
+    // int arg2_int = convert_BytesToInt(prog.arr + arg1 + 2);
 
-    stack_push(stack, arg1_int + arg2_int);
+    stack_push(stack, (Pair){(size_t)(unsigned)(arg1_int + arg2_int), STACK_ELEM_TYPES_INLINE_INT});
+
+    return 0;
+}
+int func_sub(Stack *stack, Prog *prog) {
+
+    Pair arg1 = stack_pop(stack);
+    Pair arg2 = stack_pop(stack);
+
+    int arg1_int = 0;
+    if (arg1.type == STACK_ELEM_TYPES_DATA_ADDRESS) {
+        // printf("arg1: %lu\n", prog->dataStart+arg1.elem*5);
+        arg1_int = convert_BytesToInt(prog->arr+prog->dataStart+arg1.elem*5+1);
+        // printf("arg1: %d\n", arg1_int);
+    } else if (arg1.type == STACK_ELEM_TYPES_INLINE_INT) {
+        DOT
+        arg1_int = (int)(long)arg1.elem;
+    } else {
+        CAP
+    }
+    
+    int arg2_int = 0;
+    switch (arg2.type) {
+    case STACK_ELEM_TYPES_DATA_ADDRESS:
+        // printf("arg2: %lu\n", prog->dataStart+arg2.elem*5);
+        arg2_int = convert_BytesToInt(prog->arr+prog->dataStart+arg2.elem*5+1);
+        // printf("arg2: %d\n", arg2_int);
+        break;
+    case STACK_ELEM_TYPES_INLINE_INT:
+        DOT
+        arg2_int = (int)(long)arg2.elem;
+        break;
+    default:
+        CAP
+    }
+    // assert(prog.arr[arg2] == DATATYPE_INT);
+
+    // int arg2_int = convert_BytesToInt(prog.arr + arg1 + 2);
+
+
+    // printf("arg1: %d\n", arg1_int);
+    // printf("arg2: %d\n", arg2_int);
+
+    stack_push(stack, (Pair){(size_t)(unsigned)(arg1_int - arg2_int), STACK_ELEM_TYPES_INLINE_INT});
+
+    return 0;
+}
+int func_mul(Stack *stack, Prog *prog) {
+
+    Pair arg1 = stack_pop(stack);
+    Pair arg2 = stack_pop(stack);
+
+    int arg1_int = 0;
+    if (arg1.type == STACK_ELEM_TYPES_DATA_ADDRESS) {
+        // printf("arg1: %lu\n", prog->dataStart+arg1.elem*5);
+        arg1_int = convert_BytesToInt(prog->arr+prog->dataStart+arg1.elem*5+1);
+        // printf("arg1: %d\n", arg1_int);
+    } else if (arg1.type == STACK_ELEM_TYPES_INLINE_INT) {
+        arg1_int = (int)(long)arg1.elem;
+    } else {
+        CAP
+    }
+    
+    int arg2_int = 0;
+    switch (arg2.type) {
+    case STACK_ELEM_TYPES_DATA_ADDRESS:
+        // printf("arg2: %lu\n", prog->dataStart+arg2.elem*5);
+        arg2_int = convert_BytesToInt(prog->arr+prog->dataStart+arg2.elem*5+1);
+        // printf("arg2: %d\n", arg2_int);
+        break;
+    case STACK_ELEM_TYPES_INLINE_INT:
+        arg2_int = (int)(long)arg2.elem;
+        break;
+    default:
+        CAP
+    }
+    // assert(prog.arr[arg2] == DATATYPE_INT);
+
+    // int arg2_int = convert_BytesToInt(prog.arr + arg1 + 2);
+
+    stack_push(stack, (Pair){(size_t)(unsigned)(arg1_int * arg2_int), STACK_ELEM_TYPES_INLINE_INT});
+
+    return 0;
+}
+int func_div(Stack *stack, Prog *prog) {
+
+    Pair arg1 = stack_pop(stack);
+    Pair arg2 = stack_pop(stack);
+
+    int arg1_int = 0;
+    if (arg1.type == STACK_ELEM_TYPES_DATA_ADDRESS) {
+        // printf("arg1: %lu\n", prog->dataStart+arg1.elem*5);
+        arg1_int = convert_BytesToInt(prog->arr+prog->dataStart+arg1.elem*5+1);
+        // printf("arg1: %d\n", arg1_int);
+    } else if (arg1.type == STACK_ELEM_TYPES_INLINE_INT) {
+        arg1_int = (int)(long)arg1.elem;
+    } else {
+        CAP
+    }
+    
+    int arg2_int = 0;
+    switch (arg2.type) {
+    case STACK_ELEM_TYPES_DATA_ADDRESS:
+        // printf("arg2: %lu\n", prog->dataStart+arg2.elem*5);
+        arg2_int = convert_BytesToInt(prog->arr+prog->dataStart+arg2.elem*5+1);
+        // printf("arg2: %d\n", arg2_int);
+        break;
+    case STACK_ELEM_TYPES_INLINE_INT:
+        arg2_int = (int)(long)arg2.elem;
+        break;
+    default:
+        CAP
+    }
+    // assert(prog.arr[arg2] == DATATYPE_INT);
+
+    // int arg2_int = convert_BytesToInt(prog.arr + arg1 + 2);
+
+    stack_push(stack, (Pair){(size_t)(unsigned)(arg1_int / arg2_int), STACK_ELEM_TYPES_INLINE_INT});
 
     return 0;
 }
@@ -200,11 +368,13 @@ int func_add(Stack *stack, Prog *prog) {
 //? ###########################################################################
 //? ###########################################################################
 
-int decomp(Prog prog, FILE *stream) {
+Prog decomp(Prog prog, FILE *stream) {
 
     size_t w = 0;
 
-    size_t dataStart = 2;
+    int deb = TRUE;
+
+    prog.dataStart = 2;
     for (size_t q = 0; q < prog.len; ++q, ++w) {
         // for (size_t e = 0; e < 20; ++e) fprintf(stream, "|%u|", (unsigned char)(*(prog.arr+q+e))); fprintf(stream, "\n");
 
@@ -212,15 +382,15 @@ int decomp(Prog prog, FILE *stream) {
         fprintf(stream, "%06lu %06lu: ", w, q);
         // fprintf(stream, "%05lu: ", w);
 
-        if(q >= dataStart && prog.arr[q] != COMMAND_END_OF_DATA) {
+        if(q >= prog.dataStart && prog.arr[q] != COMMAND_END_OF_DATA) {
 
             switch (prog.arr[q]) {
             case DATATYPE_INT:
-                fprintf(stream, "data int: %d\n", convert_BytesToInt(prog.arr+q+1));
+                if (deb) fprintf(stream, "data int: %d\n", convert_BytesToInt(prog.arr+q+1));
                 q += sizeof(int);
                 break;
             default:
-                fprintf(stream, "NOTHING: %d\n", (unsigned char)(prog.arr[q]));
+                if (deb) fprintf(stream, "NOTHING: %d\n", (unsigned char)(prog.arr[q]));
                 break;
             break;
             }
@@ -231,62 +401,63 @@ int decomp(Prog prog, FILE *stream) {
 
         switch (prog.arr[q]) {
         case COMMAND_LENIN:
-            fprintf(stream, "Lenin\n");
+            if (deb) fprintf(stream, "Lenin\n");
             break;
         case COMMAND_DATA_ADDRESS:
-            dataStart = convert_BytesToSizeT(prog.arr+q+1);
-            fprintf(stream, "data address is %lu\n", dataStart);
+            prog.dataStart = convert_BytesToSizeT(prog.arr+q+1);
+            if (deb) fprintf(stream, "data address is %lu\n", prog.dataStart);
             q += sizeof(size_t);
             break;
         case COMMAND_PUSH:
-            fprintf(stream, "push %lu\n", convert_BytesToSizeT(prog.arr+q+1));
+            if (deb) fprintf(stream, "push %lu\n", convert_BytesToSizeT(prog.arr+q+1));
             q += sizeof(size_t);
             break;
         case COMMAND_END_OF_DATA:
-            fprintf(stream, "end of data\n");
+            if (deb) fprintf(stream, "end of data\n");
             break;
         case COMMAND_PUSHARG:
-            fprintf(stream, "pushArg %lu\n", convert_BytesToSizeT(prog.arr+q+1));
+            if (deb) fprintf(stream, "pushArg %lu\n", convert_BytesToSizeT(prog.arr+q+1));
             q += sizeof(size_t);
             break;
         case COMMAND_CALL:
-            fprintf(stream, "call %lu\n", convert_BytesToSizeT(prog.arr+q+1));
+            if (deb) fprintf(stream, "call %lu\n", convert_BytesToSizeT(prog.arr+q+1));
             q += sizeof(size_t);
             break;
         case COMMAND_RET:
-            fprintf(stream, "ret\n");
+            if (deb) fprintf(stream, "ret %lu\n", convert_BytesToSizeT(prog.arr+q+1));
+            q += sizeof(size_t);
             break;
         case COMMAND_END:
-            fprintf(stream, "END\n");
+            if (deb) fprintf(stream, "END\n");
             break;
 
         case COMMAND_STANDARD_ADD:
-            fprintf(stream, "add\n");
+            if (deb) fprintf(stream, "add\n");
             break;
         case COMMAND_STANDARD_SUB:
-            fprintf(stream, "sub\n");
+            if (deb) fprintf(stream, "sub\n");
             break;
         case COMMAND_STANDARD_MUL:
-            fprintf(stream, "mul\n");
+            if (deb) fprintf(stream, "mul\n");
             break;
         case COMMAND_STANDARD_DIV:
-            fprintf(stream, "div\n");
+            if (deb) fprintf(stream, "div\n");
             break;
         
         default:
-            fprintf(stream, "NOTHING: %d\n", (unsigned char)(prog.arr[q]));
+            if (deb) fprintf(stream, "NOTHING: %d\n", (unsigned char)(prog.arr[q]));
             break;
         }
     }
 
-    return 0;
+    return prog;
 }
 
 
 int execute(Prog prog, FILE *stream) {
 
-    size_t pos = 2;
-    size_t func = pos;
+    size_t pos = 10;
+    size_t func = 1;
 
     int deb = TRUE;
     FILE *progout = stdout;
@@ -313,7 +484,7 @@ int execute(Prog prog, FILE *stream) {
             return 1;
         case COMMAND_PUSH:
             if (deb) fprintf(stream, "push %lu\n", convert_BytesToSizeT(prog.arr+pos+1));
-            stack_push(stack, convert_BytesToSizeT(prog.arr+pos+1));
+            stack_push(stack, (Pair){convert_BytesToSizeT(prog.arr+pos+1), STACK_ELEM_TYPES_DATA_ADDRESS});
             pos += sizeof(size_t) + 1;
             break;
         case COMMAND_END_OF_DATA:
@@ -323,46 +494,75 @@ int execute(Prog prog, FILE *stream) {
             return 1;
         case COMMAND_PUSHARG:
             if (deb) fprintf(stream, "pushArg %lu\n", convert_BytesToSizeT(prog.arr+pos+1));
-            size_t addr = stack_getByPos(stack ,func - convert_BytesToSizeT(prog.arr+pos+1) - sizeof(char));
+            // printf("----\n");
+            // printf("pos: %lu\n", pos);
+            // printf("func: %lu\n", func);
+            // printf("val: %lu\n", convert_BytesToSizeT(prog.arr+pos+1));
+
+            // print
+            Pair addr = stack_getByPos(stack, func - convert_BytesToSizeT(prog.arr+pos+1) );
             stack_push(stack, addr);
             pos += sizeof(size_t) + 1;
             break;
         case COMMAND_CALL:
             if (deb) fprintf(stream, "call %lu\n", convert_BytesToSizeT(prog.arr+pos+1));
-            stack_push(stack, pos + sizeof(size_t) + 1);
-            stack_push(stack, func);
+            stack_push(stack, (Pair){func, STACK_ELEM_TYPES_FUNC_ADDRESS});
+            stack_push(stack, (Pair){pos + sizeof(size_t) + 1, STACK_ELEM_TYPES_RET_ADDRESS});
             pos = convert_BytesToSizeT(prog.arr+pos+1);
-            func = pos;
+            func = stack_getLastPos(stack)-2;
             break;
         case COMMAND_RET:
-            if (deb) fprintf(stream, "ret\n");
-            pos  = stack_pop(stack);
-            func = stack_pop(stack);
+            // if (deb) fprintf(stream, "ret\n");
+            if (deb) fprintf(stream, "ret %lu\n", convert_BytesToSizeT(prog.arr+pos+1));
+            size_t args = convert_BytesToSizeT(prog.arr+pos+1);
+            Pair temp_ret = stack_pop(stack);
+            Pair ret = stack_pop(stack);
+            assert(ret.type == STACK_ELEM_TYPES_RET_ADDRESS);
+            pos  = ret.elem;
+            ret = stack_pop(stack);
+            assert(ret.type == STACK_ELEM_TYPES_FUNC_ADDRESS);
+            func = ret.elem;
+            while (args > 0) { stack_pop(stack); --args; }
+            stack_push(stack, temp_ret);
+            // pos += sizeof(size_t) + 1;
             break;
         case COMMAND_END:
             if (deb) fprintf(stream, "END\n");
-            assert(stack_getPos(stack) != 1);
+            assert(stack_getPos(stack) != 2);
+            pos +=1;
             return 0;
 
         case COMMAND_STANDARD_ADD:
             if (deb) fprintf(stream, "add\n");
-            func_add(stack);
+            func_add(stack, &prog);
+            pos+=1;
             break;
         case COMMAND_STANDARD_SUB:
             if (deb) fprintf(stream, "sub\n");
+            func_sub(stack, &prog);
+            pos+=1;
             break;
         case COMMAND_STANDARD_MUL:
             if (deb) fprintf(stream, "mul\n");
+            func_mul(stack, &prog);
+            pos+=1;
             break;
         case COMMAND_STANDARD_DIV:
             if (deb) fprintf(stream, "div\n");
+            func_div(stack, &prog);
+            pos+=1;
             break;
         
         default:
-            // fprintf(stream, "NOTHING: %d\n", (unsigned char)(prog.arr[q]));
+            fprintf(stream, "Undefined command: %d\n", (unsigned char)(prog.arr[pos]));
             CAP
             break;
         }
+        printf("----\n");
+        // fprintf(stream, "pos : %lu\n", pos);
+        // fprintf(stream, "func: %lu\n", func);
+        stack_dump(stack);
+        printf("----\n");
     }
 
 }
@@ -375,7 +575,11 @@ DOT
 //     printf("%s", prog);
     // CAP
 
-    decomp(prog, stdout);
+    prog = decomp(prog, stdout);
+    DOT
+    execute(prog, stdout);
+    DOT
+    CAP
 
 
 

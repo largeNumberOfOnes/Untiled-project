@@ -6,6 +6,7 @@ def add a b : 100 : Int->Int->Int
 def sub a b : 100 : Int->Int->Int
 def mul a b : 101 : Int->Int->Int
 def div a b : 101 : Int->Int->Int
+def print_int a : 100 : Int->Int
 
 def + a b : 100 : Int->Int->Int = add a b
 def - a b : 100 : Int->Int->Int = sub a b
@@ -27,4 +28,4 @@ def thatSoundsScary a b c d e : 100 : Int->Int->Int->Int->Int->Int = workWithFou
 
 //-----------------------------------------------------------------------------
 
-main = pow 2 6 + 4
+main = pow 2 6 / 4

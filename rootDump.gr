@@ -3,640 +3,657 @@ digraph {
 	rankdir=TB
 	root
 	{rank=same
-		93845777705104 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nadd\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
-		root -> 93845777705104
+		94827832027280 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nadd\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
+		root -> 94827832027280
 
-		93845777720320 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nsub\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
-		root -> 93845777720320
+		94827832043120 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nsub\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
+		root -> 94827832043120
 
-		93845777720624 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nmul\nargCount = 2\nargs:\n--> a\n--> b\npriority = 101\nInt->Int->Int\n"]
-		root -> 93845777720624
+		94827832043424 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nmul\nargCount = 2\nargs:\n--> a\n--> b\npriority = 101\nInt->Int->Int\n"]
+		root -> 94827832043424
 
-		93845777720928 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\ndiv\nargCount = 2\nargs:\n--> a\n--> b\npriority = 101\nInt->Int->Int\n"]
-		root -> 93845777720928
+		94827832043728 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\ndiv\nargCount = 2\nargs:\n--> a\n--> b\npriority = 101\nInt->Int->Int\n"]
+		root -> 94827832043728
 
-		93845777721232 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n+\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
-		root -> 93845777721232
+		94827832043968 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nprint_int\nargCount = 1\nargs:\n--> a\npriority = 100\nInt->Int\n"]
+		root -> 94827832043968
 
-		93845777721536 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n-\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
-		root -> 93845777721536
+		94827832044272 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n+\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
+		root -> 94827832044272
 
-		93845777721840 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n*\nargCount = 2\nargs:\n--> a\n--> b\npriority = 101\nInt->Int->Int\n"]
-		root -> 93845777721840
+		94827832044576 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n-\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
+		root -> 94827832044576
 
-		93845777722144 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n/\nargCount = 2\nargs:\n--> a\n--> b\npriority = 101\nInt->Int->Int\n"]
-		root -> 93845777722144
+		94827832044880 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n*\nargCount = 2\nargs:\n--> a\n--> b\npriority = 101\nInt->Int->Int\n"]
+		root -> 94827832044880
 
-		93845777722448 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n==\nargCount = 2\nargs:\n--> a\n--> b\npriority = 99\nInt->Int->Int\n"]
-		root -> 93845777722448
+		94827832045184 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n/\nargCount = 2\nargs:\n--> a\n--> b\npriority = 101\nInt->Int->Int\n"]
+		root -> 94827832045184
 
-		93845777722752 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\npow\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
-		root -> 93845777722752
+		94827832045488 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\n==\nargCount = 2\nargs:\n--> a\n--> b\npriority = 99\nInt->Int->Int\n"]
+		root -> 94827832045488
 
-		93845777723200 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nworkWithFour\nargCount = 4\nargs:\n--> a\n--> b\n--> c\n--> d\npriority = 100\nInt->Int->Int->Int->Int\n"]
-		root -> 93845777723200
+		94827832045792 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\npow\nargCount = 2\nargs:\n--> a\n--> b\npriority = 100\nInt->Int->Int\n"]
+		root -> 94827832045792
 
-		93845777723712 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nthatSoundsScary\nargCount = 5\nargs:\n--> a\n--> b\n--> c\n--> d\n--> e\npriority = 100\nInt->Int->Int->Int->Int->Int\n"]
-		root -> 93845777723712
+		94827832046240 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nworkWithFour\nargCount = 4\nargs:\n--> a\n--> b\n--> c\n--> d\npriority = 100\nInt->Int->Int->Int->Int\n"]
+		root -> 94827832046240
 
-		93845777735152 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nmain\nargCount = 0\nargs:\npriority = 0\nInt\n"]
-		root -> 93845777735152
+		94827832047360 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nthatSoundsScary\nargCount = 5\nargs:\n--> a\n--> b\n--> c\n--> d\n--> e\npriority = 100\nInt->Int->Int->Int->Int->Int\n"]
+		root -> 94827832047360
+
+		94827832058384 [shape=rectangle, style="filled",fillcolor="#900C3F", label="Deflist\nmain\nargCount = 0\nargs:\npriority = 0\nInt\n"]
+		root -> 94827832058384
 
 	}
-	93845777719968 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea2a0 } | 
+	94827832042768 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6510 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea2c0 } 
+		{ child | <02> 0x563ed33e6530 } 
 	}"]
-	93845777720000 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea2c0 } | 
+	94827832042800 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6530 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea2e0 } 
+		{ child | <02> 0x563ed33e6550 } 
 	}"]
-	93845777720032 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea2e0 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> (nil) } 
-	}"]
-	93845777720000:<02> -> 93845777720032
-	93845777719968:<02> -> 93845777720000
-		93845777705104 -> 93845777719968
-	93845777720224 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea3a0 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea3c0 } 
-	}"]
-	93845777720256 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea3c0 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea3e0 } 
-	}"]
-	93845777720288 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea3e0 } | 
+	94827832042832 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6550 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777720256:<02> -> 93845777720288
-	93845777720224:<02> -> 93845777720256
-		93845777720320 -> 93845777720224
-	93845777720528 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea4d0 } | 
+	94827832042800:<02> -> 94827832042832
+	94827832042768:<02> -> 94827832042800
+		94827832027280 -> 94827832042768
+	94827832043024 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6610 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea4f0 } 
+		{ child | <02> 0x563ed33e6630 } 
 	}"]
-	93845777720560 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea4f0 } | 
+	94827832043056 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6630 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea510 } 
+		{ child | <02> 0x563ed33e6650 } 
 	}"]
-	93845777720592 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea510 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> (nil) } 
-	}"]
-	93845777720560:<02> -> 93845777720592
-	93845777720528:<02> -> 93845777720560
-		93845777720624 -> 93845777720528
-	93845777720832 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea600 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea620 } 
-	}"]
-	93845777720864 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea620 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea640 } 
-	}"]
-	93845777720896 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea640 } | 
+	94827832043088 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6650 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777720864:<02> -> 93845777720896
-	93845777720832:<02> -> 93845777720864
-		93845777720928 -> 93845777720832
-	93845777721136 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea730 } | 
+	94827832043056:<02> -> 94827832043088
+	94827832043024:<02> -> 94827832043056
+		94827832043120 -> 94827832043024
+	94827832043328 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6740 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea750 } 
+		{ child | <02> 0x563ed33e6760 } 
 	}"]
-	93845777721168 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea750 } | 
+	94827832043360 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6760 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea770 } 
+		{ child | <02> 0x563ed33e6780 } 
 	}"]
-	93845777721200 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea770 } | 
+	94827832043392 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6780 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777721168:<02> -> 93845777721200
-	93845777721136:<02> -> 93845777721168
-		93845777721232 -> 93845777721136
-	93845777726000 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832043360:<02> -> 94827832043392
+	94827832043328:<02> -> 94827832043360
+		94827832043424 -> 94827832043328
+	94827832043632 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6870 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> 0x563ed33e6890 } 
+	}"]
+	94827832043664 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6890 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> 0x563ed33e68b0 } 
+	}"]
+	94827832043696 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e68b0 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> (nil) } 
+	}"]
+	94827832043664:<02> -> 94827832043696
+	94827832043632:<02> -> 94827832043664
+		94827832043728 -> 94827832043632
+	94827832043904 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6980 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> 0x563ed33e69a0 } 
+	}"]
+	94827832043936 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e69a0 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> (nil) } 
+	}"]
+	94827832043904:<02> -> 94827832043936
+		94827832043968 -> 94827832043904
+	94827832044176 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6a90 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> 0x563ed33e6ab0 } 
+	}"]
+	94827832044208 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6ab0 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> 0x563ed33e6ad0 } 
+	}"]
+	94827832044240 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6ad0 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> (nil) } 
+	}"]
+	94827832044208:<02> -> 94827832044240
+	94827832044176:<02> -> 94827832044208
+		94827832044272 -> 94827832044176
+	94827832049232 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777725776 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832049008 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777725648 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+	94827832048880 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
 add
-0x555a2c3eb8d0
+0x563ed33e7cf0
 Int->Int->Int"]
-93845777725776 -> 93845777725648
-	93845777725680 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832049008 -> 94827832048880
+	94827832048912 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777725776 -> 93845777725680
-93845777726000 -> 93845777725776
-	93845777725904 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832049008 -> 94827832048912
+94827832049232 -> 94827832049008
+	94827832049136 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 b
 Int"]
-93845777726000 -> 93845777725904
-		93845777721232 -> 93845777726000
-	93845777721440 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea860 } | 
+94827832049232 -> 94827832049136
+		94827832044272 -> 94827832049232
+	94827832044480 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6bc0 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea880 } 
+		{ child | <02> 0x563ed33e6be0 } 
 	}"]
-	93845777721472 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea880 } | 
+	94827832044512 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6be0 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea8a0 } 
+		{ child | <02> 0x563ed33e6c00 } 
 	}"]
-	93845777721504 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea8a0 } | 
+	94827832044544 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6c00 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777721472:<02> -> 93845777721504
-	93845777721440:<02> -> 93845777721472
-		93845777721536 -> 93845777721440
-	93845777726544 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832044512:<02> -> 94827832044544
+	94827832044480:<02> -> 94827832044512
+		94827832044576 -> 94827832044480
+	94827832049776 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777726320 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832049552 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777726192 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+	94827832049424 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
 sub
-0x555a2c3ebaf0
+0x563ed33e7f10
 Int->Int->Int"]
-93845777726320 -> 93845777726192
-	93845777726224 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832049552 -> 94827832049424
+	94827832049456 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777726320 -> 93845777726224
-93845777726544 -> 93845777726320
-	93845777726448 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832049552 -> 94827832049456
+94827832049776 -> 94827832049552
+	94827832049680 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 b
 Int"]
-93845777726544 -> 93845777726448
-		93845777721536 -> 93845777726544
-	93845777721744 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea990 } | 
+94827832049776 -> 94827832049680
+		94827832044576 -> 94827832049776
+	94827832044784 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6cf0 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea9b0 } 
+		{ child | <02> 0x563ed33e6d10 } 
 	}"]
-	93845777721776 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea9b0 } | 
+	94827832044816 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6d10 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ea9d0 } 
+		{ child | <02> 0x563ed33e6d30 } 
 	}"]
-	93845777721808 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ea9d0 } | 
+	94827832044848 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6d30 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777721776:<02> -> 93845777721808
-	93845777721744:<02> -> 93845777721776
-		93845777721840 -> 93845777721744
-	93845777727248 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832044816:<02> -> 94827832044848
+	94827832044784:<02> -> 94827832044816
+		94827832044880 -> 94827832044784
+	94827832050480 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777727024 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832050256 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777726896 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+	94827832050128 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
 mul
-0x555a2c3ebdb0
+0x563ed33e81d0
 Int->Int->Int"]
-93845777727024 -> 93845777726896
-	93845777726928 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832050256 -> 94827832050128
+	94827832050160 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777727024 -> 93845777726928
-93845777727248 -> 93845777727024
-	93845777727152 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832050256 -> 94827832050160
+94827832050480 -> 94827832050256
+	94827832050384 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 b
 Int"]
-93845777727248 -> 93845777727152
-		93845777721840 -> 93845777727248
-	93845777722048 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eaac0 } | 
+94827832050480 -> 94827832050384
+		94827832044880 -> 94827832050480
+	94827832045088 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6e20 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eaae0 } 
+		{ child | <02> 0x563ed33e6e40 } 
 	}"]
-	93845777722080 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eaae0 } | 
+	94827832045120 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6e40 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eab00 } 
+		{ child | <02> 0x563ed33e6e60 } 
 	}"]
-	93845777722112 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eab00 } | 
+	94827832045152 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6e60 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777722080:<02> -> 93845777722112
-	93845777722048:<02> -> 93845777722080
-		93845777722144 -> 93845777722048
-	93845777727952 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832045120:<02> -> 94827832045152
+	94827832045088:<02> -> 94827832045120
+		94827832045184 -> 94827832045088
+	94827832051184 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777727728 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832050960 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777727600 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+	94827832050832 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
 div
-0x555a2c3ec070
+0x563ed33e8490
 Int->Int->Int"]
-93845777727728 -> 93845777727600
-	93845777727632 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832050960 -> 94827832050832
+	94827832050864 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777727728 -> 93845777727632
-93845777727952 -> 93845777727728
-	93845777727856 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832050960 -> 94827832050864
+94827832051184 -> 94827832050960
+	94827832051088 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 b
 Int"]
-93845777727952 -> 93845777727856
-		93845777722144 -> 93845777727952
-	93845777722352 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eabf0 } | 
+94827832051184 -> 94827832051088
+		94827832045184 -> 94827832051184
+	94827832045392 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6f50 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eac10 } 
+		{ child | <02> 0x563ed33e6f70 } 
 	}"]
-	93845777722384 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eac10 } | 
+	94827832045424 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6f70 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eac30 } 
+		{ child | <02> 0x563ed33e6f90 } 
 	}"]
-	93845777722416 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eac30 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> (nil) } 
-	}"]
-	93845777722384:<02> -> 93845777722416
-	93845777722352:<02> -> 93845777722384
-		93845777722448 -> 93845777722352
-	93845777722656 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ead20 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ead40 } 
-	}"]
-	93845777722688 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ead40 } | 
-		{ entity | SIMPLE } | 
-		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3ead60 } 
-	}"]
-	93845777722720 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3ead60 } | 
+	94827832045456 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e6f90 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777722688:<02> -> 93845777722720
-	93845777722656:<02> -> 93845777722688
-		93845777722752 -> 93845777722656
-	93845777728976 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832045424:<02> -> 94827832045456
+	94827832045392:<02> -> 94827832045424
+		94827832045488 -> 94827832045392
+	94827832045696 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7080 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> 0x563ed33e70a0 } 
+	}"]
+	94827832045728 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e70a0 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> 0x563ed33e70c0 } 
+	}"]
+	94827832045760 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e70c0 } | 
+		{ entity | SIMPLE } | 
+		{ type | <01> Int } | 
+		{ child | <02> (nil) } 
+	}"]
+	94827832045728:<02> -> 94827832045760
+	94827832045696:<02> -> 94827832045728
+		94827832045792 -> 94827832045696
+	94827832052208 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777728720 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832051952 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777728752 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832051984 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 +
-0x555a2c3ec4f0
+0x563ed33e8910
 Int->Int->Int"]
-93845777728720 -> 93845777728752
-	93845777728624 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832051952 -> 94827832051984
+	94827832051856 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777728720 -> 93845777728624
-93845777728976 -> 93845777728720
-	93845777728816 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832051952 -> 94827832051856
+94827832052208 -> 94827832051952
+	94827832052048 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 b
 Int"]
-93845777728976 -> 93845777728816
-		93845777722752 -> 93845777728976
-	93845777723040 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eaea0 } | 
+94827832052208 -> 94827832052048
+		94827832045792 -> 94827832052208
+	94827832046080 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7200 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eaec0 } 
+		{ child | <02> 0x563ed33e7220 } 
 	}"]
-	93845777723072 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eaec0 } | 
+	94827832046112 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7220 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eaee0 } 
+		{ child | <02> 0x563ed33e7240 } 
 	}"]
-	93845777723104 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eaee0 } | 
+	94827832046144 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7240 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eaf00 } 
+		{ child | <02> 0x563ed33e7260 } 
 	}"]
-	93845777723136 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eaf00 } | 
+	94827832046176 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7260 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eaf20 } 
+		{ child | <02> 0x563ed33e7280 } 
 	}"]
-	93845777723168 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eaf20 } | 
+	94827832046208 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7280 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777723136:<02> -> 93845777723168
-	93845777723104:<02> -> 93845777723136
-	93845777723072:<02> -> 93845777723104
-	93845777723040:<02> -> 93845777723072
-		93845777723200 -> 93845777723040
-	93845777730944 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832046176:<02> -> 94827832046208
+	94827832046144:<02> -> 94827832046176
+	94827832046112:<02> -> 94827832046144
+	94827832046080:<02> -> 94827832046112
+		94827832046240 -> 94827832046080
+	94827832054176 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777729632 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832052864 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777729664 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832052896 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 +
-0x555a2c3ec880
+0x563ed33e8ca0
 Int->Int->Int"]
-93845777729632 -> 93845777729664
-	93845777729536 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832052864 -> 94827832052896
+	94827832052768 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777729632 -> 93845777729536
-93845777730944 -> 93845777729632
-	93845777730752 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832052864 -> 94827832052768
+94827832054176 -> 94827832052864
+	94827832053984 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777734864 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832058096 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777734896 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832058128 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 /
-0x555a2c3edcf0
+0x563ed33ea110
 Int->Int->Int"]
-93845777734864 -> 93845777734896
-	93845777730656 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832058096 -> 94827832058128
+	94827832053888 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777730528 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832053760 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777730112 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832053344 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 -
-0x555a2c3eca40
+0x563ed33e8e60
 Int->Int->Int"]
-93845777730528 -> 93845777730112
-	93845777730144 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832053760 -> 94827832053344
+	94827832053376 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777729888 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832053120 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777729920 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832053152 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 *
-0x555a2c3ec980
+0x563ed33e8da0
 Int->Int->Int"]
-93845777729888 -> 93845777729920
-	93845777729792 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832053120 -> 94827832053152
+	94827832053024 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 b
 Int"]
-93845777729888 -> 93845777729792
-93845777730144 -> 93845777729888
-	93845777729984 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832053120 -> 94827832053024
+94827832053376 -> 94827832053120
+	94827832053216 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 c
 Int"]
-93845777730144 -> 93845777729984
-93845777730528 -> 93845777730144
-93845777730656 -> 93845777730528
-	93845777730176 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832053376 -> 94827832053216
+94827832053760 -> 94827832053376
+94827832053888 -> 94827832053760
+	94827832053408 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 d
 Int"]
-93845777730656 -> 93845777730176
-93845777734864 -> 93845777730656
-93845777730752 -> 93845777734864
-	93845777734960 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832053888 -> 94827832053408
+94827832058096 -> 94827832053888
+94827832053984 -> 94827832058096
+	94827832058192 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777730752 -> 93845777734960
-93845777730944 -> 93845777730752
-		93845777723200 -> 93845777730944
-	93845777723520 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eb080 } | 
+94827832053984 -> 94827832058192
+94827832054176 -> 94827832053984
+		94827832046240 -> 94827832054176
+	94827832046560 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e73e0 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eb0a0 } 
+		{ child | <02> 0x563ed33e7400 } 
 	}"]
-	93845777723552 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eb0a0 } | 
+	94827832046592 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7400 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eb0c0 } 
+		{ child | <02> 0x563ed33e7420 } 
 	}"]
-	93845777723584 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eb0c0 } | 
+	94827832046624 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7420 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eb0e0 } 
+		{ child | <02> 0x563ed33e7440 } 
 	}"]
-	93845777723616 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eb0e0 } | 
+	94827832046656 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7440 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eb100 } 
+		{ child | <02> 0x563ed33e7460 } 
 	}"]
-	93845777723648 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eb100 } | 
+	94827832046688 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7460 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
-		{ child | <02> 0x555a2c3eb120 } 
+		{ child | <02> 0x563ed33e7480 } 
 	}"]
-	93845777723680 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3eb120 } | 
+	94827832046720 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33e7480 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-	93845777723648:<02> -> 93845777723680
-	93845777723616:<02> -> 93845777723648
-	93845777723584:<02> -> 93845777723616
-	93845777723552:<02> -> 93845777723584
-	93845777723520:<02> -> 93845777723552
-		93845777723712 -> 93845777723520
-	93845777734352 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832046688:<02> -> 94827832046720
+	94827832046656:<02> -> 94827832046688
+	94827832046624:<02> -> 94827832046656
+	94827832046592:<02> -> 94827832046624
+	94827832046560:<02> -> 94827832046592
+		94827832047360 -> 94827832046560
+	94827832057584 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777734224 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832057456 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777734192 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832057424 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 +
-0x555a2c3eda30
+0x563ed33e9e50
 Int->Int->Int"]
-93845777734224 -> 93845777734192
-	93845777733936 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832057456 -> 94827832057424
+	94827832057168 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777733488 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832056720 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777733552 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832056784 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int->Int"]
-	93845777731632 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832054864 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int->Int->Int"]
-	93845777731504 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+	94827832054736 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
 workWithFour
-0x555a2c3ecfb0
+0x563ed33e93d0
 Int->Int->Int->Int->Int"]
-93845777731632 -> 93845777731504
-	93845777731536 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832054864 -> 94827832054736
+	94827832054768 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777731632 -> 93845777731536
-93845777733552 -> 93845777731632
-	93845777733360 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832054864 -> 94827832054768
+94827832056784 -> 94827832054864
+	94827832056592 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777731984 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832055216 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777732016 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832055248 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 +
-0x555a2c3ed1b0
+0x563ed33e95d0
 Int->Int->Int"]
-93845777731984 -> 93845777732016
-	93845777731888 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832055216 -> 94827832055248
+	94827832055120 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777731984 -> 93845777731888
-93845777733360 -> 93845777731984
-	93845777733168 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832055216 -> 94827832055120
+94827832056592 -> 94827832055216
+	94827832056400 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777732944 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832056176 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777732976 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832056208 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 /
-0x555a2c3ed570
+0x563ed33e9990
 Int->Int->Int"]
-93845777732944 -> 93845777732976
-	93845777732848 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832056176 -> 94827832056208
+	94827832056080 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777732720 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832055952 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777732464 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832055696 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 -
-0x555a2c3ed370
+0x563ed33e9790
 Int->Int->Int"]
-93845777732720 -> 93845777732464
-	93845777732496 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832055952 -> 94827832055696
+	94827832055728 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777732240 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832055472 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777732272 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94827832055504 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 *
-0x555a2c3ed2b0
+0x563ed33e96d0
 Int->Int->Int"]
-93845777732240 -> 93845777732272
-	93845777732144 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832055472 -> 94827832055504
+	94827832055376 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 b
 Int"]
-93845777732240 -> 93845777732144
-93845777732496 -> 93845777732240
-	93845777732336 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832055472 -> 94827832055376
+94827832055728 -> 94827832055472
+	94827832055568 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 c
 Int"]
-93845777732496 -> 93845777732336
-93845777732720 -> 93845777732496
-93845777732848 -> 93845777732720
-	93845777732528 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832055728 -> 94827832055568
+94827832055952 -> 94827832055728
+94827832056080 -> 94827832055952
+	94827832055760 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 d
 Int"]
-93845777732848 -> 93845777732528
-93845777732944 -> 93845777732848
-93845777733168 -> 93845777732944
-	93845777733040 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832056080 -> 94827832055760
+94827832056176 -> 94827832056080
+94827832056400 -> 94827832056176
+	94827832056272 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-93845777733168 -> 93845777733040
-93845777733360 -> 93845777733168
-93845777733552 -> 93845777733360
-93845777733488 -> 93845777733552
-	93845777733712 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832056400 -> 94827832056272
+94827832056592 -> 94827832056400
+94827832056784 -> 94827832056592
+94827832056720 -> 94827832056784
+	94827832056944 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 e
 Int"]
-93845777733488 -> 93845777733712
-93845777733936 -> 93845777733488
-	93845777733840 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94827832056720 -> 94827832056944
+94827832057168 -> 94827832056720
+	94827832057072 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 d
 Int"]
-93845777733936 -> 93845777733840
-93845777734224 -> 93845777733936
-93845777734352 -> 93845777734224
-	93845777734096 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+94827832057168 -> 94827832057072
+94827832057456 -> 94827832057168
+94827832057584 -> 94827832057456
+	94827832057328 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
 12
 Int"]
-93845777734352 -> 93845777734096
-		93845777723712 -> 93845777734352
-	93845777734768 [shape=record, label="{ 
-		{ TypeTree | 0x555a2c3edc70 } | 
+94827832057584 -> 94827832057328
+		94827832047360 -> 94827832057584
+	94827832058000 [shape=record, label="{ 
+		{ TypeTree | 0x563ed33ea090 } | 
 		{ entity | SIMPLE } | 
 		{ type | <01> Int } | 
 		{ child | <02> (nil) } 
 	}"]
-		93845777735152 -> 93845777734768
-	93845777735584 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+		94827832058384 -> 94827832058000
+	94827832058816 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777735456 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832058688 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777735424 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
-+
-0x555a2c3edf00
+	94827832058656 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+/
+0x563ed33ea320
 Int->Int->Int"]
-93845777735456 -> 93845777735424
-	93845777734672 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94827832058688 -> 94827832058656
+	94827832057904 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93845777734640 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94827832057872 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93845777734832 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+	94827832058064 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
 pow
-0x555a2c3edcb0
+0x563ed33ea0d0
 Int->Int->Int"]
-93845777734640 -> 93845777734832
-	93845777739200 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+94827832057872 -> 94827832058064
+	94827832062432 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
 2
 Int"]
-93845777734640 -> 93845777739200
-93845777734672 -> 93845777734640
-	93845777734512 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+94827832057872 -> 94827832062432
+94827832057904 -> 94827832057872
+	94827832057744 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
 6
 Int"]
-93845777734672 -> 93845777734512
-93845777735456 -> 93845777734672
-93845777735584 -> 93845777735456
-	93845777735328 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+94827832057904 -> 94827832057744
+94827832058688 -> 94827832057904
+94827832058816 -> 94827832058688
+	94827832058560 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
 4
 Int"]
-93845777735584 -> 93845777735328
-		93845777735152 -> 93845777735584
+94827832058816 -> 94827832058560
+		94827832058384 -> 94827832058816
 
 }
