@@ -296,11 +296,20 @@ Exptree* eatFunction(Token **token_ptr, Scope *scope) {
             Exptree *tree = NULL;
             if (token->type == TOKEN_TYPE_PARENTHESES_BRACKET_OPEN) {
                 token = token->next; 
+                DOT
                 tree = expression(&token, scope);
+                DOT
+
+                // if (token)
                 token = token->prev;
+                DOT
+                // CAP
                 // printf("--> %s\n", token->string);
                 // exptree_printToFile(tree, "PPPPPPPPPPPPPPP.txt");
-                // system("dot -Tsvg PPPPPPPPPPPPPPP.txt -o pppppppp.svg");
+                // if (!strcmp(scope->deflist->func->name, "pow")) {
+                //     system("dot -Tsvg PPPPPPPPPPPPPPP.txt -o iii.svg");
+                //     CAP
+                // }
                 // CAP
             } else {
                 tree = exptree_initSimple(token, scope);
@@ -542,6 +551,11 @@ DOT
             tree = func;
         }
         DOT
+    } else if (token->type == TOKEN_TYPE_PARENTHESES_BRACKET_OPEN) {
+        *token_ptr = (*token_ptr)->next;
+        tree = expression(token_ptr, scope);
+    } else if (token->type == TOKEN_TYPE_PARENTHESES_BRACKET_CLOSE) {
+        CAP
     } else if (!strcmp(token->string, "if")) {
         // *token_ptr = (*token_ptr)->next;
         // Exptree *cond = expression(token_ptr, scope);

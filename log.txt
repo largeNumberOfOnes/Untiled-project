@@ -1,8 +1,7 @@
 push 0
 push 1
-push 2
 NFA call pow
-NFA call /
+NFA call print_int
 pushArg 1
 pushArg 0
 NFA call add
@@ -27,7 +26,7 @@ NFA call -
 NFA call /
 pushArg 0
 NFA call +
-push 3
+push 2
 pushArg 3
 pushArg 4
 pushArg 0
@@ -42,8 +41,7 @@ NFA call +
 pushArg 0
 NFA call workWithFour
 NFA call +
+push 3
 push 4
-push 5
-push 6
 NFA call pow
-NFA call /
+NFA call print_int

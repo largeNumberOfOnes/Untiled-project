@@ -139,6 +139,7 @@ DOT
 
     Scope *scope = scope_init(deflist_search(root->deflist, func->name));
     func->tree = expression(&token, scope);
+DOT
     scope = scope_delete(scope);
     assert(func != NULL);
 

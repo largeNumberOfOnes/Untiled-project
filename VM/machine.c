@@ -211,7 +211,6 @@ Prog readInList(char *filePath) {
 
 int func_add(Stack *stack, Prog *prog) {
 
-    printf("---> %lu\n", prog->dataStart);
     Pair arg1 = stack_pop(stack);
     Pair arg2 = stack_pop(stack);
 
@@ -364,6 +363,26 @@ int func_div(Stack *stack, Prog *prog) {
 
     return 0;
 }
+int func_print_int(Stack *stack, Prog *prog) {
+
+    Pair arg = stack_getByPos(stack, stack_getLastPos(stack));
+    
+    int arg_int = 0;
+    if (arg.type == STACK_ELEM_TYPES_DATA_ADDRESS) {
+        // printf("arg1: %lu\n", prog->dataStart+arg1.elem*5);
+        arg_int = convert_BytesToInt(prog->arr+prog->dataStart+arg.elem*5+1);
+        // printf("arg1: %d\n", arg1_int);
+    } else if (arg.type == STACK_ELEM_TYPES_INLINE_INT) {
+        arg_int = (int)(long)arg.elem;
+    } else {
+        CAP
+    }
+
+    printf("%d\n", arg_int);
+    // CAP
+
+    return 0;
+}
 
 //? ###########################################################################
 //? ###########################################################################
@@ -443,6 +462,9 @@ Prog decomp(Prog prog, FILE *stream) {
         case COMMAND_STANDARD_DIV:
             if (deb) fprintf(stream, "div\n");
             break;
+        case COMMAND_STANDARD_PRINT_INT:
+            if (deb) fprintf(stream, "print_int\n");
+            break;
         
         default:
             if (deb) fprintf(stream, "NOTHING: %d\n", (unsigned char)(prog.arr[q]));
@@ -460,6 +482,7 @@ int execute(Prog prog, FILE *stream) {
     size_t func = 1;
 
     int deb = TRUE;
+    deb = FALSE;
     FILE *progout = stdout;
 
     Stack *stack = stack_init();
@@ -470,7 +493,7 @@ int execute(Prog prog, FILE *stream) {
 
 
         // fprintf(stream, "%06lu %06lu: ", w, q);
-        fprintf(stream, "%05lu: ", pos);
+        if (deb) fprintf(stream, "%05lu: ", pos);
 
         switch (prog.arr[pos]) {
         case COMMAND_LENIN:
@@ -552,17 +575,22 @@ int execute(Prog prog, FILE *stream) {
             func_div(stack, &prog);
             pos+=1;
             break;
+        case COMMAND_STANDARD_PRINT_INT:
+            if (deb) fprintf(stream, "print_int\n");
+            func_print_int(stack, &prog);
+            pos+=1;
+            break;
         
         default:
-            fprintf(stream, "Undefined command: %d\n", (unsigned char)(prog.arr[pos]));
+            if (deb) fprintf(stream, "Undefined command: %d\n", (unsigned char)(prog.arr[pos]));
             CAP
             break;
         }
-        printf("----\n");
-        // fprintf(stream, "pos : %lu\n", pos);
-        // fprintf(stream, "func: %lu\n", func);
-        stack_dump(stack);
-        printf("----\n");
+        if (deb) printf("----\n");
+        // if (deb) fprintf(stream, "pos : %lu\n", pos);
+        // if (deb) fprintf(stream, "func: %lu\n", func);
+        if (deb) stack_dump(stack);
+        if (deb) printf("----\n");
     }
 
 }

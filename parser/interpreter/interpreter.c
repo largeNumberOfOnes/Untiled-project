@@ -386,6 +386,7 @@ int prog_workWithStandartFunctions(Prog *prog, size_t line) {
     if (!strcmp(str+2, "sub")) { com = COMMAND_STANDARD_SUB; }
     if (!strcmp(str+2, "mul")) { com = COMMAND_STANDARD_MUL; }
     if (!strcmp(str+2, "div")) { com = COMMAND_STANDARD_DIV; }
+    if (!strcmp(str+2, "print_int")) { com = COMMAND_STANDARD_PRINT_INT; }
 
     if (com != COMMAND_LENIN) {
 

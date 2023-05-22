@@ -1,37 +1,30 @@
 digraph {
 
-	94827832058816 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	93826998711392 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	94827832058688 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	93826998710928 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+print_int
+0x5555ccedb290
 Int->Int"]
-	94827832058656 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
-/
-0x563ed33ea320
-Int->Int->Int"]
-94827832058688 -> 94827832058656
-	94827832057904 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+93826998711392 -> 93826998710928
+	93826998711296 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	94827832057872 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	93826998710704 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	94827832058064 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+	93826998715296 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
 pow
-0x563ed33ea0d0
+0x5555ccedc3a0
 Int->Int->Int"]
-94827832057872 -> 94827832058064
-	94827832062432 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+93826998710704 -> 93826998715296
+	93826998715328 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
 2
 Int"]
-94827832057872 -> 94827832062432
-94827832057904 -> 94827832057872
-	94827832057744 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+93826998710704 -> 93826998715328
+93826998711296 -> 93826998710704
+	93826998710576 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
 6
 Int"]
-94827832057904 -> 94827832057744
-94827832058688 -> 94827832057904
-94827832058816 -> 94827832058688
-	94827832058560 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
-4
-Int"]
-94827832058816 -> 94827832058560
+93826998711296 -> 93826998710576
+93826998711392 -> 93826998711296
 
 }
