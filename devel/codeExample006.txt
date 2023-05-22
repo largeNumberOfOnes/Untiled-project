@@ -28,5 +28,5 @@ def thatSoundsScary a b c d e : 100 : Int->Int->Int->Int->Int->Int = workWithFou
 
 //-----------------------------------------------------------------------------
 
-// main = print_int(pow 2 6 / 4)
-main = print_int ((pow 2 6) / 4)
+main = print_int((pow 2 6 / 4) + 5)
+// main = print_int ((pow 2 6) / 4)

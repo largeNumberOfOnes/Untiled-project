@@ -295,13 +295,19 @@ Exptree* eatFunction(Token **token_ptr, Scope *scope) {
         if (isFuncArg(token)) {
             Exptree *tree = NULL;
             if (token->type == TOKEN_TYPE_PARENTHESES_BRACKET_OPEN) {
-                token = token->next; 
+                token = token->next;
                 DOT
                 tree = expression(&token, scope);
                 DOT
-
+                // assert(tree != NULL);
                 // if (token)
-                token = token->prev;
+                exptree_dump(tree, stdout);
+                exptree_dump(((Pair*)(tree->content))->func, stdout);
+                exptree_dump(((Pair*)(tree->content))->arg, stdout);
+                if (token) token = token->prev;
+                // printf(")))) %s\n", toketree->string);
+                // CAP
+                // token = token->prev;
                 DOT
                 // CAP
                 // printf("--> %s\n", token->string);
@@ -323,7 +329,7 @@ Exptree* eatFunction(Token **token_ptr, Scope *scope) {
                 DOT
                 func = exptree_initApply(func, tree);
                 DOT
-                token = token->next;
+                if (token) token = token->next;
             } else {
                 DOT
                 break;
@@ -341,6 +347,7 @@ Exptree* eatFunction(Token **token_ptr, Scope *scope) {
     *token_ptr = token;
     DOT
 
+    // CAP
     return func;
 }
 
@@ -539,8 +546,8 @@ DOT
         tree = eatFunction(token_ptr, scope);
         Token *token = *token_ptr;
         // printf("--> %s\n", token->string);
-        // CAP
         DOT
+        // CAP
         if (token && isOperType(token)) {
             *token_ptr = token->next;
             Exptree *arg2 = expression(token_ptr, scope);
@@ -551,9 +558,23 @@ DOT
             tree = func;
         }
         DOT
+        // CAP
     } else if (token->type == TOKEN_TYPE_PARENTHESES_BRACKET_OPEN) {
         *token_ptr = (*token_ptr)->next;
         tree = expression(token_ptr, scope);
+        Token *token = *token_ptr;
+        // printf("--> %s\n", token->string);
+        DOT
+        // CAP
+        if (token && isOperType(token)) {
+            *token_ptr = token->next;
+            Exptree *arg2 = expression(token_ptr, scope);
+            Exptree *func = exptree_initSimple(token, scope);
+            assert(func != NULL);
+            func = exptree_initApply(func, tree);
+            func = exptree_initApply(func, arg2);
+            tree = func;
+        }
     } else if (token->type == TOKEN_TYPE_PARENTHESES_BRACKET_CLOSE) {
         CAP
     } else if (!strcmp(token->string, "if")) {
@@ -578,9 +599,9 @@ DOT
 
     DOT
     exptree_printToFile(tree, "PPPPPPPPPPPPPPP.txt");
-    system("dot -Tsvg PPPPPPPPPPPPPPP.txt -o pppppppp.svg");
+    system("dot -Tsvg PPPPPPPPPPPPPPP.txt -o iii.svg");
 
-
+// CAP
 
     return tree;
 }

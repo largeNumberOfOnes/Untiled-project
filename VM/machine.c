@@ -392,13 +392,14 @@ Prog decomp(Prog prog, FILE *stream) {
     size_t w = 0;
 
     int deb = TRUE;
+    deb = FALSE;
 
     prog.dataStart = 2;
     for (size_t q = 0; q < prog.len; ++q, ++w) {
         // for (size_t e = 0; e < 20; ++e) fprintf(stream, "|%u|", (unsigned char)(*(prog.arr+q+e))); fprintf(stream, "\n");
 
 
-        fprintf(stream, "%06lu %06lu: ", w, q);
+        if (deb) fprintf(stream, "%06lu %06lu: ", w, q);
         // fprintf(stream, "%05lu: ", w);
 
         if(q >= prog.dataStart && prog.arr[q] != COMMAND_END_OF_DATA) {
@@ -596,7 +597,6 @@ int execute(Prog prog, FILE *stream) {
 }
 
 int virtMachine() {
-DOT
     
     Prog prog = readInList("prog.bc");
 // DOT
@@ -604,10 +604,10 @@ DOT
     // CAP
 
     prog = decomp(prog, stdout);
-    DOT
+    // DOT
     execute(prog, stdout);
-    DOT
-    CAP
+    // DOT
+    // CAP
 
 
 

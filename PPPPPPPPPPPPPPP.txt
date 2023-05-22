@@ -1,30 +1,60 @@
 digraph {
 
-	93826998711392 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94176617076864 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93826998710928 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+	94176617075504 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
 print_int
-0x5555ccedb290
+0x55a733ce9330
 Int->Int"]
-93826998711392 -> 93826998710928
-	93826998711296 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94176617076864 -> 94176617075504
+	94176617076704 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	93826998710704 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94176617076576 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	93826998715296 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
-pow
-0x5555ccedc3a0
+	94176617076544 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
++
+0x55a733ce9740
 Int->Int->Int"]
-93826998710704 -> 93826998715296
-	93826998715328 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+94176617076576 -> 94176617076544
+	94176617076288 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94176617076160 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94176617076128 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+/
+0x55a733ce95a0
+Int->Int->Int"]
+94176617076160 -> 94176617076128
+	94176617075872 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94176617075280 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94176617079872 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
+pow
+0x55a733cea440
+Int->Int->Int"]
+94176617075280 -> 94176617079872
+	94176617079904 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
 2
 Int"]
-93826998710704 -> 93826998715328
-93826998711296 -> 93826998710704
-	93826998710576 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+94176617075280 -> 94176617079904
+94176617075872 -> 94176617075280
+	94176617075152 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
 6
 Int"]
-93826998711296 -> 93826998710576
-93826998711392 -> 93826998711296
+94176617075872 -> 94176617075152
+94176617076160 -> 94176617075872
+94176617076288 -> 94176617076160
+	94176617076032 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+4
+Int"]
+94176617076288 -> 94176617076032
+94176617076576 -> 94176617076288
+94176617076704 -> 94176617076576
+	94176617076448 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+5
+Int"]
+94176617076704 -> 94176617076448
+94176617076864 -> 94176617076704
 
 }
