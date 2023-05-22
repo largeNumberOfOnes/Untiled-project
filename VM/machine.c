@@ -392,7 +392,7 @@ Prog decomp(Prog prog, FILE *stream) {
     size_t w = 0;
 
     int deb = TRUE;
-    deb = FALSE;
+    // deb = FALSE;
 
     prog.dataStart = 2;
     for (size_t q = 0; q < prog.len; ++q, ++w) {
@@ -483,7 +483,7 @@ int execute(Prog prog, FILE *stream) {
     size_t func = 1;
 
     int deb = TRUE;
-    deb = FALSE;
+    // deb = FALSE;
     FILE *progout = stdout;
 
     Stack *stack = stack_init();
@@ -587,11 +587,11 @@ int execute(Prog prog, FILE *stream) {
             CAP
             break;
         }
-        if (deb) printf("----\n");
+        // if (deb) printf("----\n");
         // if (deb) fprintf(stream, "pos : %lu\n", pos);
         // if (deb) fprintf(stream, "func: %lu\n", func);
-        if (deb) stack_dump(stack);
-        if (deb) printf("----\n");
+        // if (deb) stack_dump(stack);
+        // if (deb) printf("----\n");
     }
 
 }
@@ -603,11 +603,16 @@ int virtMachine() {
 //     printf("%s", prog);
     // CAP
 
-    prog = decomp(prog, stdout);
+    FILE *file_deBitProg = fopen("deBitProg.txt", "w+");
+    FILE *file_execDump = fopen("execDump.txt", "w+");
+
+    prog = decomp(prog, file_deBitProg);
     // DOT
-    execute(prog, stdout);
+    execute(prog, file_execDump);
     // DOT
     // CAP
+    fclose(file_deBitProg);
+    fclose(file_execDump);
 
 
 
