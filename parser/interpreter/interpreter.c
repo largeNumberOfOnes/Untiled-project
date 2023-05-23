@@ -328,6 +328,77 @@ int prog_addElem(Prog *prog, Exptree *tree, Function *func) {
     return 0;
 }
 
+char* prog_addAddrr(Prog *prog, char command) {
+
+    assert(prog != NULL);
+
+    char *str = (char*) malloc(sizeof(char)*(sizeof(size_t)+2));
+    str[0] = command;
+    for (size_t q = 0; q < sizeof(size_t); ++q) str[q+1] = 0;
+    str[sizeof(size_t)+1] = '\0';
+    prog_codeAdd(prog, str, sizeof(size_t) + 1);
+
+    return str;
+}
+
+int prog_addIf(Prog *prog, Exptree *tree, Function *func) {
+
+    assert(prog != NULL);
+    assert(tree != NULL);
+
+    size_t now = prog_getCodeLineCount(prog);
+
+    // put 0 val to data
+    char *str_data = (char*) malloc(sizeof(char)*6);
+    str_data[0] = DATATYPE_INT;
+    for (int q = 0; q < 4; ++q) str_data[q+1] = 0;
+    str_data[5] = '\0';
+    prog_dataAdd(prog, str_data, sizeof(int)+sizeof(char));
+
+    // put push 0 val address command to code
+    char *str_code = (char*) malloc(sizeof(char)*(sizeof(size_t)+2));
+    str_code[0] = COMMAND_PUSH;
+    str_code[sizeof(size_t)+1] = '\0';
+    size_t line = prog_getDataLineCount(prog) - 1;
+    convert_ToBytes(str_code+1, &line, sizeof(size_t));
+    prog_codeAdd(prog, str_code, sizeof(size_t) + 1);
+
+    // for (int q = 0; q < 4; ++q) prog_codeAddCommand(prog, 255u); // dev
+
+    Ifexptree *iftree = (Ifexptree*)(tree->content);
+
+    // cond to code
+    prog_addTree(prog, iftree->cond, func);
+    prog_codeAddCommand(prog, COMMAND_STANDARD_COMP);
+    // char* jumpifLine = prog_addAddrr(prog, COMMAND_JUMPIF);
+    // str_jumpif[0] = COMMAND_NEED_FOR_ADDRESS;
+    // MES("-----");
+    char *str_jumpif = (char*) malloc(sizeof(char)*(sizeof(char)*2+sizeof(size_t)));
+    str_jumpif[0] = COMMAND_JUMPIF;
+    str_jumpif[sizeof(char)+sizeof(size_t)] = '\0';
+    prog_codeAdd(prog, str_jumpif, sizeof(size_t)+sizeof(char));
+    // convert_ToBytes(str_jumpif, void *a, size_t size)
+
+    // arg1 to code
+    prog_addTree(prog, iftree->arg1, func);
+
+    char *str_jump = (char*) malloc(sizeof(char)*(sizeof(char)*2+sizeof(size_t)));
+    str_jump[0] = COMMAND_JUMP;
+    str_jump[sizeof(char)+sizeof(size_t)] = '\0';
+    prog_codeAdd(prog, str_jump, sizeof(size_t)+sizeof(char));
+    
+    size_t jumpifLine_n = prog_getCodeLineCount(prog);
+    convert_ToBytes(str_jumpif+1, &jumpifLine_n, sizeof(size_t));
+
+    // arg1 to code
+    prog_addTree(prog, iftree->arg2, func);
+
+    size_t jumpLine_n = prog_getCodeLineCount(prog);
+    convert_ToBytes(str_jump+1, &jumpLine_n, sizeof(size_t));
+
+    return 0;
+}
+
 int prog_addVar(Prog *prog, Exptree *tree, Function *func) {
 
     assert(prog != NULL);
@@ -369,7 +440,8 @@ int prog_addTree(Prog *prog, Exptree *tree, Function *func) {
         return prog_addFunction(prog, tree, func);
     } else if (tree->type == EXPTREE_TYPE_IF) {
 
-        CAP // dev
+        // CAP // dev
+        return prog_addIf(prog, tree, func);
     }
 
     return 1;
@@ -386,6 +458,7 @@ int prog_workWithStandartFunctions(Prog *prog, size_t line) {
     if (!strcmp(str+2, "sub")) { com = COMMAND_STANDARD_SUB; }
     if (!strcmp(str+2, "mul")) { com = COMMAND_STANDARD_MUL; }
     if (!strcmp(str+2, "div")) { com = COMMAND_STANDARD_DIV; }
+    if (!strcmp(str+2, "==")) { com = COMMAND_STANDARD_COMP; }
     if (!strcmp(str+2, "print_int")) { com = COMMAND_STANDARD_PRINT_INT; }
 
     if (com != COMMAND_LENIN) {
@@ -412,11 +485,11 @@ int prog_functionAddressesSubstitution(Prog *prog, Deflist *deflist) {
 
         if (str[0] == COMMAND_NEED_FOR_ADDRESS) {
 
-            if (stringArray_getLength(prog->code, q) > 2 &&
-                str[1] == COMMAND_CALL
-            ) {
+            assert(stringArray_getLength(prog->code, q) > 2);
 
-                printf("changing address %s\n", str+2);
+            if (str[1] == COMMAND_CALL) {
+
+                printf("changing call %s\n", str+2);
                 if (prog_workWithStandartFunctions(prog, q)) continue;
 
                 char *newstr = malloc(2*sizeof(char)+sizeof(size_t));
@@ -449,8 +522,35 @@ int prog_functionAddressesSubstitution(Prog *prog, Deflist *deflist) {
             newstr[sizeof(char)+sizeof(size_t)] = '\0';
             stringArray_changeString(prog->code, q, newstr, sizeof(size_t)+1);
             str = NULL;
-            
+
+        } else if (str[0] == COMMAND_JUMPIF) {
+
+            printf("changing jumpif %lu\n", convert_BytesToSizeT(str+1));
+            char *newstr = malloc(2*sizeof(char)+sizeof(size_t));
+            newstr[0] = COMMAND_JUMPIF;
+            size_t line = stringArray_symbolsUnderLine(prog->code, convert_BytesToSizeT(str+1)+1)-1;
+            // MES("------")
+            // printf("---- %lu\n", line);
+            convert_ToBytes(newstr+1, &line, sizeof(size_t));
+            newstr[sizeof(char)+sizeof(size_t)] = '\0';
+            stringArray_changeString(prog->code, q, newstr, sizeof(size_t)+1);
+            str = NULL;
+   
+        } else if (str[0] == COMMAND_JUMP) {
+
+            printf("changing jump %lu\n", convert_BytesToSizeT(str+1));
+            char *newstr = malloc(2*sizeof(char)+sizeof(size_t));
+            newstr[0] = COMMAND_JUMP;
+            size_t line = stringArray_symbolsUnderLine(prog->code, convert_BytesToSizeT(str+1)+2)-2;
+            // MES("------")
+            // printf("---- %lu\n", line);
+            convert_ToBytes(newstr+1, &line, sizeof(size_t));
+            newstr[sizeof(char)+sizeof(size_t)] = '\0';
+            stringArray_changeString(prog->code, q, newstr, sizeof(size_t)+1);
+            str = NULL;
+   
         }
+
 
     }
 
@@ -493,7 +593,9 @@ int interpreter(Root *root) {
     Deflist *iter = deflist_iteratorInit(root->deflist);
     while (iter) {
 
-        if (iter->func->tree == NULL) {
+        if (iter->func->tree == NULL ||
+            !strcmp(iter->func->name, "main")
+        ) {
             printf("--> %s\n", iter->func->name);
             iter = deflist_iteratorNext(iter);
             continue;

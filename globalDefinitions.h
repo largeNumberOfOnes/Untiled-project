@@ -13,6 +13,7 @@
 
 #define MES(str) printf("\033[33mMES: %s\n\033[39m",str);
 
-
+#undef DOT
+#define DOT 
 
 #endif

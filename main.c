@@ -83,7 +83,7 @@ int main() {
     char* str = preprocessor("devel/codeExample006.txt");
     DOT
     Token *token = convertToTokens(str);
-
+    // CAP
     Fence *fence = fence_createFenceFromTokens(token);
     fence_print(fence, "fence_dump");
     system("dot -Tsvg fence_dump -o fence.svg");

@@ -64,7 +64,7 @@ TypeTree* tokenTypeToTypeTree(Token *token, Scope *scope) {
         case TOKEN_TYPE_ACUTED_OPERATOR:
         case TOKEN_TYPE_ACUTED_FUNCTION:
             return scope_getFunction(scope, token->string)->typeTree; // dev
-        case TOKEN_TYPE_VARIABLE:
+        case TOKEN_TYPE_VARIABLE:{
             DOT
             TypeTree* tree = scope_getType(scope, token->string);
             DOT
@@ -76,6 +76,7 @@ TypeTree* tokenTypeToTypeTree(Token *token, Scope *scope) {
             // return typeTree_treeSeparator(type);
             // CAP
         // case TOKEN_TYPE_VARIABLE:
+            }
         default:
             CAP
     }
@@ -301,9 +302,9 @@ Exptree* eatFunction(Token **token_ptr, Scope *scope) {
                 DOT
                 // assert(tree != NULL);
                 // if (token)
-                exptree_dump(tree, stdout);
-                exptree_dump(((Pair*)(tree->content))->func, stdout);
-                exptree_dump(((Pair*)(tree->content))->arg, stdout);
+                // exptree_dump(tree, stdout);
+                // exptree_dump(((Pair*)(tree->content))->func, stdout);
+                // exptree_dump(((Pair*)(tree->content))->arg, stdout);
                 if (token) token = token->prev;
                 // printf(")))) %s\n", toketree->string);
                 // CAP
@@ -585,7 +586,29 @@ DOT
         // // system("dot -Tsvg PPPPPPPPPPPPPPP.txt -o pppppppp.svg");
         // printf("--> %s\n", (*token_ptr)->string);
         // Exptree *arg1 = expression(token_ptr, scope);
-        CAP
+        *token_ptr = token->next;
+        Exptree *arg1 = expression(token_ptr, scope);
+        assert((*token_ptr)->next != NULL);
+        // printf("--->%s\n", (*token_ptr)->string);
+        // (*token_ptr) = (*token_ptr)->next;
+        assert(!strcmp((*token_ptr)->string, "then"));
+        assert((*token_ptr)->next != NULL);
+        (*token_ptr) = (*token_ptr)->next;
+        Exptree *arg2 = expression(token_ptr, scope);
+        assert((*token_ptr)->next != NULL);
+        // (*token_ptr) = (*token_ptr)->next;
+        assert(!strcmp((*token_ptr)->string, "else"));
+        assert((*token_ptr)->next != NULL);
+        (*token_ptr) = (*token_ptr)->next;
+        Exptree *arg3 = expression(token_ptr, scope);
+
+        tree = exptree_initIf(arg1, arg2, arg3);
+
+        exptree_printToFile(tree, "PPPPPPPPPPPPPPP.txt");
+        system("dot -Tsvg PPPPPPPPPPPPPPP.txt -o pppppppp.svg");
+
+        // CAP
+        // CAP
     } else {
         DOT
         tree = weakexpression(token_ptr, scope);

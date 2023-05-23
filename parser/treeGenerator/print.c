@@ -41,6 +41,10 @@ int exptree_dump(Exptree *tree, FILE *file) {
             fprintf(file, "─┬─🢒 type: FUNCTION\n");
             fprintf(file, " ╰─🢒 content: %s\n", ((Function*)(tree->content))->name);
             break;
+        case EXPTREE_TYPE_IF:
+            fprintf(file, "─┬─🢒 type: IF\n");
+            fprintf(file, " ╰─🢒 content: --\n");
+            break;
         default:
             printf("--> %d\n", tree->type);
             CAP
@@ -84,6 +88,30 @@ int exptree_printToFile_apply(Exptree *tree, FILE *file) {
     return 0;
 }
 
+int exptree_printToFile_if(Exptree *tree, FILE *file) {
+
+    assert(tree != NULL);
+
+    char *typestr = typeTree_convertToString(tree->elemType);
+    fprintf(file, "\t%lu [shape=rectangle, style=\"filled\",fillcolor=\"#A3AB78\", label=\"IF_THEN_ELSE\n%s\"]\n", (size_t) tree, typestr);
+    free(typestr);
+
+    Ifexptree *iftree = (Ifexptree*)(tree->content);
+    assert(iftree != NULL);
+    assert(iftree->cond != 0);
+    assert(iftree->arg1 != 0);
+    assert(iftree->arg2 != 0);
+
+    exptree_printToFile_body(iftree->cond, file);
+    fprintf(file, "%lu -> %lu\n", (size_t) tree, (size_t)(iftree->cond));
+    fprintf(file, "%lu -> %lu\n", (size_t) tree, (size_t)(iftree->arg1));
+    fprintf(file, "%lu -> %lu\n", (size_t) tree, (size_t)(iftree->arg2));
+    exptree_printToFile_body(iftree->arg1, file);
+    exptree_printToFile_body(iftree->arg2, file);
+
+    return 0;
+}
+
 int exptree_printToFile_body(Exptree *tree, FILE *file) {
 
     if (tree == NULL) return 0;
@@ -92,6 +120,9 @@ int exptree_printToFile_body(Exptree *tree, FILE *file) {
     switch (tree->type) {
         case EXPTREE_TYPE_APPLY:
             exptree_printToFile_apply(tree, file);
+            break;
+        case EXPTREE_TYPE_IF:
+            exptree_printToFile_if(tree, file);
             break;
         case EXPTREE_TYPE_ELEM:
             fprintf(file, "\t%lu [shape=rectangle, style=\"filled\",fillcolor=\"#BDE038\", label=\"ELEM\n%s\n%s\"]\n", (size_t) tree, (char*)(tree->content), typestr);

@@ -363,6 +363,43 @@ int func_div(Stack *stack, Prog *prog) {
 
     return 0;
 }
+int func_comp(Stack *stack, Prog *prog) {
+
+    Pair arg1 = stack_pop(stack);
+    Pair arg2 = stack_pop(stack);
+
+    int arg1_int = 0;
+    if (arg1.type == STACK_ELEM_TYPES_DATA_ADDRESS) {
+        // printf("arg1: %lu\n", prog->dataStart+arg1.elem*5);
+        arg1_int = convert_BytesToInt(prog->arr+prog->dataStart+arg1.elem*5+1);
+        // printf("arg1: %d\n", arg1_int);
+    } else if (arg1.type == STACK_ELEM_TYPES_INLINE_INT) {
+        arg1_int = (int)(long)arg1.elem;
+    } else {
+        CAP
+    }
+    
+    int arg2_int = 0;
+    switch (arg2.type) {
+    case STACK_ELEM_TYPES_DATA_ADDRESS:
+        // printf("arg2: %lu\n", prog->dataStart+arg2.elem*5);
+        arg2_int = convert_BytesToInt(prog->arr+prog->dataStart+arg2.elem*5+1);
+        // printf("arg2: %d\n", arg2_int);
+        break;
+    case STACK_ELEM_TYPES_INLINE_INT:
+        arg2_int = (int)(long)arg2.elem;
+        break;
+    default:
+        CAP
+    }
+    // assert(prog.arr[arg2] == DATATYPE_INT);
+
+    // int arg2_int = convert_BytesToInt(prog.arr + arg1 + 2);
+
+    stack_push(stack, (Pair){(size_t)(unsigned)(arg1_int == arg2_int), STACK_ELEM_TYPES_INLINE_INT});
+
+    return 0;
+}
 int func_print_int(Stack *stack, Prog *prog) {
 
     Pair arg = stack_getByPos(stack, stack_getLastPos(stack));
@@ -450,6 +487,14 @@ Prog decomp(Prog prog, FILE *stream) {
         case COMMAND_END:
             if (deb) fprintf(stream, "END\n");
             break;
+        case COMMAND_JUMPIF:
+            if (deb) fprintf(stream, "jump if %lu\n", convert_BytesToSizeT(prog.arr+q+1));
+            q += sizeof(size_t);
+            break;
+        case COMMAND_JUMP:
+            if (deb) fprintf(stream, "jump %lu\n", convert_BytesToSizeT(prog.arr+q+1));
+            q += sizeof(size_t);
+            break;
 
         case COMMAND_STANDARD_ADD:
             if (deb) fprintf(stream, "add\n");
@@ -462,6 +507,9 @@ Prog decomp(Prog prog, FILE *stream) {
             break;
         case COMMAND_STANDARD_DIV:
             if (deb) fprintf(stream, "div\n");
+            break;
+        case COMMAND_STANDARD_COMP:
+            if (deb) fprintf(stream, "comp\n");
             break;
         case COMMAND_STANDARD_PRINT_INT:
             if (deb) fprintf(stream, "print_int\n");
@@ -523,6 +571,7 @@ int execute(Prog prog, FILE *stream) {
             // printf("func: %lu\n", func);
             // printf("val: %lu\n", convert_BytesToSizeT(prog.arr+pos+1));
 
+
             // print
             Pair addr = stack_getByPos(stack, func - convert_BytesToSizeT(prog.arr+pos+1) );
             stack_push(stack, addr);
@@ -555,6 +604,25 @@ int execute(Prog prog, FILE *stream) {
             assert(stack_getPos(stack) != 2);
             pos +=1;
             return 0;
+        case COMMAND_JUMP:
+            if (deb) fprintf(stream, "jump %lu\n", convert_BytesToSizeT(prog.arr+pos+1));
+            pos += convert_BytesToSizeT(prog.arr+pos+1);
+            return 0;
+        case COMMAND_JUMPIF:
+            if (deb) fprintf(stream, "jumpif %lu\n", convert_BytesToSizeT(prog.arr+pos+1));
+            Pair arg = stack_pop(stack);
+            int arg_int = 0;
+            if (arg.type == STACK_ELEM_TYPES_DATA_ADDRESS) {
+                arg_int = convert_BytesToInt(prog.arr+prog.dataStart+arg.elem*5+1);
+            } else if (arg.type == STACK_ELEM_TYPES_INLINE_INT) {
+                arg_int = (int)(long)arg.elem;
+            } else {
+                CAP
+            }
+            if (arg_int == 0) pos += sizeof(size_t) + 1;
+            else pos = convert_BytesToSizeT(prog.arr+pos+1);
+            break;
+
 
         case COMMAND_STANDARD_ADD:
             if (deb) fprintf(stream, "add\n");
@@ -576,6 +644,12 @@ int execute(Prog prog, FILE *stream) {
             func_div(stack, &prog);
             pos+=1;
             break;
+        case COMMAND_STANDARD_COMP:
+            if (deb) fprintf(stream, "comp\n");
+            func_comp(stack, &prog);
+            pos+=1;
+            break;
+            
         case COMMAND_STANDARD_PRINT_INT:
             if (deb) fprintf(stream, "print_int\n");
             func_print_int(stack, &prog);
@@ -587,11 +661,11 @@ int execute(Prog prog, FILE *stream) {
             CAP
             break;
         }
-        // if (deb) printf("----\n");
+        if (deb) printf("----\n");
         // if (deb) fprintf(stream, "pos : %lu\n", pos);
         // if (deb) fprintf(stream, "func: %lu\n", func);
-        // if (deb) stack_dump(stack);
-        // if (deb) printf("----\n");
+        if (deb) stack_dump(stack);
+        if (deb) printf("----\n");
     }
 
 }
@@ -606,9 +680,11 @@ int virtMachine() {
     FILE *file_deBitProg = fopen("deBitProg.txt", "w+");
     FILE *file_execDump = fopen("execDump.txt", "w+");
 
-    prog = decomp(prog, file_deBitProg);
-    // DOT
-    execute(prog, file_execDump);
+    // prog = decomp(prog, file_deBitProg);
+    prog = decomp(prog, stdout);
+    DOT
+    // execute(prog, file_execDump);
+    execute(prog, stdout);
     // DOT
     // CAP
     fclose(file_deBitProg);

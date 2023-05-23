@@ -1,11 +1,8 @@
 push 0
 push 1
-push 2
-push 3
-NFA call pow
-NFA call /
 NFA call +
-NFA call print_int
+push 2
+NFA call add
 pushArg 1
 pushArg 0
 NFA call add
@@ -18,38 +15,3 @@ NFA call mul
 pushArg 1
 pushArg 0
 NFA call div
-pushArg 1
-pushArg 0
-NFA call +
-pushArg 0
-pushArg 3
-pushArg 2
-pushArg 1
-NFA call *
-NFA call -
-NFA call /
-pushArg 0
-NFA call +
-push 4
-pushArg 3
-pushArg 4
-pushArg 0
-pushArg 3
-pushArg 2
-pushArg 1
-NFA call *
-NFA call -
-NFA call /
-pushArg 0
-NFA call +
-pushArg 0
-NFA call workWithFour
-NFA call +
-push 5
-push 6
-push 7
-push 8
-NFA call pow
-NFA call /
-NFA call +
-NFA call print_int

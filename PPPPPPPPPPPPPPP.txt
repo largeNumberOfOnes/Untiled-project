@@ -1,60 +1,22 @@
 digraph {
 
-	94176617076864 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94433245409344 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	94176617075504 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
-print_int
-0x55a733ce9330
+	94433245409088 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-94176617076864 -> 94176617075504
-	94176617076704 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int"]
-	94176617076576 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int->Int"]
-	94176617076544 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
-+
-0x55a733ce9740
+	94433245409120 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+*
+0x55e2f40c2f60
 Int->Int->Int"]
-94176617076576 -> 94176617076544
-	94176617076288 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94433245409088 -> 94433245409120
+	94433245408992 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+a
 Int"]
-	94176617076160 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int->Int"]
-	94176617076128 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
-/
-0x55a733ce95a0
-Int->Int->Int"]
-94176617076160 -> 94176617076128
-	94176617075872 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+94433245409088 -> 94433245408992
+94433245409344 -> 94433245409088
+	94433245409184 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+a
 Int"]
-	94176617075280 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int->Int"]
-	94176617079872 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="FUNCTION
-pow
-0x55a733cea440
-Int->Int->Int"]
-94176617075280 -> 94176617079872
-	94176617079904 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
-2
-Int"]
-94176617075280 -> 94176617079904
-94176617075872 -> 94176617075280
-	94176617075152 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
-6
-Int"]
-94176617075872 -> 94176617075152
-94176617076160 -> 94176617075872
-94176617076288 -> 94176617076160
-	94176617076032 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
-4
-Int"]
-94176617076288 -> 94176617076032
-94176617076576 -> 94176617076288
-94176617076704 -> 94176617076576
-	94176617076448 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
-5
-Int"]
-94176617076704 -> 94176617076448
-94176617076864 -> 94176617076704
+94433245409344 -> 94433245409184
 
 }
