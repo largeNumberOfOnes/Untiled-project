@@ -1,22 +1,108 @@
 digraph {
 
-	94029360242592 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
-Int"]
-	94029360242336 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94457370238928 [shape=rectangle, style="filled",fillcolor="#A3AB78", label="IF_THEN_ELSE
 Int->Int"]
-	94029360242368 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
-*
-0x5584ea9d9ec0
+	94457370237040 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94457370236912 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94457370236656 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+==
+0x55e891ffd6f0
 Int->Int->Int"]
-94029360242336 -> 94029360242368
-	94029360242240 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-a
+94457370236912 -> 94457370236656
+	94457370236688 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-94029360242336 -> 94029360242240
-94029360242592 -> 94029360242336
-	94029360242432 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
-a
+	94457370236432 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94457370236464 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
++
+0x55e891ffd630
+Int->Int->Int"]
+94457370236432 -> 94457370236464
+	94457370236336 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+4
 Int"]
-94029360242592 -> 94029360242432
+94457370236432 -> 94457370236336
+94457370236688 -> 94457370236432
+	94457370236528 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+9
+Int"]
+94457370236688 -> 94457370236528
+94457370236912 -> 94457370236688
+94457370237040 -> 94457370236912
+	94457370236720 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+13
+Int"]
+94457370237040 -> 94457370236720
+94457370238928 -> 94457370237040
+94457370238928 -> 94457370237552
+94457370238928 -> 94457370238768
+	94457370237552 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94457370237296 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94457370237328 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+/
+0x55e891ffd990
+Int->Int->Int"]
+94457370237296 -> 94457370237328
+	94457370237200 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+8
+Int"]
+94457370237296 -> 94457370237200
+94457370237552 -> 94457370237296
+	94457370237392 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+2
+Int"]
+94457370237552 -> 94457370237392
+	94457370238768 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94457370242976 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94457370242944 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
++
+0x55e891ffef80
+Int->Int->Int"]
+94457370242976 -> 94457370242944
+	94457370238576 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94457370238448 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94457370238192 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+-
+0x55e891ffdcf0
+Int->Int->Int"]
+94457370238448 -> 94457370238192
+	94457370238224 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int"]
+	94457370237808 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+Int->Int"]
+	94457370237840 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
++
+0x55e891ffdb90
+Int->Int->Int"]
+94457370237808 -> 94457370237840
+	94457370237712 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+2
+Int"]
+94457370237808 -> 94457370237712
+94457370238224 -> 94457370237808
+	94457370237904 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+6
+Int"]
+94457370238224 -> 94457370237904
+94457370238448 -> 94457370238224
+94457370238576 -> 94457370238448
+	94457370238256 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+2
+Int"]
+94457370238576 -> 94457370238256
+94457370242976 -> 94457370238576
+94457370238768 -> 94457370242976
+	94457370242848 [shape=rectangle, style="filled",fillcolor="#BDE038", label="ELEM
+1
+Int"]
+94457370238768 -> 94457370242848
 
 }

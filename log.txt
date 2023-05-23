@@ -1,8 +1,18 @@
-push 0
 push 1
-NFA call +
 push 2
-NFA call add
+push 3
+NFA call +
+NFA call ==
+push 4
+push 5
+NFA call /
+push 6
+push 7
+push 8
+push 9
+NFA call +
+NFA call -
+NFA call +
 pushArg 1
 pushArg 0
 NFA call add

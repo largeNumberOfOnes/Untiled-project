@@ -680,11 +680,11 @@ int virtMachine() {
     FILE *file_deBitProg = fopen("deBitProg.txt", "w+");
     FILE *file_execDump = fopen("execDump.txt", "w+");
 
-    // prog = decomp(prog, file_deBitProg);
-    prog = decomp(prog, stdout);
+    prog = decomp(prog, file_deBitProg);
+    // prog = decomp(prog, stdout);
     DOT
-    // execute(prog, file_execDump);
-    execute(prog, stdout);
+    execute(prog, file_execDump);
+    // execute(prog, stdout);
     // DOT
     // CAP
     fclose(file_deBitProg);

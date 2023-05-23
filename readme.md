@@ -71,9 +71,11 @@ def workWithFour a b c d : 100 : Int->Int->Int->Int->Int = a + (b*c - d)/ a
 def thatSoundsScary a b c d e : 100 : Int->Int->Int->Int->Int->Int
     = workWithFour a (a + (b*c - d)/ a) e d + 12
 
+def pow a b : 100 : Int->Int = a + b
+
 //-----------------------------------------------------------------------------
 
-main = `/ (pow 2 6) 4
+main = pow 2 6 \ 4
 ```
 
 В результате его исполнения получается структурное дерево (storkGallery/root.svg):
