@@ -1,22 +1,22 @@
 digraph {
 
-	94433245409344 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94029360242592 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int"]
-	94433245409088 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
+	94029360242336 [shape=rectangle, style="filled",fillcolor="#506266", label="APPLY
 Int->Int"]
-	94433245409120 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
+	94029360242368 [shape=rectangle, style="filled",fillcolor="#818274", label="OPERATOR
 *
-0x55e2f40c2f60
+0x5584ea9d9ec0
 Int->Int->Int"]
-94433245409088 -> 94433245409120
-	94433245408992 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94029360242336 -> 94029360242368
+	94029360242240 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-94433245409088 -> 94433245408992
-94433245409344 -> 94433245409088
-	94433245409184 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
+94029360242336 -> 94029360242240
+94029360242592 -> 94029360242336
+	94029360242432 [shape=rectangle, style="filled",fillcolor="#C26D97", label="VAR
 a
 Int"]
-94433245409344 -> 94433245409184
+94029360242592 -> 94029360242432
 
 }

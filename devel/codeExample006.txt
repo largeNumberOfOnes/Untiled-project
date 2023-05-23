@@ -31,9 +31,10 @@ def == a b : 99 : Int->Int->Int
 
 // def spFunc_01 a b : 100 : Int->Int->Int = if ((4+9) == 2) then (8/2) else (2+6-2) + 1
 
-def pow a n : 102 : Int->Int->Int = if (n == 0) then (1) else (pow (a *a) (b - 1))
-//main = if (4+9 == 13) then (8/2) else (2+6-2) + 1
-main = add 1 (2+4)
+// def pow a n : 102 : Int->Int->Int = if (n == 0) then (1) else (pow (a *a) (b - 1))
+
+// main = if (4+9 == 7) then (8/2) else (2+6-2) + 1
+main = if (4+9 == 13) then (8/2) else (2+6-2) + 1
 
 // main = print_int ((pow 2 6 / 4) + 5)
 // main = print_int ((pow 2 6) / 4)
